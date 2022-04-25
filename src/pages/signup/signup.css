@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@100&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+main {
+  display: flex;
+  max-width: 100%;
+}
+.signUp__image__login {
+  flex: 2;
+  background-image: url(./assets/Group\ 10.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.tickitz {
+  position: relative;
+  left: 18%;
+  top: 35%;
+}
+.tickitz__desc {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 35%;
+}
+.signUp__image--cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+.signUp {
+  flex: 1;
+  margin: 33px 80px;
+  padding: 0 40px;
+}
+
+.tickitzLogo {
+  display: none;
+}
+.signUp__header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+}
+.signUp__subHeader {
+  color: gray;
+  font-family: "Inter", sans-serif;
+  padding: 10px 0px;
+}
+.input {
+  padding: 10px 0px;
+  font-size: small;
+  font-weight: bold;
+}
+.signUp__input {
+  color: black;
+  font-weight: bold;
+  width: 90%;
+  height: 60px;
+  border-radius: 16px;
+  border: 1px solid gray;
+  padding: 0 20px;
+}
+.signUp__input:focus {
+  border: 2px solid gray;
+  color: black;
+  font-weight: bold;
+}
+
+/* .signUp__input:valid {
+  border: 1px solid green;
+} */
+
+.button {
+}
+.button__signUp {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 10px 0;
+  background-color: blueviolet;
+  width: 90%;
+  height: 60px;
+  border-radius: 16px;
+  padding: 0 20px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.button__signUp:hover {
+  font-size: 20px;
+  background-color: rgb(166, 72, 253);
+}
+.button__link {
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  main {
+    display: flex;
+    max-width: 100%;
+  }
+  .signUp__image {
+    flex: 0;
+    background-image: none;
+  }
+  .signUp {
+    flex: 1;
+    margin: 33px 0;
+    padding: 0 0;
+  }
+  .tickitz {
+    position: none;
+    left: 180px;
+    top: 35%;
+  }
+  .tickitz__desc {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 35%;
+  }
+  .tickitzLogo {
+    display: block;
+    margin-bottom: 30px;
+    padding: 20px;
+    position: relative;
+    right: 27px;
+  }
+  .signUp__header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+  }
+  .signUp__subHeader {
+    color: purple;
+    font-family: "Inter", sans-serif;
+    padding: 10px 0px;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .input {
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4e4b66;
+  }
+  .signUp__input {
+    color: black;
+    width: 90%;
+    height: 60px;
+    border-radius: 16px;
+    border: 1px solid gray;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+  .signUp__input:focus {
+    border: 2px solid gray;
+    color: black;
+    font-weight: bold;
+  }
+}
