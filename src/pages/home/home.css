@@ -266,7 +266,7 @@ input[type="text"]:focus {
 .upcoming {
   position: relative;
   width: 100%;
-  margin: 90px 0 0 0;
+  margin: 300px 0 0 0;
 }
 
 .upcoming__header {
@@ -435,7 +435,7 @@ input[type="text"]:focus {
   background-color: gainsboro;
 }
 /*---------------------------input Email-----------------------------------------------*/
-.input {
+.inputs {
   position: relative;
   margin: 200px 0 0 0;
   background-color: white;
@@ -446,28 +446,28 @@ input[type="text"]:focus {
   box-shadow: 10px 10px 10px gainsboro;
   text-align: center;
 }
-.input__align {
+.input__aligns {
   position: relative;
   top: 60px;
 }
-.input__desc {
+.input__descs {
   color: gray;
   font-weight: bold;
 }
-.input__title {
+.input__titles {
   color: #5f2eea;
   font-family: "Mulish", sans-serif;
   font-weight: 900;
   font-size: 55px;
 }
-.input__email {
+.input__emails {
   border: solid gainsboro 2px;
   margin: 20px 10px;
   padding: 10px 70px;
   border-radius: 10px;
   text-align: left;
 }
-.input__button {
+.input__buttons {
   color: white;
   font-weight: bold;
   background-color: #5f2eea;
@@ -475,7 +475,7 @@ input[type="text"]:focus {
   border-radius: 10px;
 }
 
-.input__caption {
+.input__captions {
   display: block;
   font-size: 15px;
 }

@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
-import Navbar from "../../components/basic/Navbar/index";
+import Navbar from "../../components/header/Navbar/index";
+import Footer from "../../components/footer/index";
+import Card from "../../components/card";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "../../utils/axios";
 
 function Home() {
+  // const handleDetailMovie = (id) => {
+  //   console.log("detailClick", id);
+  // };
+  const limit = 6;
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]);
+  const [pageInfo, setPageInfo] = useState({});
+  useEffect(() => {
+    getDataMovie();
+  }, []);
+  const getDataMovie = async () => {
+    try {
+      console.log("getDataMovie");
+      console.log(limit);
+      console.log(page);
+      const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
+      console.log(resultMovie);
+      setData(resultMovie.data.data);
+      setPageInfo(resultMovie.data.pagination);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
+  const handleDetailMovie = (id) => {
+    console.log(id);
+  };
   return (
     <>
       <Navbar />
@@ -28,66 +59,9 @@ function Home() {
         </div>
         <div className="movieCard">
           <div className="movieDetails">
-            <div className="movieDetails__movies1">
-              <img src={require("./assets/Rectangle 112.png")} alt="logoImg" width={"220px"} />
-              <div className="movieCards">
-                <h2 className="movieDetails__titles">John Wick</h2>
-                <p className="movieDetails__genres">Action,Adventure,Thriller</p>
-                <a href="movieDetail.html">
-                  <button className="movieDetails__buttons"> Details</button>
-                </a>
-              </div>
-            </div>
-            <div className="movieDetails__movies2">
-              <img src={require("./assets/Rectangle 112.png")} alt="logoImg" width={"220px"} />
-              <div className="movieCards">
-                <h2 className="movieDetails__titles">John Wick</h2>
-                <p className="movieDetails__genres">Action,Adventure,Thriller</p>
-                <a href="movieDetail.html">
-                  <button className="movieDetails__buttons"> Details</button>
-                </a>
-              </div>
-            </div>
-            <div className="movieDetails__movies3">
-              <img src={require("./assets/Rectangle 112.png")} alt="logoImg" width={"220px"} />
-              <div className="movieCards">
-                <h2 className="movieDetails__titles">John Wick</h2>
-                <p className="movieDetails__genres">Action,Adventure,Thriller</p>
-                <a href="movieDetail.html">
-                  <button className="movieDetails__buttons"> Details</button>
-                </a>
-              </div>
-            </div>
-            <div className="movieDetails__movies4">
-              <img src={require("./assets/Rectangle 112.png")} alt="logoImg" width={"220px"} />
-              <div className="movieCards">
-                <h2 className="movieDetails__titles">John Wick</h2>
-                <p className="movieDetails__genres">Action,Adventure,Thriller</p>
-                <a href="movieDetail.html">
-                  <button className="movieDetails__buttons"> Details</button>
-                </a>
-              </div>
-            </div>
-            <div className="movieDetails__movies5">
-              <img src={require("./assets/Rectangle 112.png")} alt="logoImg" width={"220px"} />
-              <div className="movieCards">
-                <h2 className="movieDetails__titles">John Wick</h2>
-                <p className="movieDetails__genres">Action,Adventure,Thriller</p>
-                <a href="movieDetail.html">
-                  <button className="movieDetails__buttons"> Details</button>
-                </a>
-              </div>
-            </div>
-            <div className="movieDetails__movies6">
-              <img src={require("./assets/Rectangle 112.png")} alt="logoImg" width={"220px"} />
-              <div className="movieCards">
-                <h2 className="movieDetails__titles">John Wick</h2>
-                <p className="movieDetails__genres">Action,Adventure,Thriller</p>
-                <a href="movieDetail.html">
-                  <button className="movieDetails__buttons"> Details</button>
-                </a>
-              </div>
-            </div>
+            {data.map((item) => (
+              <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
+            ))}
           </div>
         </div>
       </div>
@@ -115,92 +89,27 @@ function Home() {
         </div>
         {/*--------------------------Movie details-----------------------------*/}
         <div className="movieDetails">
-          <section className="movieDetails__movie1">
-            <img
-              src={require("./assets/Rectangle 112.png")}
-              alt="imageJohnWick"
-              style={{ width: "100%" }}
-            />
-            <h2 className="movieDetails__title">John Wick</h2>
-            <p className="movieDetails__genre">Action,Adventure,Thriller</p>
-            <a href="movieDetail.html">
-              <button className="movieDetails__button"> Details</button>
-            </a>
-          </section>
-          <section className="movieDetails__movie2">
-            <img
-              src={require("./assets/Rectangle 112.png")}
-              alt="imageLionKing"
-              style={{ width: "100%" }}
-            />
-            <h2 className="movieDetails__title">Lion King</h2>
-            <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
-            <a href="movieDetail.html">
-              <button className="movieDetails__button"> Details</button>
-            </a>
-          </section>
-          <section className="movieDetails__movie3">
-            <img
-              src={require("./assets/Rectangle 112.png")}
-              alt="imageSpiderman"
-              style={{ width: "100%" }}
-            />
-            <h2 className="movieDetails__title">Spiderman Homecoming</h2>
-            <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
-            <a href="movieDetail.html">
-              <button className="movieDetails__button"> Details</button>
-            </a>
-          </section>
-          <section className="movieDetails__movie4">
-            <img
-              src={require("./assets/Rectangle 112.png")}
-              alt="imageJohnWick"
-              style={{ width: "100%" }}
-            />
-            <h2 className="movieDetails__title">John Wick</h2>
-            <p className="movieDetails__genre">Action,Adventure,Thriller</p>
-            <a href="movieDetail.html">
-              <button className="movieDetails__button"> Details</button>
-            </a>
-          </section>
-          <section className="movieDetails__movie5">
-            <img
-              src={require("./assets/Rectangle 112.png")}
-              alt="imageLionKing"
-              style={{ width: "100%" }}
-            />
-            <h2 className="movieDetails__title">Lion King</h2>
-            <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
-            <a href="movieDetail.html">
-              <button className="movieDetails__button"> Details</button>
-            </a>
-          </section>
-          <section className="movieDetails__movie6">
-            <img
-              src={require("./assets/Rectangle 112.png")}
-              alt="imageSpiderman"
-              style={{ width: "100%" }}
-            />
-            <h2 className="movieDetails__title">Spiderman Homecoming</h2>
-            <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
-            <a href="movieDetail.html">
-              <button className="movieDetails__button"> Details</button>
-            </a>
-          </section>
+          {data.map((item) => (
+            <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
+          ))}
         </div>
       </section>
       {/*--------------------------Movie details-----------------------------*/}
-      <div className="container input">
-        <section className="input__align">
-          <h3 className="input__desc">Be the vanguard of the</h3>
-          <h1 className="input__title">Moviegoers</h1>
-          <input type="email" placeholder="Type Your Email" className="input__email" />
-          <button className="input__button">join now</button>
-          <span className="input__caption">
-            By joining you as a Tickitz member, we will always send you the latest updates via email{" "}
-          </span>
-        </section>
+      <div className="container">
+        <div className="inputs">
+          <section className="input__aligns">
+            <h3 className="input__descs">Be the vanguard of the</h3>
+            <h1 className="input__titles">Moviegoers</h1>
+            <input type="email" placeholder="Type Your Email" className="input__emails" />
+            <button className="input__buttons">join now</button>
+            <span className="input__captions">
+              By joining you as a Tickitz member, we will always send you the latest updates via
+              email{" "}
+            </span>
+          </section>
+        </div>
       </div>
+      <Footer />
     </>
   );
 }

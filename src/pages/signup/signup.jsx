@@ -11,7 +11,11 @@ function SignUp() {
   });
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
+
   const handleChangeForm = (event) => {
+    // console.log("User sedang mengetik");
+    // console.log(event.target.name);
+    // console.log(event.target.value);
     setForm({ ...form, [event.target.name]: event.target.value });
     console.log(form);
   };
@@ -19,8 +23,13 @@ function SignUp() {
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-
+      // console.log("Submit Login");
+      // Input = email password di siapkan
+      // console.log(form);
+      // Proses = memanggil axios
       const resultLogin = await axios.post("auth/login", form);
+      // proses get data user by id
+      //   const resultUser = await axios.get(`user/${resultLogin.data.data.id}`)
       const resultUser = [
         {
           id: 1,
@@ -33,7 +42,7 @@ function SignUp() {
       localStorage.setItem("token", resultLogin.data.data.token);
       localStorage.setItem("refreshToken", resultLogin.data.data.refreshToken);
       localStorage.setItem("dataUser", JSON.stringify(resultUser[0]));
-      navigate("/homePage");
+      navigate("/home");
 
       //   UNTUK GET DATA USER
       //   const dataUser = JSON.parse(localStorage.getItem(dataUser));
@@ -43,6 +52,12 @@ function SignUp() {
       setMessage(error.response.data.msg);
     }
   };
+
+  const handleReset = (event) => {
+    event.preventDefault();
+    console.log("Reset Form");
+  };
+
   return (
     <>
       <main>
@@ -56,22 +71,36 @@ function SignUp() {
           <h3 className="signUp__subHeader">
             Sign in with your data that you entered during your registration
           </h3>
+          {!message ? null : isError ? (
+            <div className="alert alert-danger" role="alert">
+              {message}
+            </div>
+          ) : (
+            <div className="alert alert-primary" role="alert">
+              {message}
+            </div>
+          )}
+          {/*handle submit---------------------------------*/}
           <h4 className="input">Email</h4>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} onReset={handleReset}>
             <input
               type="email"
               placeholder="Write Your Email"
+              name="email"
               className="signUp__input"
               onChange={handleChangeForm}
             />
             <h4 className="input">Password</h4>
             <input
               type="password"
+              name="password"
               placeholder="Write Your Password"
               className="signUp__input"
-              onKeyPress={handleChangeForm}
+              onChange={handleChangeForm}
             />
-            <button className="button__signUp">Sign In</button>
+            <button className="button__signUp" type="submit">
+              Sign In
+            </button>
           </form>
         </section>
       </main>

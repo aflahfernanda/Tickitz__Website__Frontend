@@ -33,9 +33,9 @@ function SignIn() {
           <h1 className="signUp__header">Sign Up</h1>
           <h3 className="signUp__subHeader">fill your aditional details</h3>
           <h4 className="input">First Name</h4>
-          <input type="text" placeholder="Write Your First Name" className="signUp__input" />
+          <input type="search" placeholder="write your first name" className="signUp__inputName" />
           <h4 className="input">Last Name</h4>
-          <input type="text" placeholder="Write Your Last Name" className="signUp__input" />
+          <input type="search" placeholder="write your first name" className="signUp__inputName" />
           <h4 className="input">Phone Number</h4>
           <input type="number" placeholder="Write Your Phone Number" className="signUp__input" />
           <h4 className="input">Email</h4>

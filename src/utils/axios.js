@@ -6,6 +6,9 @@ const axiosApiIntances = axios.create({
 // Add a request interceptor
 axiosApiIntances.interceptors.request.use(
   function (config) {
+    config.headers = {
+      Authorization: `Bearer ${localStorage.getItem("token")}`
+    };
     // Do something before request is sent
     return config;
   },

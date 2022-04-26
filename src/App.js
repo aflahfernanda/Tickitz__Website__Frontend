@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BasicCounter from "./pages/basic/Counter/classComponent";
 import BasicReact from "./pages/basic/React";

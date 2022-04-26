@@ -1,0 +1,56 @@
+<div className="movieDetails">
+  <section className="movieDetails__movie1">
+    <img src={require("./assets/Rectangle 112.png")} alt="imageJohnWick" style={{ width: "100%" }}
+    />
+    <h2 className="movieDetails__title">John Wick</h2>
+    <p className="movieDetails__genre">Action,Adventure,Thriller</p>
+    <a href="movieDetail.html">
+      <button className="movieDetails__button">Details</button>
+    </a>
+  </section>
+  <section className="movieDetails__movie2">
+    <img src={require("./assets/Rectangle 112.png")} alt="imageLionKing" style={{ width: "100%" }}
+    />
+    <h2 className="movieDetails__title">Lion King</h2>
+    <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
+    <a href="movieDetail.html">
+      <button className="movieDetails__button">Details</button>
+    </a>
+  </section>
+  <section className="movieDetails__movie3">
+    <img src={require("./assets/Rectangle 112.png")} alt="imageSpiderman" style={{ width: "100%" }}
+    />
+    <h2 className="movieDetails__title">Spiderman Homecoming</h2>
+    <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
+    <a href="movieDetail.html">
+      <button className="movieDetails__button">Details</button>
+    </a>
+  </section>
+  <section className="movieDetails__movie4">
+    <img src={require("./assets/Rectangle 112.png")} alt="imageJohnWick" style={{ width: "100%" }}
+    />
+    <h2 className="movieDetails__title">John Wick</h2>
+    <p className="movieDetails__genre">Action,Adventure,Thriller</p>
+    <a href="movieDetail.html">
+      <button className="movieDetails__button">Details</button>
+    </a>
+  </section>
+  <section className="movieDetails__movie5">
+    <img src={require("./assets/Rectangle 112.png")} alt="imageLionKing" style={{ width: "100%" }}
+    />
+    <h2 className="movieDetails__title">Lion King</h2>
+    <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
+    <a href="movieDetail.html">
+      <button className="movieDetails__button">Details</button>
+    </a>
+  </section>
+  <section className="movieDetails__movie6">
+    <img src={require("./assets/Rectangle 112.png")} alt="imageSpiderman" style={{ width: "100%" }}
+    />
+    <h2 className="movieDetails__title">Spiderman Homecoming</h2>
+    <p className="movieDetails__genre">Action,Adventure,Fantasy</p>
+    <a href="movieDetail.html">
+      <button className="movieDetails__button">Details</button>
+    </a>
+  </section>
+</div>
