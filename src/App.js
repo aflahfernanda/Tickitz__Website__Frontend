@@ -6,6 +6,10 @@ import SignIn from "./pages/signin/signIn";
 import SignUp from "./pages/signup/signup.jsx";
 import BasicLogin from "./pages/basic/login";
 import Home from "./pages/home/home.jsx";
+import ViewAll from "./pages/viewAll/viewAll";
+import Detail from "./pages/moviedetail/moviedetail.jsx";
+import OrderPage from "./pages/order/order";
+import Payment from "./pages/payment/payment";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
         <Route path="signin" element={<SignIn />} />
         <Route path="login" element={<SignUp />} />
         <Route path="home" element={<Home />} />
+        <Route path="home/viewall" element={<ViewAll />} />
+        <Route path="moviedetail" element={<Detail />} />
+        <Route path="orderpage" element={<OrderPage />} />
+        <Route path="paymentpage" element={<Payment />} />
       </Routes>
     </BrowserRouter>
   );
