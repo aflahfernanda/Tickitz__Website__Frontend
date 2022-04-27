@@ -1,21 +1,23 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./index.css";
 
 function Card(props) {
   //   const { name, category, src } = props;
   //   const handleDetail = () => {
   //     props.handleDetail(1, data);
-
-  const { id, name, category } = props.data;
-  const image = "Rectangle_112_praybk.png";
+  const navigate = useNavigate();
+  const { id, name, category, image } = props.data;
+  const handleMovieDetail = () => {
+    navigate("/moviedetail");
+  };
   return (
     <section className="movieDetails__movie1">
       <img
         src={
           image
-            ? `https://res.cloudinary.com/da776aoko/image/upload/v1650926050/Tickitz/user/${image}`
-            : "https://res.cloudinary.com/da776aoko/image/upload/v1650926050/Tickitz/user/"
+            ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
+            : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
         }
         alt="imageJohnWick"
         style={{ width: "100%" }}

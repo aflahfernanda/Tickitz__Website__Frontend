@@ -3,10 +3,21 @@ import "./moviedetail.css";
 import Navbar from "../../components/header/Navbar/index";
 import Footer from "../../components/footer/index";
 import Card from "../../components/card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "../../utils/axios";
 
 function Detail() {
+  const params = useParams();
+  const movieId = params.id;
+  const getMovieId = async () => {
+    try {
+      const resultMovie = await axios.get(`movie/${movieId}`);
+      setData(resultMovie.data.data);
+      setPageInfo(resultMovie.data.pagination);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
   return (
     <>
       <Navbar />

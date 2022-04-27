@@ -3,13 +3,14 @@ import "./home.css";
 import Navbar from "../../components/header/Navbar/index";
 import Footer from "../../components/footer/index";
 import Card from "../../components/card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 
 function Home() {
   // const handleDetailMovie = (id) => {
   //   console.log("detailClick", id);
   // };
+  const navigate = useNavigate();
   const limit = 6;
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
@@ -19,19 +20,15 @@ function Home() {
   }, []);
   const getDataMovie = async () => {
     try {
-      console.log("getDataMovie");
-      console.log(limit);
-      console.log(page);
       const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
-      console.log(resultMovie);
       setData(resultMovie.data.data);
       setPageInfo(resultMovie.data.pagination);
     } catch (error) {
       console.log(error.response);
     }
   };
-
   const handleDetailMovie = (id) => {
+    navigate(`/moviedetail/${id}`);
     console.log(id);
   };
   return (
