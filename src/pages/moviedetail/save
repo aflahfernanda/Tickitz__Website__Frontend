@@ -1,0 +1,184 @@
+<div className="showTickets__box">
+            <div className="showTickets__header">
+              <img
+                src={require("../../assets/assets/VectorCinema1.png")}
+                alt="ubv.id"
+                className="showTickets__box--image"
+              />
+              <section className="showTickets__box--title">
+                <h3 className="showTickets__box--header"> ebv.id</h3>
+                <p className="showTickets__box--location">
+                  {" "}
+                  Whatever street No.12, <br />
+                  South Purwokerto
+                </p>
+              </section>
+            </div>
+            <hr />
+            <section className=" container showTickets__times">
+              <p className="showTickets__times--times">08.30 am</p>
+              <p className="showTickets__times--times">10.30 pm</p>
+              <p className="showTickets__times--timesLight">12.00 pm</p>
+              <p className="showTickets__times--times">02.00 pm </p>
+              <p className="showTickets__times--times">04.30 pm</p>
+              <p className="showTickets__times--timesLight">07.00 pm</p>
+              <p className="showTickets__times--times">08.30 pm</p>
+            </section>
+            <a href="orderPage.html">
+              <button className="showTickets__button"> Book Now</button>
+            </a>
+          </div>
+          <div className="showTickets__box">
+            <div className="showTickets__header">
+              <img
+                src={require("../../assets/assets/VectorCinema2.png")}
+                alt="ubv.id"
+                className="showTickets__box--image"
+              />
+              <section className="showTickets__box--title">
+                <h3 className="showTickets__box--header"> cineOne21</h3>
+                <p className="showTickets__box--location">
+                  {" "}
+                  Downcare street No. 21,
+                  <br />
+                  East Purwokerto
+                </p>
+              </section>
+            </div>
+            <hr />
+            <section className=" container showTickets__times">
+              <p className="showTickets__times--times">08.30 am</p>
+              <p className="showTickets__times--times">10.00 pm</p>
+              <p className="showTickets__times--timesLight">12.00 pm</p>
+              <p className="showTickets__times--times">02.00 pm </p>
+              <p className="showTickets__times--times">04.00 pm</p>
+              <p className="showTickets__times--timesLight">06.00 pm</p>
+              <p className="showTickets__times--times">08.00 pm</p>
+            </section>
+            <a href="orderPage.html">
+              <button className="showTickets__button"> Book Now</button>
+            </a>
+          </div>
+          <div className="showTickets__box">
+            <div className="showTickets__header">
+              <img
+                src={require("../../assets/assets/VectorCinema3.png")}
+                alt="ubv.id"
+                className="showTickets__box--image"
+              />
+              <section className="showTickets__box--title">
+                <h3 className="showTickets__box--header"> hiflix cinema</h3>
+                <p className="showTickets__box--location">
+                  {" "}
+                  Colonel street No. 2, East
+                  <br />
+                  Purwokerto
+                </p>
+              </section>
+            </div>
+            <hr />
+            <section className=" container showTickets__times">
+              <p className="showTickets__times--times">08.30 am</p>
+              <p className="showTickets__times--times">10.00 pm</p>
+              <p className="showTickets__times--timesLight">12.00 pm</p>
+              <p className="showTickets__times--times">02.00 pm </p>
+              <p className="showTickets__times--times">04.00 pm</p>
+              <p className="showTickets__times--timesLight">06.00 pm</p>
+              <p className="showTickets__times--times">08.00 pm</p>
+            </section>
+            <a href="orderPage.html">
+              <button className="showTickets__button"> Book Now</button>
+            </a>
+          </div>
+          <div className="showTickets__box">
+            <div className="showTickets__header">
+              <img
+                src={require("../../assets/assets/VectorCinema1.png")}
+                alt="ubv.id"
+                className="showTickets__box--image"
+              />
+              <section className="showTickets__box--title">
+                <h3 className="showTickets__box--header"> ebv.id</h3>
+                <p className="showTickets__box--location">
+                  {" "}
+                  Whatever street No.12, <br />
+                  South Purwokerto
+                </p>
+              </section>
+            </div>
+            <hr />
+            <section className=" container showTickets__times">
+              <p className="showTickets__times--times">08.30 am</p>
+              <p className="showTickets__times--times">10.30 pm</p>
+              <p className="showTickets__times--timesLight">12.00 pm</p>
+              <p className="showTickets__times--times">02.00 pm </p>
+              <p className="showTickets__times--times">04.30 pm</p>
+              <p className="showTickets__times--timesLight">07.00 pm</p>
+              <p className="showTickets__times--times">08.30 pm</p>
+            </section>
+            <a href="orderPage.html">
+              <button className="showTickets__button"> Book Now</button>
+            </a>
+          </div>
+          <div className="showTickets__box">
+            <div className="showTickets__header">
+              <img
+                src={require("../../assets/assets/VectorCinema2.png")}
+                alt="ubv.id"
+                className="showTickets__box--image"
+              />
+              <section className="showTickets__box--title">
+                <h3 className="showTickets__box--header"> cineOne21</h3>
+                <p className="showTickets__box--location">
+                  {" "}
+                  Downcare street No. 21,
+                  <br />
+                  East Purwokerto
+                </p>
+              </section>
+            </div>
+            <hr />
+            <section className=" container showTickets__times">
+              <p className="showTickets__times--times">10.00 pm</p>
+              <p className="showTickets__times--times">10.00 pm</p>
+              <p className="showTickets__times--timesLight">12.00 pm</p>
+              <p className="showTickets__times--times">02.00 pm </p>
+              <p className="showTickets__times--times">04.00 pm</p>
+              <p className="showTickets__times--timesLight">06.00 pm</p>
+              <p className="showTickets__times--times">08.00 pm</p>
+            </section>
+            <a href="orderPage.html">
+              <button className="showTickets__button"> Book Now</button>
+            </a>
+          </div>
+          <div className="showTickets__box">
+            <div className="showTickets__header">
+              <img
+                src={require("../../assets/assets/VectorCinema3.png")}
+                alt="ubv.id"
+                className="showTickets__box--image"
+              />
+              <section className="showTickets__box--title">
+                <h3 className="showTickets__box--header"> hiflix cinema</h3>
+                <p className="showTickets__box--location">
+                  {" "}
+                  Colonel street No. 2, East
+                  <br />
+                  Purwokerto
+                </p>
+              </section>
+            </div>
+            <hr />
+            <section className=" container showTickets__times">
+              <p className="showTickets__times--times">08.30 am</p>
+              <p className="showTickets__times--times">10.00 pm</p>
+              <p className="showTickets__times--timesLight">12.00 pm</p>
+              <p className="showTickets__times--times">02.00 pm </p>
+              <p className="showTickets__times--times">04.00 pm</p>
+              <p className="showTickets__times--timesLight">06.00 pm</p>
+              <p className="showTickets__times--times">08.00 pm</p>
+            </section>
+            <a href="orderPage.html">
+              <button className="showTickets__button"> Book Now</button>
+            </a>
+          </div>

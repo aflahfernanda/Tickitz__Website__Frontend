@@ -143,7 +143,7 @@ input[type="text"]:focus {
 .movieDetails {
   position: relative;
   margin-bottom: 100px;
-  display: flex;
+  display: inline;
   overflow-x: auto;
   margin: 10px 0 0 8vh;
   padding: 40px 40px;
@@ -292,7 +292,7 @@ input[type="text"]:focus {
 /*---------------------------month-----------------------------------------------*/
 .upcoming__month {
   position: relative;
-  margin: 0 0 0 13vh;
+  margin: 0 0 0 100px;
   text-align: center;
   overflow-x: auto;
   white-space: nowrap;
@@ -319,121 +319,12 @@ input[type="text"]:focus {
 .movieDetails {
   position: relative;
   margin-bottom: 100px;
-  display: flex;
-  overflow-x: auto;
+  margin-top: 100px;
+  overflow-x: scroll;
   margin: 100px 0 0 8vh;
   padding: 40px 40px;
 }
-.movieDetails__movie1 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: solid gainsboro 2px;
-  border-radius: 16px;
-  padding: 15px;
-  margin-right: 30px;
-  flex: 1;
-}
-.movieDetails__movie1:hover {
-  background-color: gainsboro;
-}
-.movieDetails__title {
-  text-align: center;
-  margin: 10px 0;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-.movieDetails__genre {
-  text-align: center;
-  color: #a0a3bd;
-  font-weight: bold;
-}
-.movieDetails__button {
-  color: blueviolet;
-  font-weight: bold;
-  padding: 5px 30px;
-  margin: 0 50px;
-  border-radius: 10px;
-  border: solid blueviolet 2px;
-  background-color: white;
-}
-.movieDetails__button:hover {
-  color: white;
-  background-color: blueviolet;
-}
-.movieDetails__movie2 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: solid gainsboro 2px;
-  border-radius: 16px;
-  padding: 15px;
-  margin-right: 30px;
-  flex: 1;
-}
-.movieDetails__movie2:hover {
-  background-color: gainsboro;
-}
-.movieDetails__movie3 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: solid gainsboro 2px;
-  border-radius: 16px;
-  padding: 15px;
-  margin-right: 30px;
-  flex: 1;
-}
-.movieDetails__movie3:hover {
-  background-color: gainsboro;
-}
-.movieDetails__movie4 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: solid gainsboro 2px;
-  border-radius: 16px;
-  padding: 15px;
-  margin-right: 30px;
-  flex: 1;
-}
-.movieDetails__movie4:hover {
-  background-color: gainsboro;
-}
-.movieDetails__movie5 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: solid gainsboro 2px;
-  border-radius: 16px;
-  padding: 15px;
-  margin-right: 30px;
-  flex: 1;
-}
-.movieDetails__movie5:hover {
-  background-color: gainsboro;
-}
 
-.movieDetails__movie6 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: solid gainsboro 2px;
-  border-radius: 16px;
-  padding: 15px;
-  margin-right: 30px;
-  flex: 1;
-}
-.movieDetails__movie6:hover {
-  background-color: gainsboro;
-}
 /*---------------------------input Email-----------------------------------------------*/
 .inputs {
   position: relative;

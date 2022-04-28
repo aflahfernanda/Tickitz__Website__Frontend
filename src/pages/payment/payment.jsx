@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./payment.css";
 import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer";
+import { useLocation } from "react-router-dom";
 
 function Payment() {
+  const { state } = useLocation();
+  console.log(state);
+
   return (
     <>
       <Navbar />
@@ -18,7 +22,9 @@ function Payment() {
                   <p className="flex__movie--infos">Date & Time</p>
                 </div>
                 <div className="flex__results">
-                  <p className="flex__movie--results">Tuesday, 07 July 2020 at 02:00</p>
+                  <p className="flex__movie--results">
+                    {`${state[1].dateBooking}` + " at" + ` ${state[1].timeBooking}`}
+                  </p>
                 </div>
               </section>
               <hr />
@@ -27,7 +33,7 @@ function Payment() {
                   <p className="flex__movie--infos">Movie Selected</p>
                 </div>
                 <div className="flex__results">
-                  <p className="flex__movie--results">Spiderman:HomeComing</p>
+                  <p className="flex__movie--results">{state[2].name}</p>
                 </div>
               </section>
               <hr />
@@ -36,7 +42,7 @@ function Payment() {
                   <p className="flex__movie--infos">Cinema Name</p>
                 </div>
                 <div className="flex__results">
-                  <p className="flex__movie--results">CineOne21</p>
+                  <p className="flex__movie--results">{state[1].premiere}</p>
                 </div>
               </section>
               <hr />
@@ -45,7 +51,7 @@ function Payment() {
                   <p className="flex__movie--infos">Number Of Ticket</p>
                 </div>
                 <div className="flex__results">
-                  <p className="flex__movie--results">3 Pieces</p>
+                  <p className="flex__movie--results">{state[0].length + " Pieces"}</p>
                 </div>
               </section>
               <hr />
@@ -54,7 +60,7 @@ function Payment() {
                   <p className="flex__movie--infos1">Total Payment</p>
                 </div>
                 <div className="flex__results">
-                  <p className="flex__movie--results1">$30,00</p>
+                  <p className="flex__movie--results1">${50 * state[0].length}</p>
                 </div>
               </section>
             </div>
@@ -64,53 +70,58 @@ function Payment() {
               <section className="seat__border--boxs">
                 <button className="border__box--grids">
                   <img
-                    src="./paymentPage/assets/logos_google-pay.png"
+                    src={require("../../assets/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png")}
+                    alt="payment/image"
+                    width="80%"
+                    name="BCA"
+                  />
+                </button>
+                <button className="border__box--grids">
+                  <img
+                    src={require("../../assets/assets/Logo DANA (PNG-240p) - FileVector69 1.png")}
                     alt="payment/image"
                     width="100%"
-                    height="100%"
-                  />
-                </button>
-                <button className="border__box--grids">
-                  <img src="./paymentPage/assets/Visa.png" alt="payment/image" width="100%" />
-                </button>
-                <button className="border__box--grids">
-                  <img
-                    src="./paymentPage/assets/Logo GoPay (SVG-240p) - FileVector69 1.png"
-                    alt="payment/image"
-                    width="100%"
+                    name="Dana"
                   />
                 </button>
                 <button className="border__box--grids">
                   <img
-                    src="./paymentPage/assets/logos_paypal.png"
-                    alt="payment/image"
-                    width="50%"
-                  />
-                </button>
-                <button className="border__box--grids">
-                  <img
-                    src="./paymentPage/assets/Logo DANA (PNG-240p) - FileVector69 1.png"
+                    src={require("../../assets/assets/Logo GoPay (SVG-240p) - FileVector69 1.png")}
                     alt="payment/image"
                     width="100%"
                   />
                 </button>
                 <button className="border__box--grids">
                   <img
-                    src="./paymentPage/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png"
+                    src={require("../../assets/assets/logos_paypal.png")}
+                    alt="payment/image"
+                    width="40%"
+                  />
+                </button>
+                <button className="border__box--grids">
+                  <img
+                    src={require("../../assets/assets/Logo DANA (PNG-240p) - FileVector69 1.png")}
                     alt="payment/image"
                     width="100%"
                   />
                 </button>
                 <button className="border__box--grids">
                   <img
-                    src="./paymentPage/assets/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.png"
+                    src={require("../../assets/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png")}
                     alt="payment/image"
-                    width="70%"
+                    width="90%"
+                  />
+                </button>
+                <button className="border__box--grids">
+                  <img
+                    src={require("../../assets/assets/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.png")}
+                    alt="payment/image"
+                    width="60%"
                   />
                 </button>
 
                 <button className="border__box--grids">
-                  <img src="./paymentPage/assets/ovo.png" alt="payment/image" width="100%" />
+                  <img src={require("../../assets/assets/ovo.png")} width="100%" />
                 </button>
               </section>
               <p className="ors">or</p>
@@ -128,7 +139,16 @@ function Payment() {
                 </a>
               </section>
               <section className="button__checkouts">
-                <button className="button__checkout--movies">Pay Your Order</button>
+                <button
+                  className="button__checkout--movies"
+                  onClick={() =>
+                    createBookingUser({
+                      timeBooking: "09.00"
+                    })
+                  }
+                >
+                  Pay Your Order
+                </button>
               </section>
             </div>
           </div>
@@ -140,9 +160,9 @@ function Payment() {
             <section className="personal__boxs">
               <h5 className="personal__box--headers">Full Name</h5>
               <input
-                type="text"
+                type="search"
                 placeholder="Write Your Full Name"
-                className="personal__box--name"
+                className="personal__box--names"
               />
               <h5 className="personal__box--headers">Email</h5>
               <input

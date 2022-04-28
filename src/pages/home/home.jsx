@@ -11,16 +11,19 @@ function Home() {
   //   console.log("detailClick", id);
   // };
   const navigate = useNavigate();
-  const limit = 6;
+  const limit = 5;
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
+  const [searchRelease, setSearchRelease] = useState("");
   useEffect(() => {
     getDataMovie();
   }, []);
   const getDataMovie = async () => {
     try {
-      const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
+      const resultMovie = await axios.get(
+        `movie?page=${page}&limit=${limit}&sort=&searchRelease=${searchRelease}`
+      );
       setData(resultMovie.data.data);
       setPageInfo(resultMovie.data.pagination);
     } catch (error) {
@@ -55,7 +58,7 @@ function Home() {
           <p className="nowShowing__header--viewAll"> View All</p>
         </div>
         <div className="movieCard">
-          <div className="movieDetails">
+          <div className="container movieDetails">
             {data.map((item) => (
               <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
             ))}
@@ -85,7 +88,7 @@ function Home() {
           <button className="upcoming__month--button">Desember</button>
         </div>
         {/*--------------------------Movie details-----------------------------*/}
-        <div className="movieDetails">
+        <div className="container movieDetails ">
           {data.map((item) => (
             <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
           ))}
