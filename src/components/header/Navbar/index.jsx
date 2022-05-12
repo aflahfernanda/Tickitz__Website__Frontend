@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "./index.css";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -7,7 +8,7 @@ function Navbar() {
     navigate("/login");
   };
   return (
-    <div className="container">
+    <div>
       <nav className="container-fluid navbar navbar-expand-lg navbar-light nav--edit background">
         <div className="container-fluid">
           <a className="navbar-brand" href="./homeDekstop.html">

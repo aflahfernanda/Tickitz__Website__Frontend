@@ -54,7 +54,7 @@ main {
   font-family: "Inter", sans-serif;
   padding: 10px 0px;
 }
-.input {
+.input__header {
   padding: 10px 0px;
   font-size: small;
   font-weight: bold;
@@ -105,13 +105,14 @@ main {
     display: flex;
     max-width: 100%;
   }
-  .signUp__image {
+  .signUp__image__login {
     flex: 0;
     background-image: none;
+    display: none;
   }
   .signUp {
     flex: 1;
-    margin: 33px 0;
+    margin: 33px 10%;
     padding: 0 0;
   }
   .tickitz {
@@ -145,7 +146,7 @@ main {
     font-size: 18px;
     margin-bottom: 30px;
   }
-  .input {
+  .input__header {
     padding: 10px 0px;
     font-size: 16px;
     font-weight: bold;

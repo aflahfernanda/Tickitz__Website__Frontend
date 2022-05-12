@@ -35,7 +35,7 @@ function Home() {
     console.log(id);
   };
   return (
-    <>
+    <div className="container">
       <Navbar />
       <main>
         {/*--------------------------Welcome-----------------------------*/}
@@ -52,13 +52,13 @@ function Home() {
       </main>
 
       {/*--------------------------Now Showing-----------------------------*/}
-      <div className=" nowShowing" style={{ width: "100%" }}>
-        <div className="container nowShowing__header">
+      <div className=" container nowShowing" style={{ width: "100%" }}>
+        <div className="nowShowing__header">
           <p className="nowShowing__header--nowShowing"> Now Showing </p>
           <p className="nowShowing__header--viewAll"> View All</p>
         </div>
         <div className="movieCard">
-          <div className="container movieDetails">
+          <div className="movieDetails">
             {data.map((item) => (
               <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
             ))}
@@ -67,8 +67,8 @@ function Home() {
       </div>
       {/*--------------------------UpcomingMonth-----------------------------*/}
 
-      <section className=" upcoming" style={{ width: "100%" }}>
-        <div className="container upcoming__header">
+      <section className=" container upcoming" style={{ width: "100%" }}>
+        <div className="upcoming__header">
           <p className="upcoming__header--upcoming"> Upcoming Movies</p>
           <p className="upcoming__header--viewAll"> View All</p>
         </div>
@@ -88,7 +88,7 @@ function Home() {
           <button className="upcoming__month--button">Desember</button>
         </div>
         {/*--------------------------Movie details-----------------------------*/}
-        <div className="container movieDetails ">
+        <div className=" movieDetails ">
           {data.map((item) => (
             <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
           ))}
@@ -110,7 +110,7 @@ function Home() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

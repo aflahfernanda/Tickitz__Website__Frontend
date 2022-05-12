@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "../../utils/axios";
 import { useNavigate } from "react-router-dom";
 import "./signup.css";
@@ -11,7 +11,7 @@ function SignUp() {
   });
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
-
+  console.log(form);
   const handleChangeForm = (event) => {
     // console.log("User sedang mengetik");
     // console.log(event.target.name);
@@ -33,16 +33,23 @@ function SignUp() {
       const resultUser = [
         {
           id: 1,
-          name: "Bagus"
+          name: "aflah",
+          role: "admin"
         }
       ];
+      console.log(resultLogin);
       // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai
       setIsError(false);
       setMessage(resultLogin.data.msg);
+      localStorage.setItem("role", resultLogin.data.data.role);
       localStorage.setItem("token", resultLogin.data.data.token);
       localStorage.setItem("refreshToken", resultLogin.data.data.refreshToken);
       localStorage.setItem("dataUser", JSON.stringify(resultUser[0]));
-      navigate("/home");
+      if (resultUser[0].role == "admin") {
+        navigate("/manageMovie");
+      } else {
+        navigate("/home");
+      }
 
       //   UNTUK GET DATA USER
       //   const dataUser = JSON.parse(localStorage.getItem(dataUser));
@@ -81,7 +88,7 @@ function SignUp() {
             </div>
           )}
           {/*handle submit---------------------------------*/}
-          <h4 className="input">Email</h4>
+          <h4 className="input__header">Email</h4>
           <form onSubmit={handleSubmit} onReset={handleReset}>
             <input
               type="email"
@@ -90,7 +97,7 @@ function SignUp() {
               className="signUp__input"
               onChange={handleChangeForm}
             />
-            <h4 className="input">Password</h4>
+            <h4 className="input__header">Password</h4>
             <input
               type="password"
               name="password"

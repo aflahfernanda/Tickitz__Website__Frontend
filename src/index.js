@@ -5,11 +5,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { Provider } from "react-redux";
+// without redux persist
+// import store from "./stores";
+
+// with redux persist
+import stores from "./stores";
+const { persistor, store } = stores;
+console.log(persistor);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

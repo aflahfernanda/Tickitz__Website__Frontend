@@ -145,7 +145,7 @@ input[type="text"]:focus {
   margin-bottom: 100px;
   display: inline;
   overflow-x: auto;
-  margin: 10px 0 0 8vh;
+  margin: 10px 0;
   padding: 40px 40px;
   bottom: 100px;
 }
@@ -292,7 +292,7 @@ input[type="text"]:focus {
 /*---------------------------month-----------------------------------------------*/
 .upcoming__month {
   position: relative;
-  margin: 0 0 0 100px;
+  margin: 0 0 150px 0;
   text-align: center;
   overflow-x: auto;
   white-space: nowrap;
