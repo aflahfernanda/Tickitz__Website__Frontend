@@ -7,12 +7,21 @@ function Navbar() {
   const handleLogout = () => {
     navigate("/login");
   };
+
+  const handleHome = () => {
+    navigate("/home");
+  };
   return (
     <div>
       <nav className="container-fluid navbar navbar-expand-lg navbar-light nav--edit background">
         <div className="container-fluid">
-          <a className="navbar-brand" href="./homeDekstop.html">
-            <img src={require("./assets/Tickitz 2.png")} alt="logo/image" width="80%" />
+          <a className="navbar-brand">
+            <img
+              src={require("./assets/Tickitz 2.png")}
+              alt="logo/image"
+              width="80%"
+              onClick={handleHome}
+            />
           </a>
           <div>
             <button

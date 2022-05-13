@@ -19,6 +19,9 @@ function ManageMovie() {
   useEffect(() => {
     getdataMovie();
   }, []);
+  useEffect(() => {
+    getdataMovie();
+  }, [page]);
   const dispatch = useDispatch();
   const [form, setForm] = useState({
     name: "",
@@ -26,8 +29,7 @@ function ManageMovie() {
     category: "",
     releaseDate: "",
     cast: "",
-    durationHour: "",
-    durationMinute: "",
+    duration: "",
     synopsis: "",
     image: null
   });
@@ -70,30 +72,23 @@ function ManageMovie() {
       setForm({ ...form, [name]: value });
     }
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(form);
-    setImage(null);
-    const formData = new FormData();
-    for (const data in form) {
-      formData.append(data, form[data]);
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      console.log(form);
+      setImage(null);
+      const formData = new FormData();
+      for (const data in form) {
+        formData.append(data, form[data]);
+      }
+      dispatch(postMovie(formData));
+      getDataMovie();
+    } catch (error) {
+      console.log(error.response);
     }
-    dispatch(postMovie(formData));
-    getDataMovie();
   };
   const setUpdate = (data) => {
-    const {
-      id,
-      name,
-      director,
-      category,
-      releaseDate,
-      cast,
-      durationHour,
-      durationMinute,
-      synopsis,
-      image
-    } = data;
+    const { id, name, director, category, releaseDate, cast, duration, synopsis, image } = data;
     setForm({
       ...form,
       name,
@@ -101,8 +96,7 @@ function ManageMovie() {
       category,
       releaseDate,
       cast,
-      durationHour,
-      durationMinute,
+      duration,
       synopsis,
       image
     });
@@ -131,14 +125,13 @@ function ManageMovie() {
       <Navbar />
       <h2>Form Movie</h2>
       {/* ------------------------------manageMovie Input-------------------------------- */}
-      <form onSubmit={isUpdate ? handleSubmit : handleUpdate}>
+      <form onSubmit={isUpdate ? handleUpdate : handleSubmit}>
         <div className="manageMovie__updateMovie">
           <div className="manageMovie__updateMovie--image">
-            <img
-              src={require("../../assets/assets/Rectangle 112.png")}
-              alt="logo/image"
-              width="80%"
-            />
+            <div>
+              {image && <img src={image} alt="Image Movie Preview" width="50%" />}
+              <input type="file" name="image" onChange={(event) => handleChangeForm(event)} />
+            </div>
           </div>
           <div className="manageMovie__updateMovie--name">
             <h5>Movie Name</h5>
@@ -159,7 +152,7 @@ function ManageMovie() {
             />
             <h5>Release Date</h5>
             <input
-              type="search"
+              type="date"
               placeholder="input release date"
               name="releaseDate"
               onChange={(event) => handleChangeForm(event)}
@@ -189,12 +182,12 @@ function ManageMovie() {
                 <input
                   type="search"
                   placeholder="input hour"
-                  name="durationHour"
+                  name="duration"
                   onChange={(event) => handleChangeForm(event)}
                   value={form.duration}
                 />
               </div>
-              <div className="manageMovie__updateMovie--durationMinute">
+              {/* <div className="manageMovie__updateMovie--durationMinute">
                 <h5>Duration Minute</h5>
                 <input
                   type="search"
@@ -203,7 +196,7 @@ function ManageMovie() {
                   onChange={(event) => handleChangeForm(event)}
                   value={form.duration}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           {/* ------------------------------manageMovie Input-------------------------------- */}
@@ -218,11 +211,7 @@ function ManageMovie() {
             value={form.synopsis}
           />
         </div>
-        <div>
-          <h3>update image</h3>
-          <input type="file" name="image" onChange={(event) => handleChangeForm(event)} />
-          {image && <img src={image} alt="Image Movie Preview" />}
-        </div>
+
         <button>Reset</button>
         <button type="submit">{isUpdate ? "Update" : "Submit"}</button>
       </form>

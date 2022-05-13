@@ -34,6 +34,9 @@ function Home() {
     navigate(`/moviedetail/${id}`);
     console.log(id);
   };
+  const handleviewAllMovie = () => {
+    navigate("/home/viewAll");
+  };
   return (
     <div className="container">
       <Navbar />
@@ -55,7 +58,9 @@ function Home() {
       <div className=" container nowShowing" style={{ width: "100%" }}>
         <div className="nowShowing__header">
           <p className="nowShowing__header--nowShowing"> Now Showing </p>
-          <p className="nowShowing__header--viewAll"> View All</p>
+          <p className="nowShowing__header--viewAll" onClick={handleviewAllMovie}>
+            View All
+          </p>
         </div>
         <div className="movieCard">
           <div className="movieDetails">
@@ -70,7 +75,9 @@ function Home() {
       <section className=" container upcoming" style={{ width: "100%" }}>
         <div className="upcoming__header">
           <p className="upcoming__header--upcoming"> Upcoming Movies</p>
-          <p className="upcoming__header--viewAll"> View All</p>
+          <p className="upcoming__header--viewAll" onClick={handleviewAllMovie}>
+            View All
+          </p>
         </div>
 
         <div className="upcoming__month">

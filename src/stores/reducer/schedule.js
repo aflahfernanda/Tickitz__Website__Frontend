@@ -6,12 +6,12 @@ const initialState = {
   msg: ""
 };
 
-const movie = (state = initialState, action) => {
+const schedule = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_DATA_MOVIE_PENDING": {
+    case "GET_DATA_SCHEDULE_PENDING": {
       return { ...state, isLoading: true, isError: false };
     }
-    case "GET_DATA_MOVIE_FULFILLED": {
+    case "GET_DATA_SCHEDULE_FULFILLED": {
       console.log(action.payload);
       return {
         ...state,
@@ -22,7 +22,7 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "GET_DATA_MOVIE_REJECTED": {
+    case "GET_DATA_SCHEDULE_REJECTED": {
       console.log(action.payload);
       return {
         ...state,
@@ -33,21 +33,21 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "POST_MOVIE_PENDING": {
+    case "POST_SCHEDULE_PENDING": {
       return {
         ...state,
         isLoading: true,
         isError: false
       };
     }
-    case "POST_MOVIE_FULFILLED": {
+    case "POST_SCHEDULE_FULFILLED": {
       return {
         ...state,
         isLoading: false,
         isError: false
       };
     }
-    case "POST_MOVIE_REJECTED": {
+    case "POST_SCHEDULE_REJECTED": {
       return {
         ...state,
         isLoading: false,
@@ -55,14 +55,14 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "UPDATE_MOVIE_PENDING": {
+    case "UPDATE_SCHEDULE_PENDING": {
       return {
         ...state,
         isLoading: true,
         isError: false
       };
     }
-    case "UPDATE_MOVIE_FULFILLED": {
+    case "UPDATE_SCHEDULE_FULFILLED": {
       return {
         ...state,
         isLoading: false,
@@ -70,7 +70,7 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "UPDATE_MOVIE_REJECTED": {
+    case "UPDATE_SCHEDULE_REJECTED": {
       return {
         ...state,
         isLoading: false,
@@ -78,14 +78,14 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "DELETE_MOVIE_PENDING": {
+    case "DELETE_SCHEDULE_PENDING": {
       return {
         ...state,
         isLoading: true,
         isError: false
       };
     }
-    case "DELETE_MOVIE_FULFILLED": {
+    case "DELETE_SCHEDULE_FULFILLED": {
       return {
         ...state,
         isLoading: false,
@@ -93,7 +93,7 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "DELETE_MOVIE_REJECTED": {
+    case "DELETE_SCHEDULE_REJECTED": {
       return {
         ...state,
         isLoading: false,
@@ -107,4 +107,4 @@ const movie = (state = initialState, action) => {
   }
 };
 
-export default movie;
+export default schedule;

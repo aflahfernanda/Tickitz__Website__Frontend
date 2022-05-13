@@ -20,6 +20,7 @@ function App() {
       <Routes>
         <Route path="signin" element={<SignIn />} />
         <Route path="login" element={<SignUp />} />
+
         <Route element={<PublicRoute restricted={true} />}></Route>
         <Route element={<PrivateRoute isAdmin={true} />}>
           <Route path="manageMovie" element={<ManageMovie />} />

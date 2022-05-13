@@ -138,6 +138,7 @@ input[type="text"]:focus {
   text-align: right;
   color: #5f2eea;
   font-weight: bold;
+  cursor: pointer;
 }
 /*---------------------------cards image---------*/
 .movieDetails {

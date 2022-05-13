@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@100&family=Mulish:wght@200;600;700&display=swap");
+
+* {
+  font-family: "Mulish", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.manageSchedule {
+  background-color: white;
+  display: flex;
+}
+.manageSchedule__image {
+  flex: 1;
+  background-color: aqua;
+}
+.manageSchedule__movie {
+  flex: 2;
+  background-color: bisque;
+}
+.manageSchedule__location {
+  flex: 2;
+  background-color: cornsilk;
+}
