@@ -3,7 +3,7 @@ import "./viewAll.css";
 import Navbar from "../../components/header/Navbar/index";
 import Footer from "../../components/footer/index";
 import Card from "../../components/card";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, createSearchParams, useSearchParams } from "react-router-dom";
 import axios from "../../utils/axios";
 import Pagination from "react-paginate";
 
@@ -13,18 +13,39 @@ function ViewAll() {
   // };
   const limit = 8;
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("");
-  const [release, setRelease] = useState("");
-  const [page, setPage] = useState(1);
+  const [searchParams] = useSearchParams();
+  const params = Object.fromEntries([...searchParams]);
+  const [search, setSearch] = useState(params.search ? params.search : null);
+  const [sort, setSort] = useState(params.sort ? params.sort : null);
+
+  const [release, setRelease] = useState(params.releaseDate ? params.releaseDate : null);
+  const [page, setPage] = useState(params.page ? params.page : "1");
   const [data, setData] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
+
   useEffect(() => {
     getDataMovie();
   }, []);
   useEffect(() => {
     getDataMovie();
-  }, [page]);
+    const params = {};
+    if (page !== "1") {
+      params.page = page;
+    }
+    if (release) {
+      params.release = release;
+    }
+    if (search) {
+      params.search = search;
+    }
+    if (sort) {
+      params.sort = sort;
+    }
+    navigate({
+      pathname: "/home/viewAll",
+      search: `?${createSearchParams(params)}`
+    });
+  }, [page, release, search, sort]);
   const handlePagination = (data) => {
     setPage(data.selected + 1);
   };
@@ -56,7 +77,7 @@ function ViewAll() {
     navigate(`/moviedetail/${id}`);
   };
   return (
-    <>
+    <div className="container">
       <Navbar />
       {/*--------------------------UpcomingMonth-----------------------------*/}
 
@@ -135,7 +156,7 @@ function ViewAll() {
         initialPage={page - 1}
       />
       <Footer />
-    </>
+    </div>
   );
 }
 

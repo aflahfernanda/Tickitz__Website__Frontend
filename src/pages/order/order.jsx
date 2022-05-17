@@ -11,6 +11,7 @@ function OrderPage() {
   const listSeat = ["A", "B", "C", "D", "E", "F", "G"];
   const [selectedSeat, setSelectedSeat] = useState([]);
   const [reservedSeat, setReversedSeat] = useState(["A1", "B2", "C11"]);
+  console.log(state);
 
   const handleSelectSeat = (seat) => {
     console.log(seat);
@@ -32,8 +33,13 @@ function OrderPage() {
     // [2] = lempar data dengan state
     navigate("/paymentpage", { state: [selectedSeat, state[0], state[1]] });
   };
+  const handleChangeMovie = () => {
+    // [1] = localstorage
+    // [2] = lempar data dengan state
+    navigate("/home/viewAll");
+  };
   return (
-    <>
+    <div className="container">
       <Navbar />
       {/*<!----------------------------------Movie Selected---------------------------------------------->*/}
       <section className="movieSelected">
@@ -42,9 +48,10 @@ function OrderPage() {
             <h3 className="movieSelected__header">Movie Selected</h3>
             <div className="movieSelected__movieSelected">
               <p className="movieSelected__movieSelected--title">{state[1].name}</p>
-              <a href="homeDekstop.html">
-                <button className="movieSelected__movieSelected--button">Change Movie</button>
-              </a>
+
+              <button className="movieSelected__movieSelected--button" onClick={handleChangeMovie}>
+                Change Movie
+              </button>
             </div>
             <h3 className="seatSelected__header">Choose Your Seat</h3>
             <div className="seatSelected__movieSelected">
@@ -151,7 +158,7 @@ function OrderPage() {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

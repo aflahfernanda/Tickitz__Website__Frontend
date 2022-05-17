@@ -10,21 +10,65 @@
 .manageMovie__background {
   background-color: #f5f6f8;
 }
-
+.manageMovie__tittle {
+  font-weight: bold;
+}
 .manageMovie__updateMovie {
   background-color: white;
   display: flex;
+  height: 300px;
+  margin-bottom: 80px;
+  margin-top: 30px;
 }
 .manageMovie__updateMovie--image {
-  background-color: aqua;
   flex: 1;
+  border: solid gainsboro;
+  height: 50vh;
+  border-radius: 20px;
+  padding: 5px 5px;
+  margin-right: 40px;
+}
+.manageMovie__updateMovie--image--file {
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  border: solid white;
+  color: blueviolet;
+  font-size: 12px;
+}
+.manageMovie__updateMovie--image--preview {
+  width: 28vh;
+  margin: 10px 20px;
+  border: solid gainsboro;
+  border-radius: 12px;
+  padding: 10px 10px;
 }
 .manageMovie__updateMovie--name {
-  background-color: antiquewhite;
   flex: 2;
+  margin-right: 50px;
+}
+.manageMovie__header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.manageMovie__inputType {
+  border: solid gainsboro;
+  border-radius: 12px;
+  font-size: 20px;
+  height: 50px;
+  width: 100%;
+  padding: 20px;
+}
+.manageMovie__inputTypeSynopsis {
+  border: solid gainsboro;
+  border-radius: 12px;
+  font-size: 15px;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 .manageMovie__updateMovie--category {
-  background-color: brown;
   flex: 2;
 }
 /*manage Movie Duration slice*/
@@ -37,19 +81,58 @@
 .manageMovie__updateMovie--durationMinute {
   flex: 1;
 }
+.manageMovie__submitReset {
+  text-align: right;
+}
+.manageMovie__submitReset--button {
+  width: 15%;
+  height: 50px;
+  border: solid blueviolet 2px;
+  border-radius: 12px;
+  background-color: white;
+  font-weight: bold;
+  color: blueviolet;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+.manageMovie__submitReset--button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
 /*dataMovie Header slice*/
 .dataMovie__header {
   display: flex;
+  margin-bottom: 50px;
 }
 .dataMovie {
   flex: 1;
+  font-weight: bold;
 }
-.searchSort {
+.sortSearch {
   flex: 1;
+  text-align: right;
+}
+.sortSearch__sort {
+  width: 30%;
+  height: 50px;
+  border-radius: 12px;
+  margin-right: 20px;
+}
+.sortSearch__search {
+  width: 30%;
+  height: 50px;
+  border-radius: 12px;
 }
 .dataMovie__update {
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 20px;
   row-gap: 20px;
+}
+.pagination {
+  font-weight: bold;
+  margin: 40px;
+  justify-content: center;
+  text-align: center;
 }

@@ -1,13 +1,69 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./payment.css";
 import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
 
 function Payment() {
   const { state } = useLocation();
-  console.log(state);
+  const [payButton, setPayButton] = useState("");
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+  const [form, setForm] = useState({
+    userId: "",
+    scheduleId: "",
+    dateBooking: "",
+    timeBooking: "",
+    paymentMethod: "",
+    totalPayment: "",
+    statusPayment: "",
+    seat: []
+  });
+  const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  // const [keyword, setKeyword] = useState("");
 
+  // const handleChangeEmail = (event) => {
+  //   console.log(event.target.value);
+  //   setEmail(event.target.value);
+  // };
+  // const handlePassword = (event) => {
+  //   if (event.key === "Enter") {
+  //     console.log("user input a password");
+  //     console.log("password is", event.target.value);
+  //   }
+  // };
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      // console.log("Submit Login");
+      // Input = email password di siapkan
+      // console.log(form);
+      // Proses = memanggil axios
+      const formData = new FormData();
+      for (const data in form) {
+        formData.append(data, form[data]);
+      }
+      const resultLogin = await axios.post("booking");
+      console.log(resultLogin);
+      console.log(resultLogin.data.message);
+      // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai
+      setIsError(false);
+      setMessage(resultLogin.data.message);
+      navigate("/login");
+    } catch (error) {
+      console.log(error.response);
+      setIsError(true);
+      setMessage(error.response.data.msg);
+    }
+  };
+
+  const handlePayment = (event) => {
+    setPayButton(event.target.name);
+  };
+  console.log(payButton);
   return (
     <>
       <Navbar />
@@ -68,7 +124,7 @@ function Payment() {
             <h1 className="container movieInfo__headers">Choose a Payment Method</h1>
             <section className="seat__borders">
               <section className="seat__border--boxs">
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="BCA Klickpay">
                   <img
                     src={require("../../assets/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png")}
                     alt="payment/image"
@@ -76,7 +132,7 @@ function Payment() {
                     name="BCA"
                   />
                 </button>
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="Dana">
                   <img
                     src={require("../../assets/assets/Logo DANA (PNG-240p) - FileVector69 1.png")}
                     alt="payment/image"
@@ -84,35 +140,35 @@ function Payment() {
                     name="Dana"
                   />
                 </button>
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="Gopay">
                   <img
                     src={require("../../assets/assets/Logo GoPay (SVG-240p) - FileVector69 1.png")}
                     alt="payment/image"
                     width="100%"
                   />
                 </button>
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="Paypal">
                   <img
                     src={require("../../assets/assets/logos_paypal.png")}
                     alt="payment/image"
                     width="40%"
                   />
                 </button>
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="Dana">
                   <img
                     src={require("../../assets/assets/Logo DANA (PNG-240p) - FileVector69 1.png")}
                     alt="payment/image"
                     width="100%"
                   />
                 </button>
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="BCA Klickpay">
                   <img
                     src={require("../../assets/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png")}
                     alt="payment/image"
                     width="90%"
                   />
                 </button>
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="Bank BRI">
                   <img
                     src={require("../../assets/assets/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.png")}
                     alt="payment/image"
@@ -120,7 +176,7 @@ function Payment() {
                   />
                 </button>
 
-                <button className="border__box--grids">
+                <button className="border__box--grids" onClick={handlePayment} name="OVO">
                   <img src={require("../../assets/assets/ovo.png")} width="100%" />
                 </button>
               </section>
@@ -141,11 +197,12 @@ function Payment() {
               <section className="button__checkouts">
                 <button
                   className="button__checkout--movies"
-                  onClick={() =>
-                    createBookingUser({
-                      timeBooking: "09.00"
-                    })
-                  }
+                  // onClick={() =>
+                  //   createBookingUser({
+                  //     timeBooking: "09.00"
+                  //   })
+                  // }
+                  onClick={handleSubmit}
                 >
                   Pay Your Order
                 </button>

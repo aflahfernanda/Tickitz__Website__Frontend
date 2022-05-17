@@ -40,12 +40,13 @@ function Card(props) {
               : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
           }
           alt="Card image cap"
-          style={{ width: "250px" }}
+          style={{ width: "100%" }}
         />
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{category}</p>
-          <button className="btn btn-primary" onClick={() => props.handleDetail(id)}>
+
+          <button className="btn btn-outline-primary" onClick={() => props.handleDetail(id)}>
             Details
           </button>
         </div>

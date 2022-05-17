@@ -1,10 +1,10 @@
 import { type } from "@testing-library/user-event/dist/type";
 import axios from "../../utils/axios";
 
-export const getDataSchedule = () => {
+export const getDataSchedule = (page, limit) => {
   return {
     type: "GET_DATA_SCHEDULE",
-    payload: axios.get("schedule?page=1&limit=6")
+    payload: axios.get(`schedule?page=${page}&limit=${limit}&searchLocation=&sort=&searchMovieId=2`)
   };
 };
 

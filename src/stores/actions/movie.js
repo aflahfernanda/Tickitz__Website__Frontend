@@ -1,10 +1,10 @@
 import { type } from "@testing-library/user-event/dist/type";
 import axios from "../../utils/axios";
 
-export const getDataMovie = (page, limit) => {
+export const getDataMovie = (page, limit, search, sort) => {
   return {
     type: "GET_DATA_MOVIE",
-    payload: axios.get(`movie?page=${page}&limit=${limit}`)
+    payload: axios.get(`movie?page=${page}&limit=${limit}&sort=&searchRelease=&searchName=`)
   };
 };
 
@@ -23,6 +23,6 @@ export const updateMovie = (id, form) => {
 export const deleteMovie = (id) => {
   return {
     type: "DELETE_MOVIE",
-    payload: axios.patch(`movie/${id}`)
+    payload: axios.delete(`movie/${id}`)
   };
 };

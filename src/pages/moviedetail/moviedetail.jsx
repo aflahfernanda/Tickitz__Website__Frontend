@@ -64,11 +64,11 @@ function Detail() {
   };
   console.log(dataOrder);
   return (
-    <>
+    <div className="container">
       <Navbar />
       {/*movie detail------------------------------------------------------------------------*/}
       <section className="container">
-        <div className="movieDetails">
+        <div className="movieDetailss">
           <img
             src={
               data.image
@@ -76,7 +76,6 @@ function Detail() {
                 : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
             }
             alt="spiderman/image"
-            width="10%"
             height="80%"
             className="moviDetails__image"
           />
@@ -126,12 +125,9 @@ function Detail() {
             placeholder="Set A dates"
           />
           <select name="City" className="times__dropdown--location">
-            <option>Purwekerto</option>
-            <option>Bandung</option>
-            <option>Jakarta</option>
-            <option>Semarang</option>
-            <option>Surabaya</option>
-            <option>Yogyakarta</option>
+            {dataSchedule.map((item) => (
+              <option key={item.id}>{item.location}</option>
+            ))}
           </select>
         </div>
         {/*show Ticket------------------------------------------------------------------------*/}
@@ -183,7 +179,7 @@ function Detail() {
         <p className="container or">View More</p>
       </section>
       <Footer />
-    </>
+    </div>
   );
 }
 

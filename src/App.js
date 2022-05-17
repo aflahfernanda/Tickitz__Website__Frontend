@@ -26,6 +26,7 @@ function App() {
           <Route path="manageMovie" element={<ManageMovie />} />
           <Route path="manageSchedule" element={<ManageSchedule />} />
         </Route>
+
         <Route element={<PrivateRoute isAdmin={false} />}>
           <Route path="home" element={<Home />} />
           <Route path="home/viewall" element={<ViewAll />} />

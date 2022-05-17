@@ -11,7 +11,7 @@ function Home() {
   //   console.log("detailClick", id);
   // };
   const navigate = useNavigate();
-  const limit = 5;
+  const limit = 4;
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
@@ -22,7 +22,7 @@ function Home() {
   const getDataMovie = async () => {
     try {
       const resultMovie = await axios.get(
-        `movie?page=${page}&limit=${limit}&sort=&searchRelease=${searchRelease}`
+        `movie?page=${page}&limit=${limit}&sort=&searchRelease=${searchRelease}&searchName=`
       );
       setData(resultMovie.data.data);
       setPageInfo(resultMovie.data.pagination);
@@ -36,6 +36,9 @@ function Home() {
   };
   const handleviewAllMovie = () => {
     navigate("/home/viewAll");
+  };
+  const handleMonth = (event) => {
+    setSearchRelease(event.target.id);
   };
   return (
     <div className="container">
@@ -55,19 +58,20 @@ function Home() {
       </main>
 
       {/*--------------------------Now Showing-----------------------------*/}
-      <div className=" container nowShowing" style={{ width: "100%" }}>
+      <div
+        className=" container nowShowing"
+        style={{ width: "100%", position: "relative", bottom: "10px" }}
+      >
         <div className="nowShowing__header">
           <p className="nowShowing__header--nowShowing"> Now Showing </p>
           <p className="nowShowing__header--viewAll" onClick={handleviewAllMovie}>
             View All
           </p>
         </div>
-        <div className="movieCard">
-          <div className="movieDetails">
-            {data.map((item) => (
-              <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
-            ))}
-          </div>
+        <div className="movieDetailsView" style={{ position: "relative", bottom: "120px" }}>
+          {data.map((item) => (
+            <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
+          ))}
         </div>
       </div>
       {/*--------------------------UpcomingMonth-----------------------------*/}
@@ -81,21 +85,53 @@ function Home() {
         </div>
 
         <div className="upcoming__month">
-          <button className="upcoming__month--button">January</button>
-          <button className="upcoming__month--button">February</button>
-          <button className="upcoming__month--button">March</button>
-          <button className="upcoming__month--button">April</button>
-          <button className="upcoming__month--button">May</button>
-          <button className="upcoming__month--button">June</button>
-          <button className="upcoming__month--button">July</button>
-          <button className="upcoming__month--button">August</button>
-          <button className="upcoming__month--button">September</button>
-          <button className="upcoming__month--button">October</button>
-          <button className="upcoming__month--button">November</button>
-          <button className="upcoming__month--button">Desember</button>
+          <button className="upcoming__month--button" id="" onClick={handleMonth}>
+            All Month
+          </button>
+          <button className="upcoming__month--button" id="01" onClick={handleMonth}>
+            January
+          </button>
+          <button className="upcoming__month--button" id="02" onClick={handleMonth}>
+            February
+          </button>
+          <button className="upcoming__month--button" id="03" onClick={handleMonth}>
+            March
+          </button>
+          <button className="upcoming__month--button" id="04" onClick={handleMonth}>
+            April
+          </button>
+          <button className="upcoming__month--button" id="05" onClick={handleMonth}>
+            May
+          </button>
+          <button className="upcoming__month--button" id="06" onClick={handleMonth}>
+            June
+          </button>
+          <button className="upcoming__month--button" id="07" onClick={handleMonth}>
+            July
+          </button>
+          <button className="upcoming__month--button" id="08" onClick={handleMonth}>
+            August
+          </button>
+          <button className="upcoming__month--button" id="09" onClick={handleMonth}>
+            September
+          </button>
+          <button className="upcoming__month--button" id="10" onClick={handleMonth}>
+            October
+          </button>
+          <button className="upcoming__month--button" id="11" onClick={handleMonth}>
+            November
+          </button>
+          <button className="upcoming__month--button" id="12" onClick={handleMonth}>
+            Desember
+          </button>
         </div>
         {/*--------------------------Movie details-----------------------------*/}
-        <div className=" movieDetails ">
+        {/* <div className=" movieDetails ">
+          {data.map((item) => (
+            <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
+          ))}
+        </div> */}
+        <div className="movieDetailsView" style={{ position: "relative", bottom: "100px" }}>
           {data.map((item) => (
             <Card data={item} key={item.id} handleDetail={handleDetailMovie} />
           ))}

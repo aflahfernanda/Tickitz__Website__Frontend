@@ -2,12 +2,13 @@ import React from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./index.css";
 
-function AdminCard(props) {
+function ScheduleCard(props) {
   //   const { name, category, src } = props;
   //   const handleDetail = () => {
   //     props.handleDetail(1, data);
   const navigate = useNavigate();
-  const { id, name, category, image } = props.data;
+  const { id, image, name, movieId, price, premiere, location, dateStart, dateEnd, time } =
+    props.data;
   const handleMovieDetail = () => {
     navigate("/moviedetail");
   };
@@ -34,17 +35,28 @@ function AdminCard(props) {
       <div className="card" style={{ width: "80%" }}>
         <img
           className="card-img-top"
-          src={
-            image
-              ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
-              : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
-          }
+          src={require("../../assets/assets/VectorCinema1.png")}
           alt="Card image cap"
           style={{ width: "250px" }}
         />
         <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <p className="card-text">{category}</p>
+          <h5 className="card-title">{premiere}</h5>
+          <p className="card-text">{location}</p>
+          {time.split(",").map((item) => (
+            <button
+              key={item}
+              className="showTickets__times--timesLight"
+              // onClick={() =>
+              //   changeDataBooking({
+              //     timeBooking: itemTime,
+              //     scheduleId: item.id,
+              //     premiere: item.premiere
+              //   })
+              // }
+            >
+              {item}
+            </button>
+          ))}
           <button
             className="btn btn-outline-primary"
             style={{
@@ -69,9 +81,9 @@ function AdminCard(props) {
     </>
   );
 }
-AdminCard.defaultProps = {
+ScheduleCard.defaultProps = {
   name: "default name",
   category: "default category"
 };
 
-export default AdminCard;
+export default ScheduleCard;

@@ -2,7 +2,14 @@ import { combineReducers } from "redux";
 
 import movie from "./movie";
 import schedule from "./schedule";
-export default combineReducers({
+import user from "./user";
+const reducer = combineReducers({
   movie,
-  schedule
+  schedule,
+  user
 });
+// export default combineReducers({
+//   movie,
+//   schedule
+// });
+export default reducer;

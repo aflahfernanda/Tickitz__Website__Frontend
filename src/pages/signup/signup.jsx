@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../utils/axios";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getUserById } from "../../stores/actions/user";
 import "./signup.css";
 
 function SignUp() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
     email: "",
     password: ""
   });
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
-  console.log(form);
   const handleChangeForm = (event) => {
     // console.log("User sedang mengetik");
     // console.log(event.target.name);
     // console.log(event.target.value);
     setForm({ ...form, [event.target.name]: event.target.value });
-    console.log(form);
+    console.log(event.target.name);
   };
 
   const handleSubmit = async (event) => {
@@ -28,29 +30,20 @@ function SignUp() {
       // console.log(form);
       // Proses = memanggil axios
       const resultLogin = await axios.post("auth/login", form);
-      // proses get data user by id
-      //   const resultUser = await axios.get(`user/${resultLogin.data.data.id}`)
-      const resultUser = [
-        {
-          id: 1,
-          name: "aflah",
-          role: "admin"
-        }
-      ];
-      console.log(resultLogin);
+      console.log(resultLogin.data.msg);
       // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai
       setIsError(false);
       setMessage(resultLogin.data.msg);
-      localStorage.setItem("role", resultLogin.data.data.role);
       localStorage.setItem("token", resultLogin.data.data.token);
       localStorage.setItem("refreshToken", resultLogin.data.data.refreshToken);
-      localStorage.setItem("dataUser", JSON.stringify(resultUser[0]));
-      if (resultUser[0].role == "admin") {
+
+      await dispatch(getUserById(resultLogin.data.data.id));
+
+      if (resultLogin.data.msg === "succes login to admin") {
         navigate("/manageMovie");
       } else {
         navigate("/home");
       }
-
       //   UNTUK GET DATA USER
       //   const dataUser = JSON.parse(localStorage.getItem(dataUser));
     } catch (error) {
@@ -109,6 +102,9 @@ function SignUp() {
               Sign In
             </button>
           </form>
+          <p>
+            dont have an account?<a href="/signin">SignUp</a>
+          </p>
         </section>
       </main>
     </>
