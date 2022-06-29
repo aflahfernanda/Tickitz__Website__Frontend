@@ -10,8 +10,8 @@ import reducer from "./reducer";
 const persistedReducer = persistReducer(
   {
     key: "root",
-    storage,
-    whitelist: ["user"]
+    storage
+    // whitelist: ["user"]
   },
   reducer
 );

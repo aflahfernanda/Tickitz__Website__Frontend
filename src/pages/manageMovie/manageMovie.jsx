@@ -129,7 +129,7 @@ function ManageMovie() {
     setIdMovie(id);
     setIsUpdate(true);
   };
-  const handleUpdate = (e) => {
+  const handleUpdate = async (e) => {
     e.preventDefault();
     console.log(form);
     console.log(idMovie);
@@ -138,7 +138,7 @@ function ManageMovie() {
     for (const data in form) {
       formData.append(data, form[data]);
     }
-    dispatch(updateMovie(idMovie, formData));
+    await dispatch(updateMovie(idMovie, formData));
     getDataMovie();
     handleReset();
   };

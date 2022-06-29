@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, Navigate, Outlet } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function PublicRoute(props) {
   const location = useLocation();
@@ -11,3 +12,6 @@ export default function PublicRoute(props) {
 
   return <Outlet />;
 }
+PublicRoute.propTypes = {
+  restricted: PropTypes.bool
+};

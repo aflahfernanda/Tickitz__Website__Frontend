@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
 export default function PrivateRoute(props) {
   const location = useLocation();
@@ -15,3 +16,6 @@ export default function PrivateRoute(props) {
   }
   return <Outlet />;
 }
+PrivateRoute.propTypes = {
+  isAdmin: PropTypes.bool
+};

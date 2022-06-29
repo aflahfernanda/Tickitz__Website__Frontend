@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosApiIntances = axios.create({
-  // baseURL: "http://localhost:3001/"
-  baseURL: process.env.baseURL
+  baseURL: "https://project-paytickz.herokuapp.com/"
+  // REACT_APP_baseURL: process.env.baseURL
 });
 // Add a request interceptor
 axiosApiIntances.interceptors.request.use(

@@ -18,10 +18,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="signin" element={<SignIn />} />
-        <Route path="login" element={<SignUp />} />
+        <Route element={<PublicRoute restricted={true} />}>
+          <Route path="signin" element={<SignIn />} />
+          <Route path="login" element={<SignUp />} />
+        </Route>
 
-        <Route element={<PublicRoute restricted={true} />}></Route>
         <Route element={<PrivateRoute isAdmin={true} />}>
           <Route path="manageMovie" element={<ManageMovie />} />
           <Route path="manageSchedule" element={<ManageSchedule />} />
