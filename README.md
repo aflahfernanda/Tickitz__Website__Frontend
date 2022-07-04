@@ -82,7 +82,7 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
     <img src="./src/assets/assets/readmeHome6.png" width="400" />
 </p>
 <p float="left">
-  <img src="./src/assets/assets/readmeHome7.png" width="400" />
+  <img src="./src/assets/assets/readmeHome7png.png" width="400" />
 </p>
 <br>
 <h3 align='center'>Admin Preview Pages</h3>
