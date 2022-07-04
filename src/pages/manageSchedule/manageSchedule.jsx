@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./manageSchedule.css";
-import AdminNavbar from "../../components/header/AdminNavbar";
+import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer/index";
 import ScheduleCard from "../../components/ScheduleCard";
 
@@ -21,15 +21,20 @@ import AdminCard from "../../components/adminCard";
 function ManageSchedule() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const [scheduleId, setScheduleId] = useState("");
   const params = Object.fromEntries([...searchParams]);
-  const limit = 8;
+  const limit = 100;
   const [page, setPage] = useState(1);
-  // const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
+  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const [idMovie, setIdMovie] = useState("");
   const [isUpdate, setIsUpdate] = useState(false);
+  const [scheduleLocation, setScheduleLocation] = useState([]);
   const [image, setImage] = useState(null);
+  const [searchLocation, setSearchLocation] = useState("");
+  const [searchDate, setSearchDate] = useState("");
+  const [searchMovieId, setSearchMovieId] = useState("1");
   const movie = useSelector((state) => state.movie);
   const schedule = useSelector((state) => state.schedule);
   const [form, setForm] = useState({
@@ -41,9 +46,17 @@ function ManageSchedule() {
     dateEnd: "",
     time: []
   });
-
   useEffect(() => {
     getdataSchedule();
+  }, [searchMovieId]);
+  useEffect(() => {
+    getdataMovie();
+  }, []);
+  useEffect(() => {
+    getdataMovieId();
+  }, []);
+  useEffect(() => {
+    getdataScheduleLocation();
   }, []);
   useEffect(() => {
     getdataSchedule();
@@ -58,21 +71,38 @@ function ManageSchedule() {
       pathname: "/manageSchedule",
       search: `?${createSearchParams(params)}`
     });
-  }, [page, isUpdate]);
-
-  const getdataSchedule = async () => {
+  }, [page, isUpdate, sort, searchDate]);
+  console.log(schedule);
+  const getdataMovie = async () => {
     try {
-      await dispatch(getDataSchedule(page, limit));
-      await dispatch(getDataMovie(page, limit, sort));
+      await dispatch(getDataMovie(page, limit, sort, search));
+      getdataMovieId();
     } catch (error) {
       console.log(error.response);
     }
   };
-  const handleSearch = (event) => {
-    console.log(event);
-    if (event.key === "Enter") {
-      setSearch(event.target.value);
-      // console.log(event.target.value);
+  const getdataMovieId = async () => {
+    try {
+      const result = await axios.get(`movie/${searchMovieId}`);
+
+      setImage(result.data.data[0].image);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+  const getdataScheduleLocation = async () => {
+    try {
+      const result = await dispatch(getDataSchedule(page, limit, "", searchMovieId, ""));
+      setScheduleLocation(result.action.payload.data.data);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+  const getdataSchedule = async () => {
+    try {
+      await dispatch(getDataSchedule(page, limit, sort, searchMovieId, searchDate));
+    } catch (error) {
+      console.log(error.response);
     }
   };
   const handleSort = (event) => {
@@ -82,6 +112,7 @@ function ManageSchedule() {
   const handleDetailMovie = (id) => {
     console.log(id);
   };
+  console.log(scheduleId);
   const handlePagination = (data) => {
     console.log(data);
     setPage(data.selected + 1);
@@ -101,12 +132,10 @@ function ManageSchedule() {
       e.preventDefault();
       console.log(form);
       setImage(null);
-      const formData = new FormData();
-      for (const data in form) {
-        formData.append(data, form[data]);
-      }
-      dispatch(postSchedule(formData));
-      getDataSchedule();
+      await dispatch(postSchedule(form));
+      alert("Succes Create Schedule, New Schedule Has Been Added");
+      getdataSchedule();
+      handleReset();
     } catch (error) {
       console.log(error.response);
     }
@@ -129,7 +158,8 @@ function ManageSchedule() {
     setIdMovie(id);
     setIsUpdate(true);
   };
-  const handleUpdate = (e) => {
+  console.log(form);
+  const handleUpdate = async (e) => {
     e.preventDefault();
     console.log(form);
     console.log(idMovie);
@@ -138,193 +168,229 @@ function ManageSchedule() {
     for (const data in form) {
       formData.append(data, form[data]);
     }
-    dispatch(updateSchedule(idMovie, formData));
-    getDataSchedule();
+    await dispatch(updateSchedule(idMovie, form));
+    alert("Succes Update Schedule");
+    getdataSchedule();
+    handleReset();
   };
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     console.log(id);
-    dispatch(deleteMovie(id));
-    getDataMovie();
+    await dispatch(deleteSchedule(id));
+    alert("Succes Delete Schedule");
+    getdataSchedule();
   };
-  const handleReset = (id) => {
-    console.log(id);
-    dispatch(deleteMovie(id));
-    getDataMovie();
+  const handleReset = () => {
+    setForm({
+      movieId: "",
+      price: "",
+      premiere: "",
+      location: "",
+      dateStart: "",
+      dateEnd: "",
+      time: []
+    });
+  };
+  const handleDataMovie = (e) => {
+    setSearchMovieId(e.target.value);
+    setForm({ ...form, movieId: e.target.value });
+  };
+  const handleFormPremiere = (value) => {
+    setForm({ ...form, premiere: value });
+  };
+  const handleDate = (event) => {
+    setSearchDate(event.target.value);
+    // if (dateChange) {
+    //   return Date;
+    // }
   };
   return (
-    <div className="container">
-      <AdminNavbar />
-      <h2 className="manageMovie__tittle">Form Scehdule</h2>
-      {/* ------------------------------manageMovie Input-------------------------------- */}
-      <form onSubmit={isUpdate ? handleUpdate : handleSubmit}>
-        <div className="manageMovie__updateMovie">
-          <div className="manageMovie__updateMovie--image">
-            <div>
-              <input
-                type="file"
-                name="image"
-                onChange={(event) => handleChangeForm(event)}
-                className="manageMovie__updateMovie--image--file"
+    <div>
+      <Navbar />
+      <div className="container">
+        <h2 className="manageMovie__tittle">a</h2>
+        {/* ------------------------------manageMovie Input-------------------------------- */}
+        <h2 className="manageMovie__tittles">Form Scehdule</h2>
+        <form onSubmit={isUpdate ? handleUpdate : handleSubmit}>
+          <div className="manageMovie__updateMovie">
+            <div className="manageMovie__updateMovie--image" style={{ border: "none" }}>
+              <img
+                src={
+                  image
+                    ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
+                    : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
+                }
+                alt="Image Movie Preview"
+                width="50%"
+                // style={{ marginTop: "50px" }}
+                className="manageMovie__updateMovie--image--preview"
               />
-              {image && (
-                <img
-                  src={image}
-                  alt="Image Movie Preview"
-                  width="50%"
-                  className="manageMovie__updateMovie--image--preview"
-                />
-              )}
             </div>
-          </div>
-          <div className="manageMovie__updateMovie--name">
-            <h5 className="manageMovie__header">Movie Name</h5>
-            <input
-              type="search"
-              placeholder="input director name"
-              name="name"
-              onChange={(event) => handleChangeForm(event)}
-              value={form.name}
-              className="manageMovie__inputType"
-            />
-            {/* <select name="movie" id="" onChange={(event) => handleChangeForm(event)}>
-              {schedule.data.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.name}
-                </option>
-              ))}
-            </select> */}
-            <h5 className="manageMovie__header">Price</h5>
-            <input
-              type="search"
-              placeholder="input director name"
-              name="price"
-              onChange={(event) => handleChangeForm(event)}
-              value={form.price}
-              className="manageMovie__inputType"
-            />
-            <h5 className="manageMovie__header">Premiere</h5>
-            <input
-              type="search"
-              placeholder="input release date"
-              name="premiere"
-              onChange={(event) => handleChangeForm(event)}
-              value={form.premiere}
-              className="manageMovie__inputType"
-            />
-          </div>
-          <div className="manageMovie__updateMovie--category">
-            <h5 className="manageMovie__header">Location</h5>
-            <input
-              type="search"
-              placeholder="input category"
-              name="location"
-              onChange={(event) => handleChangeForm(event)}
-              value={form.location}
-              className="manageMovie__inputType"
-            />
-            <h5 className="manageMovie__header">Date Start</h5>
-            <input
-              type="search"
-              placeholder="input cast name"
-              name="dateStart"
-              onChange={(event) => handleChangeForm(event)}
-              value={form.dateStart}
-              className="manageMovie__inputType"
-            />
-            <div className="manageMovie__updateMovie--duration">
-              <div className="manageMovie__updateMovie--durationHour">
-                <h5 className="manageMovie__header">Date End</h5>
-                <input
-                  type="search"
-                  placeholder="input hour"
-                  name="dateEnd"
-                  onChange={(event) => handleChangeForm(event)}
-                  value={form.dateEnd}
-                  className="manageMovie__inputType"
-                />
-              </div>
-              <div className="manageMovie__updateMovie--time">
-                <div className="manageMovie__updateMovie--time">
-                  <h5 className="manageMovie__header">Time</h5>
-                  <input
-                    type="search"
-                    placeholder="input hour"
-                    name="time"
-                    onChange={(event) => handleChangeForm(event)}
-                    value={form.time}
-                    className="manageMovie__inputType"
+            <div className="manageMovie__updateMovie--name">
+              <h5 className="manageMovie__header">Movie Name</h5>
+              <select name="Movie" className="manageMovie__inputTypes" onChange={handleDataMovie}>
+                {movie.data.map((item) => (
+                  <option key={item.id} value={item.id} id={item.id}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+              <h5 className="manageMovie__header">Price</h5>
+              <input
+                type="search"
+                placeholder="input Price"
+                name="price"
+                onChange={(event) => handleChangeForm(event)}
+                value={form.price}
+                className="manageMovie__inputType"
+              />
+              <h5 className="manageMovie__header">Premiere</h5>
+              <div className="manageSchedule__premiereFlex">
+                <div
+                  onClick={(value) => handleFormPremiere("hiflix")}
+                  className="manageSchedule__premiereName"
+                >
+                  <img
+                    src={require("../../assets/assets/VectorCinema3.png")}
+                    alt=""
+                    onClick={(value) => handleFormPremiere("hiflix")}
+                  />
+                </div>
+                <div className="manageSchedule__premiereName">
+                  <img
+                    src={require("../../assets/assets/VectorCinema1.png")}
+                    alt=""
+                    onClick={(value) => handleFormPremiere("ebu.id")}
+                    width="90%"
+                  />
+                </div>
+                <div className="manageSchedule__premiereName">
+                  <img
+                    src={require("../../assets/assets/VectorCinema2.png")}
+                    alt=""
+                    onClick={(value) => handleFormPremiere("CineOne21")}
                   />
                 </div>
               </div>
-              {/* <div className="manageMovie__updateMovie--durationMinute">
-                <h5>Duration Minute</h5>
-                <input
-                  type="search"
-                  placeholder="input minute"
-                  name="durationMinute"
-                  onChange={(event) => handleChangeForm(event)}
-                  value={form.duration}
-                />
-              </div> */}
             </div>
-          </div>
-          {/* ------------------------------manageMovie Input-------------------------------- */}
-        </div>
-        <div className="manageMovie__submitReset">
-          <button className="manageMovie__submitReset--button">Reset</button>
-          <button type="submit" className="manageMovie__submitReset--button">
-            {isUpdate ? "Update" : "Submit"}
-          </button>
-        </div>
-      </form>
-      {/* ------------------------------manageMovie Input-------------------------------- */}
-      <div className="dataMovie__header">
-        <h2 className="dataMovie">Data Schedule</h2>
-        <div className="sortSearch">
-          <select name="" id="" onChange={handleSort} className="sortSearch__sort">
-            <option value="name ASC"> From Top</option>
-            <option value="name DESC"> From Bottom</option>
-          </select>
-          <input
-            type="search"
-            placeholder="searchMovieName"
-            onKeyPress={() => handleSearch(event)}
-            className="sortSearch__search"
-          />
-        </div>
-      </div>
-      <div className="dataMovie__update">
-        {movie.isLoading ? (
-          <div className="d-flex justify-content-center">
-            <div className="spinner-border" role="status">
-              <span className="sr-only"></span>
+            <div className="manageMovie__updateMovie--category">
+              <h5 className="manageMovie__header">Location</h5>
+              <input
+                type="search"
+                placeholder="input location"
+                name="location"
+                onChange={(event) => handleChangeForm(event)}
+                value={form.location}
+                className="manageMovie__inputType"
+              />
+              <div className="manageMovie__updateMovie--duration">
+                <div className="manageMovie__updateMovie--durationHour">
+                  <h5 className="manageMovie__header">Date Start</h5>
+                  <input
+                    type="date"
+                    placeholder="input release date"
+                    name="dateStart"
+                    onChange={(event) => handleChangeForm(event)}
+                    value={form.dateStart.split("T")[0]}
+                    className="manageMovie__inputType"
+                  />
+                </div>
+                <div className="manageMovie__updateMovie--time">
+                  <div className="manageMovie__updateMovie--time">
+                    <h5 className="manageMovie__header">Date End</h5>
+                    <input
+                      type="date"
+                      placeholder="input release date"
+                      name="dateEnd"
+                      onChange={(event) => handleChangeForm(event)}
+                      value={form.dateEnd.split("T")[0]}
+                      className="manageMovie__inputType"
+                    />
+                  </div>
+                </div>
+              </div>
+              <h5 className="manageMovie__header">Time</h5>
+              <input
+                type="search"
+                placeholder="input time"
+                name="time"
+                onChange={(event) => handleChangeForm(event)}
+                value={form.time}
+                className="manageMovie__inputType"
+              />
             </div>
+            {/* ------------------------------manageMovie Input-------------------------------- */}
           </div>
-        ) : (
-          schedule.data.map((item) => (
-            <ScheduleCard
-              data={item}
-              key={item.id}
-              handleDetail={handleDetailMovie}
-              setUpdate={setUpdate}
-              handleDelete={handleDelete}
+          <div className="manageSchedule__submitReset">
+            <button className="manageMovie__submitReset--button">Reset</button>
+            <button type="submit" className="manageMovie__submitReset--button">
+              {isUpdate ? "Update" : "Submit"}
+            </button>
+          </div>
+        </form>
+        {/* ------------------------------manageMovie Input-------------------------------- */}
+        <div className="dataMovie__header">
+          <h2 className="dataMovie">Data Schedule</h2>
+          <div className="sortSearch">
+            <select name="City" className="sortSearch__sort" onChange={handleSort}>
+              {scheduleLocation.map((item) => (
+                <option key={item.id} value={item.location}>
+                  {item.location}
+                </option>
+              ))}
+            </select>
+            <input
+              type="date"
+              name="dates"
+              onChange={handleDate}
+              className="sortSearch__search"
+              placeholder="Set A dates"
             />
-          ))
-        )}
+          </div>
+        </div>
+        <div className="dataMovie__update">
+          {schedule.isLoading ? (
+            <div className="d-flex justify-content-center  dataMovie__loading">
+              <div className="spinner-border" role="status">
+                <span className="sr-only"></span>
+              </div>
+            </div>
+          ) : (
+            <div className="scheduleCard">
+              {schedule.data.map((item) => (
+                <ScheduleCard
+                  data={item}
+                  key={item.id}
+                  handleDetail={handleDetailMovie}
+                  setUpdate={setUpdate}
+                  handleDelete={handleDelete}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+        <Pagination
+          previousLabel={
+            <div>
+              <p className="pagination_previous">Previous</p>
+            </div>
+          }
+          nextLabel={
+            <div>
+              <p className="pagination_previous">Next</p>
+            </div>
+          }
+          breakLabel={"..."}
+          pageCount={movie.pageInfo.totalPage}
+          onPageChange={handlePagination}
+          containerClassName={"pagination"}
+          subContainerClassName={"pages pagination"}
+          activeClassName={"active"}
+          // pageClassName="paginations"
+          pageLinkClassName="paginations"
+          initialPage={page - 1}
+        />
+        <Footer />
       </div>
-      <Pagination
-        className="pagination"
-        previousLabel={"Previous"}
-        nextLabel={"Next"}
-        breakLabel={"..."}
-        pageCount={schedule.pageInfo.totalPage}
-        onPageChange={handlePagination}
-        containerClassName={"pagination"}
-        subContainerClassName={"pages pagination"}
-        activeClassName={"active"}
-        initialPage={page - 1}
-      />
-      <Footer />
     </div>
   );
 }

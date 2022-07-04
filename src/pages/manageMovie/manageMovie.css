@@ -6,6 +6,8 @@
   padding: 0px;
   box-sizing: border-box;
 }
+.background__manage {
+}
 /*manage Movie slice*/
 .manageMovie__background {
   background-color: #f5f6f8;
@@ -13,14 +15,19 @@
 .manageMovie__tittle {
   font-weight: bold;
 }
+.manageMovie__tittles {
+  font-weight: bold;
+  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .manageMovie__updateMovie {
   background-color: white;
   display: flex;
   height: 300px;
   margin-bottom: 80px;
-  margin-top: 30px;
 }
 .manageMovie__updateMovie--image {
+  margin-top: 50px;
   flex: 1;
   border: solid gainsboro;
   height: 50vh;
@@ -44,31 +51,54 @@
   padding: 10px 10px;
 }
 .manageMovie__updateMovie--name {
+  margin-top: 50px;
   flex: 2;
   margin-right: 50px;
 }
 .manageMovie__header {
   font-weight: bold;
+  margin-bottom: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+.manageMovie__synopsis {
+  margin-top: 150px;
+  font-weight: bold;
   margin-bottom: 10px;
+}
+.manageMovie__inputTypes {
+  border: solid gainsboro;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 .manageMovie__inputType {
   border: solid gainsboro;
   border-radius: 12px;
   font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   height: 50px;
   width: 100%;
   padding: 20px;
+  margin-bottom: 20px;
 }
 .manageMovie__inputTypeSynopsis {
   border: solid gainsboro;
   border-radius: 12px;
   font-size: 15px;
-  height: 50px;
+  height: 80px;
   width: 100%;
   margin-bottom: 30px;
   padding: 20px;
 }
 .manageMovie__updateMovie--category {
+  margin-top: 50px;
   flex: 2;
 }
 /*manage Movie Duration slice*/
@@ -108,6 +138,7 @@
 .dataMovie {
   flex: 1;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .sortSearch {
   flex: 1;
@@ -118,11 +149,20 @@
   height: 50px;
   border-radius: 12px;
   margin-right: 20px;
+  border: solid black 2px;
+  padding: 5px 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 .sortSearch__search {
   width: 30%;
   height: 50px;
   border-radius: 12px;
+  border: solid black 2px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: black;
+  padding: 5px 10px;
 }
 .dataMovie__update {
   display: grid;
@@ -135,4 +175,838 @@
   margin: 40px;
   justify-content: center;
   text-align: center;
+}
+.dataMovie__loading {
+  display: flex;
+  justify-content: center;
+  margin-left: 550px;
+  color: #5f2eea;
+}
+.dataMovie__noDataFoundFlex {
+  display: flex;
+  justify-content: end;
+}
+
+.dataMovie__noDataFound {
+  text-align: center;
+  margin-left: 250px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: #5f2eea;
+  margin-top: 40px;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .background__manage {
+  }
+  /*manage Movie slice*/
+  .manageMovie__background {
+    background-color: #f5f6f8;
+  }
+  .manageMovie__tittle {
+    font-weight: bold;
+  }
+  .manageMovie__tittles {
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .manageMovie__updateMovie {
+    background-color: white;
+    display: flex;
+    height: 300px;
+    margin-bottom: 80px;
+  }
+  .manageMovie__updateMovie--image {
+    margin-top: 50px;
+    flex: 1;
+    border: solid gainsboro;
+    height: 50vh;
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin-right: 40px;
+  }
+  .manageMovie__updateMovie--image--file {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: solid white;
+    color: blueviolet;
+    font-size: 12px;
+  }
+  .manageMovie__updateMovie--image--preview {
+    width: 28vh;
+    margin: 10px 20px;
+    border: solid gainsboro;
+    border-radius: 12px;
+    padding: 10px 10px;
+  }
+  .manageMovie__updateMovie--name {
+    margin-top: 50px;
+    flex: 2;
+    margin-right: 50px;
+  }
+  .manageMovie__header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .manageMovie__synopsis {
+    margin-top: 150px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .manageMovie__inputTypes {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputType {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputTypeSynopsis {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 15px;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .manageMovie__updateMovie--category {
+    margin-top: 50px;
+    flex: 2;
+  }
+  /*manage Movie Duration slice*/
+  .manageMovie__updateMovie--duration {
+    display: flex;
+  }
+  .manageMovie__updateMovie--durationHour {
+    flex: 1;
+  }
+  .manageMovie__updateMovie--durationMinute {
+    flex: 1;
+  }
+  .manageMovie__submitReset {
+    text-align: right;
+  }
+  .manageMovie__submitReset--button {
+    width: 15%;
+    height: 50px;
+    border: solid blueviolet 2px;
+    border-radius: 12px;
+    background-color: white;
+    font-weight: bold;
+    color: blueviolet;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+  .manageMovie__submitReset--button:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  /*dataMovie Header slice*/
+  .dataMovie__header {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .dataMovie {
+    flex: 1;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .sortSearch {
+    flex: 1;
+    text-align: right;
+  }
+  .sortSearch__sort {
+    width: 30%;
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 20px;
+    border: solid black 2px;
+    padding: 5px 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .sortSearch__search {
+    width: 30%;
+    height: 50px;
+    border-radius: 12px;
+    border: solid black 2px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    padding: 5px 10px;
+  }
+  .dataMovie__update {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .pagination {
+    font-weight: bold;
+    margin: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  .dataMovie__loading {
+    display: flex;
+    justify-content: center;
+    margin-left: 550px;
+    color: #5f2eea;
+  }
+  .dataMovie__noDataFoundFlex {
+    display: flex;
+    justify-content: end;
+  }
+
+  .dataMovie__noDataFound {
+    text-align: center;
+    margin-left: 250px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .background__manage {
+  }
+  /*manage Movie slice*/
+  .manageMovie__background {
+    background-color: #f5f6f8;
+  }
+  .manageMovie__tittle {
+    font-weight: bold;
+  }
+  .manageMovie__tittles {
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  }
+  .manageMovie__updateMovie {
+    background-color: white;
+    display: block;
+    height: 300px;
+    margin-bottom: 80px;
+  }
+  .manageMovie__updateMovie--image {
+    margin-top: 50px;
+    flex: 1;
+    border: solid gainsboro;
+    height: 300px;
+    width: 220px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin-right: 40px;
+    margin-left: 250px;
+  }
+  .manageMovie__updateMovie--image--file {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: solid white;
+    color: blueviolet;
+    font-size: 12px;
+  }
+  .manageMovie__updateMovie--image--preview {
+    width: 28vh;
+    margin: 10px 20px;
+    border: solid gainsboro;
+    border-radius: 12px;
+    padding: 10px 10px;
+  }
+  .manageMovie__updateMovie--name {
+    margin-top: 50px;
+    flex: 2;
+    margin-right: 0px;
+  }
+  .manageMovie__header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .manageMovie__synopsis {
+    margin-top: 730px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .manageMovie__inputTypes {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputType {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputTypeSynopsis {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 15px;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .manageMovie__updateMovie--category {
+    margin-top: 10px;
+    flex: 2;
+  }
+  /*manage Movie Duration slice*/
+  .manageMovie__updateMovie--duration {
+    display: flex;
+  }
+  .manageMovie__updateMovie--durationHour {
+    flex: 1;
+  }
+  .manageMovie__updateMovie--durationMinute {
+    flex: 1;
+  }
+  .manageMovie__submitReset {
+    text-align: right;
+  }
+  .manageMovie__submitReset--button {
+    width: 30%;
+    height: 50px;
+    border: solid blueviolet 2px;
+    border-radius: 12px;
+    background-color: white;
+    font-weight: bold;
+    color: blueviolet;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+  .manageMovie__submitReset--button:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  /*dataMovie Header slice*/
+  .dataMovie__header {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .dataMovie {
+    flex: 1;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  }
+  .sortSearch {
+    flex: 1;
+    text-align: right;
+  }
+  .sortSearch__sort {
+    width: 40%;
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 20px;
+    border: solid black 2px;
+    padding: 5px 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .sortSearch__search {
+    width: 50%;
+    height: 50px;
+    border-radius: 12px;
+    border: solid black 2px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    padding: 5px 10px;
+  }
+  .dataMovie__update {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .pagination {
+    font-weight: bold;
+    margin: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  .dataMovie__loading {
+    display: flex;
+    justify-content: center;
+    margin-left: 550px;
+    color: #5f2eea;
+  }
+  .dataMovie__noDataFoundFlex {
+    display: flex;
+    justify-content: end;
+  }
+
+  .dataMovie__noDataFound {
+    text-align: center;
+    margin-left: 250px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .background__manage {
+  }
+  /*manage Movie slice*/
+  .manageMovie__background {
+    background-color: #f5f6f8;
+  }
+  .manageMovie__tittle {
+    font-weight: bold;
+  }
+  .manageMovie__tittles {
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  }
+  .manageMovie__updateMovie {
+    background-color: white;
+    display: block;
+    height: 300px;
+    margin-bottom: 80px;
+  }
+  .manageMovie__updateMovie--image {
+    margin-top: 50px;
+    flex: 1;
+    border: solid gainsboro;
+    height: 300px;
+    width: 220px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin-right: 40px;
+    margin-left: 150px;
+  }
+  .manageMovie__updateMovie--image--file {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: solid white;
+    color: blueviolet;
+    font-size: 12px;
+  }
+  .manageMovie__updateMovie--image--preview {
+    width: 28vh;
+    margin: 10px 20px;
+    border: solid gainsboro;
+    border-radius: 12px;
+    padding: 10px 10px;
+  }
+  .manageMovie__updateMovie--name {
+    margin-top: 50px;
+    flex: 2;
+    margin-right: 0px;
+  }
+  .manageMovie__header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .manageMovie__synopsis {
+    margin-top: 730px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .manageMovie__inputTypes {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputType {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputTypeSynopsis {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 15px;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .manageMovie__updateMovie--category {
+    margin-top: 10px;
+    flex: 2;
+  }
+  /*manage Movie Duration slice*/
+  .manageMovie__updateMovie--duration {
+    display: flex;
+  }
+  .manageMovie__updateMovie--durationHour {
+    flex: 1;
+  }
+  .manageMovie__updateMovie--durationMinute {
+    flex: 1;
+  }
+  .manageMovie__submitReset {
+    text-align: right;
+  }
+  .manageMovie__submitReset--button {
+    width: 30%;
+    height: 50px;
+    border: solid blueviolet 2px;
+    border-radius: 12px;
+    background-color: white;
+    font-weight: bold;
+    color: blueviolet;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+  .manageMovie__submitReset--button:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  /*dataMovie Header slice*/
+  .dataMovie__header {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .dataMovie {
+    flex: 1;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  }
+  .sortSearch {
+    flex: 1;
+    text-align: right;
+  }
+  .sortSearch__sort {
+    width: 40%;
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 20px;
+    border: solid black 2px;
+    padding: 5px 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 13px;
+  }
+  .sortSearch__search {
+    width: 50%;
+    height: 50px;
+    border-radius: 12px;
+    border: solid black 2px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .dataMovie__update {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .pagination {
+    font-weight: bold;
+    margin: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  .dataMovie__loading {
+    display: flex;
+    justify-content: center;
+    margin-left: 550px;
+    color: #5f2eea;
+  }
+  .dataMovie__noDataFoundFlex {
+    display: flex;
+    justify-content: end;
+  }
+
+  .dataMovie__noDataFound {
+    text-align: center;
+    margin-left: 250px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .background__manage {
+  }
+  /*manage Movie slice*/
+  .manageMovie__background {
+    background-color: #f5f6f8;
+  }
+  .manageMovie__tittle {
+    font-weight: bold;
+  }
+  .manageMovie__tittles {
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  }
+  .manageMovie__updateMovie {
+    background-color: white;
+    display: block;
+    height: 300px;
+    margin-bottom: 80px;
+  }
+  .manageMovie__updateMovie--image {
+    margin-top: 50px;
+    flex: 1;
+    border: solid gainsboro;
+    height: 300px;
+    width: 220px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px 5px;
+    margin-right: 40px;
+    margin-left: 120px;
+  }
+  .manageMovie__updateMovie--image--file {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: solid white;
+    color: blueviolet;
+    font-size: 12px;
+  }
+  .manageMovie__updateMovie--image--preview {
+    width: 28vh;
+    margin: 10px 20px;
+    border: solid gainsboro;
+    border-radius: 12px;
+    padding: 10px 10px;
+  }
+  .manageMovie__updateMovie--name {
+    margin-top: 50px;
+    flex: 2;
+    margin-right: 0px;
+  }
+  .manageMovie__header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .manageMovie__synopsis {
+    margin-top: 730px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .manageMovie__inputTypes {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputType {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .manageMovie__inputTypeSynopsis {
+    border: solid gainsboro;
+    border-radius: 12px;
+    font-size: 15px;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .manageMovie__updateMovie--category {
+    margin-top: 10px;
+    flex: 2;
+  }
+  /*manage Movie Duration slice*/
+  .manageMovie__updateMovie--duration {
+    display: flex;
+  }
+  .manageMovie__updateMovie--durationHour {
+    flex: 1;
+  }
+  .manageMovie__updateMovie--durationMinute {
+    flex: 1;
+  }
+  .manageMovie__submitReset {
+    text-align: right;
+  }
+  .manageMovie__submitReset--button {
+    width: 30%;
+    height: 50px;
+    border: solid blueviolet 2px;
+    border-radius: 12px;
+    background-color: white;
+    font-weight: bold;
+    color: blueviolet;
+    margin-left: 20px;
+    margin-bottom: 100px;
+  }
+  .manageMovie__submitReset--button:hover {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  /*dataMovie Header slice*/
+  .dataMovie__header {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .dataMovie {
+    flex: 1;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+  }
+  .sortSearch {
+    flex: 1;
+    text-align: right;
+  }
+  .sortSearch__sort {
+    width: 40%;
+    height: 50px;
+    border-radius: 12px;
+    margin-right: 20px;
+    border: solid black 2px;
+    padding: 5px 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 13px;
+  }
+  .sortSearch__search {
+    width: 50%;
+    height: 50px;
+    border-radius: 12px;
+    border: solid black 2px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .dataMovie__update {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+  .pagination {
+    font-weight: bold;
+    margin: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  .dataMovie__loading {
+    display: flex;
+    justify-content: center;
+    margin-left: 550px;
+    color: #5f2eea;
+  }
+  .dataMovie__noDataFoundFlex {
+    display: flex;
+    justify-content: end;
+  }
+
+  .dataMovie__noDataFound {
+    text-align: center;
+    margin-left: 250px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    margin-top: 40px;
+  }
 }

@@ -1,0 +1,1348 @@
+.profile__bgcolor {
+  background-color: #f5f6f8;
+}
+
+.profile__flex {
+  display: flex;
+}
+.profile__flex1 {
+  flex: 1;
+  margin-top: 150px;
+}
+.profile__flex2 {
+  flex: 3;
+  margin-top: 150px;
+}
+.profile__infoProfile {
+  background-color: white;
+  box-shadow: gainsboro 8px 8px 8px;
+  border-radius: 12px;
+  padding: 30px;
+}
+.profile__infoHeader {
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-weight: bold;
+  color: gray;
+}
+.profile__image {
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+}
+.profile__imageBox {
+  border-radius: 50%;
+  border: solid gainsboro;
+  height: 180px;
+  width: 100%;
+}
+.profile__name {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+.profile__email {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 20px;
+  color: #4e4b66;
+  font-weight: bold;
+}
+.profile__buttonLogout {
+  margin: 10px 0;
+  text-align: center;
+  padding: 10px 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  border: none;
+  background-color: #5f2eea;
+  color: white;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.profile__buttonLogout:hover {
+  background-color: #845df2;
+  color: white;
+}
+.profile__buttonBox {
+  display: flex;
+  justify-content: center;
+}
+.profile__profileChoice {
+  background-color: white;
+  margin-left: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: gainsboro 8px 8px 8px;
+  display: flex;
+  margin-bottom: 40px;
+}
+.profile__accountSettings {
+  flex: 1;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: black;
+  cursor: pointer;
+}
+.profile__orderHistory {
+  flex: 2;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: black;
+  cursor: pointer;
+}
+.profile__detailsInformation {
+  background-color: white;
+  margin-left: 40px;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: gainsboro 8px 8px 8px;
+  margin-bottom: 40px;
+}
+.profile__detailsHeader {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-weight: bold;
+}
+.profile__detailInput {
+  display: flex;
+  margin-top: 30px;
+}
+.profile__detailInputFlex1 {
+  flex: 1;
+}
+.profile__detailInputFlex2 {
+  flex: 1;
+}
+.profile__inputHeader {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 18px;
+}
+.profile__input {
+  padding: 13px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: solid gray 1px;
+  width: 95%;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+.button__updateFlex {
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.button__cancelUpdate {
+  padding: 15px 100px;
+  font-size: 15px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  margin-bottom: 30px;
+}
+.button__updateChanges {
+  padding: 15px 100px;
+  font-size: 15px;
+  border: none;
+  background-color: #5f2eea;
+  margin-bottom: 30px;
+  color: white;
+  border-radius: 8px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+.profile__orderCardBox {
+  background-color: white;
+  margin-left: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: gainsboro 8px 8px 8px;
+  height: 500px;
+  margin-bottom: 40px;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.profile__orderCard {
+  background-color: #f5f6f8;
+  padding: 20px 40px;
+  box-shadow: gainsboro 5px 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.profile__orderCardFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.profile__orderDate {
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 17px;
+  color: grey;
+}
+.profile__orderMovie {
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 28px;
+  color: black;
+}
+.profile__orderTicketButton {
+  padding: 10px 50px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: white;
+  background-color: #00ba88;
+}
+.profile__orderTicketButton:hover {
+  background-color: #04906b;
+}
+.profile__updateImageButton {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background: #5f2eea;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+.profile__deleteImageButton {
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background: red;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+.profile__cancelImageButton {
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  color: #5f2eea;
+  background: gainsboro;
+  border: solid gray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+.profile__updateButton {
+  display: block;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  border: none;
+  background-color: #5f2eea;
+}
+.update__confirm {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 17px;
+}
+.update__confirmFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.update__confirm__cancel {
+  padding: 5px 20px;
+  border-radius: 8px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  background-color: red;
+  border: none;
+  color: white;
+}
+.update__confirm__update {
+  padding: 5px 20px;
+  border-radius: 8px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  background-color: #845df2;
+  border: none;
+  color: white;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .profile__bgcolor {
+    background-color: #f5f6f8;
+  }
+
+  .profile__flex {
+    display: flex;
+  }
+  .profile__flex1 {
+    flex: 1;
+    margin-top: 150px;
+  }
+  .profile__flex2 {
+    flex: 3;
+    margin-top: 150px;
+  }
+  .profile__infoProfile {
+    background-color: white;
+    box-shadow: gainsboro 8px 8px 8px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .profile__infoHeader {
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    color: gray;
+  }
+  .profile__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .profile__imageBox {
+    border-radius: 50%;
+    border: solid gainsboro;
+    height: 170px;
+    width: 100%;
+  }
+  .profile__name {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .profile__email {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 16px;
+    color: #4e4b66;
+    font-weight: bold;
+  }
+  .profile__buttonLogout {
+    margin: 10px 0;
+    text-align: center;
+    padding: 5px 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .profile__buttonLogout:hover {
+    background-color: #845df2;
+    color: white;
+  }
+  .profile__buttonBox {
+    display: flex;
+    justify-content: center;
+  }
+  .profile__profileChoice {
+    background-color: white;
+    margin-left: 40px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .profile__accountSettings {
+    flex: 1;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__orderHistory {
+    flex: 2;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__detailsInformation {
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    margin-bottom: 40px;
+  }
+  .profile__detailsHeader {
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+  }
+  .profile__detailInput {
+    display: flex;
+    margin-top: 30px;
+  }
+  .profile__detailInputFlex1 {
+    flex: 1;
+  }
+  .profile__detailInputFlex2 {
+    flex: 1;
+  }
+  .profile__inputHeader {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 17px;
+  }
+  .profile__input {
+    padding: 13px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: solid gray 1px;
+    width: 95%;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .button__updateFlex {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .button__cancelUpdate {
+    padding: 10px 80px;
+    font-size: 15px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 30px;
+  }
+  .button__updateChanges {
+    padding: 10px 80px;
+    font-size: 15px;
+    border: none;
+    background-color: #5f2eea;
+    margin-bottom: 30px;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__orderCardBox {
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    height: 500px;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    white-space: nowrap;
+  }
+  .profile__orderCard {
+    background-color: #f5f6f8;
+    padding: 20px 40px;
+    box-shadow: gainsboro 5px 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .profile__orderCardFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile__orderDate {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+    color: grey;
+  }
+  .profile__orderMovie {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 20px;
+    color: black;
+  }
+  .profile__orderTicketButton {
+    padding: 10px 50px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+    background-color: #00ba88;
+  }
+  .profile__orderTicketButton:hover {
+    background-color: #04906b;
+  }
+  .profile__updateImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__deleteImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: red;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__cancelImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: #5f2eea;
+    background: gainsboro;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__updateButton {
+    display: block;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border: none;
+    background-color: #5f2eea;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .profile__bgcolor {
+    background-color: #f5f6f8;
+  }
+
+  .profile__flex {
+    display: flex;
+  }
+  .profile__flex1 {
+    flex: 1;
+    margin-top: 150px;
+  }
+  .profile__flex2 {
+    flex: 3;
+    margin-top: 150px;
+  }
+  .profile__infoProfile {
+    background-color: white;
+    box-shadow: gainsboro 8px 8px 8px;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .profile__infoHeader {
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    color: gray;
+  }
+  .profile__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .profile__imageBox {
+    border-radius: 50%;
+    border: solid gainsboro;
+    height: 170px;
+    width: 100%;
+  }
+  .profile__name {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .profile__email {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 16px;
+    color: #4e4b66;
+    font-weight: bold;
+  }
+  .profile__buttonLogout {
+    margin: 10px 0;
+    text-align: center;
+    padding: 5px 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .profile__buttonLogout:hover {
+    background-color: #845df2;
+    color: white;
+  }
+  .profile__buttonBox {
+    display: flex;
+    justify-content: center;
+  }
+  .profile__profileChoice {
+    background-color: white;
+    margin-left: 40px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .profile__accountSettings {
+    flex: 1;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__orderHistory {
+    flex: 2;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__detailsInformation {
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    margin-bottom: 40px;
+  }
+  .profile__detailsHeader {
+    font-size: 18px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+  }
+  .profile__detailInput {
+    display: flex;
+    margin-top: 30px;
+  }
+  .profile__detailInputFlex1 {
+    flex: 1;
+  }
+  .profile__detailInputFlex2 {
+    flex: 1;
+  }
+  .profile__inputHeader {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+  .profile__input {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: solid gray 1px;
+    width: 95%;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .button__updateFlex {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .button__cancelUpdate {
+    padding: 7px 40px;
+    font-size: 15px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 30px;
+  }
+  .button__updateChanges {
+    padding: 10px 40px;
+    font-size: 15px;
+    border: none;
+    background-color: #5f2eea;
+    margin-bottom: 30px;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__orderCardBox {
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    height: 500px;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    white-space: nowrap;
+  }
+  .profile__orderCard {
+    background-color: #f5f6f8;
+    padding: 20px 40px;
+    box-shadow: gainsboro 5px 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .profile__orderCardFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile__orderDate {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 13px;
+    color: grey;
+  }
+  .profile__orderMovie {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+    color: black;
+  }
+  .profile__orderTicketButton {
+    padding: 5px 30px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+    background-color: #00ba88;
+  }
+  .profile__orderTicketButton:hover {
+    background-color: #04906b;
+  }
+  .profile__updateImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__deleteImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: red;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__cancelImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: #5f2eea;
+    background: gainsboro;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__updateButton {
+    display: block;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border: none;
+    background-color: #5f2eea;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .profile__bgcolor {
+    background-color: #f5f6f8;
+  }
+
+  .profile__flex {
+    display: inline-block;
+    margin-left: 80px;
+  }
+  .profile__flex1 {
+    flex: 1;
+    margin-top: 150px;
+    margin-left: 45px;
+  }
+  .profile__flex2 {
+    flex: 3;
+    margin-top: 50px;
+  }
+  .profile__infoProfile {
+    background-color: white;
+    box-shadow: gainsboro 8px 8px 8px;
+    border-radius: 12px;
+    padding: 30px;
+  }
+  .profile__infoHeader {
+    font-size: 25px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    color: gray;
+  }
+  .profile__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 120px;
+  }
+  .profile__imageBox {
+    border-radius: 50%;
+    border: solid gainsboro;
+    height: 170px;
+    width: 100%;
+  }
+  .profile__name {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .profile__email {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+    color: #4e4b66;
+    font-weight: bold;
+  }
+  .profile__buttonLogout {
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .profile__buttonLogout:hover {
+    background-color: #845df2;
+    color: white;
+  }
+  .profile__buttonBox {
+    display: flex;
+    justify-content: center;
+  }
+  .profile__profileChoice {
+    background-color: white;
+    margin-left: 40px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .profile__accountSettings {
+    flex: 1;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__orderHistory {
+    flex: 2;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__detailsInformation {
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    margin-bottom: 40px;
+  }
+  .profile__detailsHeader {
+    font-size: 18px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+  }
+  .profile__detailInput {
+    display: flex;
+    margin-top: 30px;
+  }
+  .profile__detailInputFlex1 {
+    flex: 1;
+  }
+  .profile__detailInputFlex2 {
+    flex: 1;
+  }
+  .profile__inputHeader {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+  .profile__input {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: solid gray 1px;
+    width: 95%;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .button__updateFlex {
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .button__cancelUpdate {
+    padding: 7px 40px;
+    font-size: 15px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 30px;
+  }
+  .button__updateChanges {
+    padding: 10px 40px;
+    font-size: 15px;
+    border: none;
+    background-color: #5f2eea;
+    margin-bottom: 30px;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__orderCardBox {
+    background-color: white;
+    margin-left: 40px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    height: 500px;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    white-space: nowrap;
+  }
+  .profile__orderCard {
+    background-color: #f5f6f8;
+    padding: 20px 40px;
+    box-shadow: gainsboro 5px 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .profile__orderCardFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile__orderDate {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 13px;
+    color: grey;
+  }
+  .profile__orderMovie {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+    color: black;
+  }
+  .profile__orderTicketButton {
+    padding: 5px 30px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+    background-color: #00ba88;
+  }
+  .profile__orderTicketButton:hover {
+    background-color: #04906b;
+  }
+  .profile__updateImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__deleteImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: red;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__cancelImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: #5f2eea;
+    background: gainsboro;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+}
+@media (max-width: 575.98px) {
+  .profile__bgcolor {
+    background-color: #f5f6f8;
+  }
+
+  .profile__flex {
+    display: inline-block;
+    margin-left: 0px;
+  }
+  .profile__flex1 {
+    flex: 1;
+    margin-top: 150px;
+    margin-left: 0px;
+  }
+  .profile__flex2 {
+    flex: 3;
+    margin-top: 50px;
+  }
+  .profile__infoProfile {
+    background-color: white;
+    box-shadow: gainsboro 8px 8px 8px;
+    border-radius: 12px;
+    padding: 30px;
+  }
+  .profile__infoHeader {
+    font-size: 18px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    color: gray;
+  }
+  .profile__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 120px;
+  }
+  .profile__imageBox {
+    border-radius: 50%;
+    border: solid gainsboro;
+    height: 170px;
+    width: 100%;
+  }
+  .profile__name {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .profile__email {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+    color: #4e4b66;
+    font-weight: bold;
+  }
+  .profile__buttonLogout {
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .profile__buttonLogout:hover {
+    background-color: #845df2;
+    color: white;
+  }
+  .profile__buttonBox {
+    display: flex;
+    justify-content: center;
+  }
+  .profile__profileChoice {
+    background-color: white;
+    margin-left: 0px;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: gainsboro 8px 8px 8px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .profile__accountSettings {
+    flex: 1;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__orderHistory {
+    flex: 2;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: black;
+    cursor: pointer;
+  }
+  .profile__detailsInformation {
+    background-color: white;
+    margin-left: 0px;
+    padding: 20px;
+    width: 100%;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    margin-bottom: 40px;
+  }
+  .profile__detailsHeader {
+    font-size: 18px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+  }
+  .profile__detailInput {
+    display: flex;
+    margin-top: 30px;
+  }
+  .profile__detailInputFlex1 {
+    flex: 1;
+  }
+  .profile__detailInputFlex2 {
+    flex: 1;
+  }
+  .profile__inputHeader {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+  .profile__input {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: solid gray 1px;
+    width: 95%;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .button__updateFlex {
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .button__cancelUpdate {
+    padding: 7px 40px;
+    font-size: 15px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 30px;
+  }
+  .button__updateChanges {
+    padding: 10px 40px;
+    font-size: 15px;
+    border: none;
+    background-color: #5f2eea;
+    margin-bottom: 30px;
+    color: white;
+    border-radius: 8px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__orderCardBox {
+    background-color: white;
+    margin-left: 0px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: gainsboro 8px 8px 8px;
+    height: 500px;
+    margin-bottom: 40px;
+    overflow-y: auto;
+    white-space: nowrap;
+  }
+  .profile__orderCard {
+    background-color: #f5f6f8;
+    padding: 20px 40px;
+    box-shadow: gainsboro 5px 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .profile__orderCardFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .profile__orderDate {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 13px;
+    color: grey;
+  }
+  .profile__orderMovie {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+    color: black;
+  }
+  .profile__orderTicketButton {
+    padding: 5px 30px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+    background-color: #00ba88;
+  }
+  .profile__orderTicketButton:hover {
+    background-color: #04906b;
+  }
+  .profile__updateImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__deleteImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background: red;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  .profile__cancelImageButton {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    color: #5f2eea;
+    background: gainsboro;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+}

@@ -11,28 +11,39 @@ main {
   display: flex;
   max-width: 100%;
 }
-.signUp__image__logins {
+.signUp__image__login {
   flex: 1.8;
   background-image: url(./assets/Group\ 10.png);
-  background-repeat: no-repeat;
 }
-.tickitz {
-  margin-top: 220px;
-  margin-left: 120px;
-  width: 65%;
+.tickitzs {
+  margin-top: 80px;
+  margin-left: 40px;
+  width: 35%;
+  margin-bottom: 40px;
 }
-.tickitz__desc {
+.tickitzs__desc {
   font-size: 40px;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
-  text-align: center;
+  margin-left: 50px;
+  text-align: left;
 }
-.tickitz__descs {
-  font-size: 60px;
+.tickitzs__descs {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+.tickitzs__descss {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: white;
-  text-align: start;
-  margin-right: 150px;
+  text-align: left;
+  margin-left: 50px;
 }
 .image_set {
   margin-top: 28%;
@@ -53,25 +64,28 @@ main {
 .tickitzLogo {
   display: none;
 }
-.signUp__header {
-  margin-top: 40px;
+.signUp__headers {
+  margin-top: 90px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 35px;
   font-weight: bold;
 }
 .signUp__subHeader {
   color: gray;
-  font-family: "Inter", sans-serif;
   padding: 10px 0px;
   font-size: 15px;
   font-weight: bold;
   text-align: justify;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 .input__header {
   padding: 10px 0px;
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 .signUp__input {
   color: #5f2eea;
@@ -87,7 +101,7 @@ main {
   color: black;
   font-weight: bold;
 }
-.button__signUp {
+.button__signUps {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin: 10px 0;
@@ -101,6 +115,7 @@ main {
   margin-top: 30px;
   font-size: 20px;
   cursor: pointer;
+  margin-bottom: 198px;
 }
 .button__signUp:hover {
   font-size: 22px;
@@ -115,6 +130,8 @@ main {
   color: #8692a6;
   font-weight: light;
   margin-top: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 .reset_align_link {
   text-align: center;
@@ -123,6 +140,8 @@ main {
   text-decoration: none;
   font-weight: light;
   margin-top: 5px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   * {
@@ -136,22 +155,41 @@ main {
     display: flex;
     max-width: 100%;
   }
-  .signUp__image__logins {
+  .signUp__image__login {
     flex: 1.8;
     background-image: url(./assets/Group\ 10.png);
     background-color: #5f2eea;
-    height: 1000px;
+    height: 750px;
   }
-  .tickitz {
-    margin-top: 220px;
-    margin-left: 100px;
-    width: 65%;
+  .tickitzs {
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 30%;
+    margin-bottom: 40px;
   }
-  .tickitz__desc {
+  .tickitzs__desc {
     font-size: 30px;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
-    text-align: center;
+    margin-left: 50px;
+    text-align: left;
+  }
+  .tickitzs__descs {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-left: 50px;
+  }
+  .tickitzs__descss {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-left: 50px;
   }
   .image_set {
     margin-top: 28%;
@@ -172,10 +210,10 @@ main {
   .tickitzLogo {
     display: none;
   }
-  .signUp__header {
-    margin-top: 40px;
+  .signUp__headers {
+    margin-top: 60px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
   }
   .signUp__subHeader {
@@ -261,7 +299,7 @@ main {
     flex: 1.8;
     background-image: url(./assets/Group\ 10.png);
     background-color: #5f2eea;
-    height: 100vh;
+    height: 650px;
     justify-content: center;
   }
   .tickitz {
@@ -270,12 +308,35 @@ main {
     width: 70%;
     margin-left: auto;
   }
-  .tickitz__desc {
+  .tickitzs {
+    margin-top: 80px;
+    margin-left: 40px;
+    width: 30%;
+    margin-bottom: 40px;
+  }
+  .tickitzs__desc {
     font-size: 25px;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
-    text-align: center;
-    display: none;
+    margin-left: 50px;
+    text-align: left;
+  }
+  .tickitzs__descs {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: left;
+    margin-bottom: 40px;
+    margin-left: 50px;
+  }
+  .tickitzs__descss {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-left: 50px;
   }
   .image_set {
     margin-top: 28%;
@@ -289,19 +350,18 @@ main {
   }
   .signUp {
     flex: 1;
-    margin: 33px 30px;
+    margin: 33px 60px;
     padding: 0 40px;
   }
 
   .tickitzLogo {
     display: none;
   }
-  .signUp__header {
-    margin-top: 40px;
+  .signUp__headers {
+    margin-top: 60px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bold;
-    margin-bottom: 20px;
   }
   .signUp__subHeader {
     color: gray;
@@ -386,7 +446,7 @@ main {
     display: flex;
     max-width: 100%;
   }
-  .signUp__image__logins {
+  .signUp__image__login {
     flex: 1.8;
     background-image: url(./assets/Group\ 10.png);
     background-color: #5f2eea;
@@ -518,7 +578,7 @@ main {
     display: flex;
     max-width: 100%;
   }
-  .signUp__image__logins {
+  .signUp__image__login {
     flex: 1.8;
     background-image: url(./assets/Group\ 10.png);
     background-color: #5f2eea;

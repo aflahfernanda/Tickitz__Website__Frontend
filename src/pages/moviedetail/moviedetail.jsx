@@ -10,8 +10,11 @@ function Detail() {
   const params = useParams();
   const navigate = useNavigate();
   const [dataSchedule, setSchedule] = useState([]);
+  const [scheduleLocation, setScheduleLocation] = useState([]);
   const movieId = params.id;
   const [data, setData] = useState([]);
+  const [location, setLocation] = useState("");
+  const [date, setDate] = useState("");
   const [dataOrder, setDataOrder] = useState({
     movieId: params.id,
     dateBooking: new Date().toISOString().split("T")[0]
@@ -21,8 +24,11 @@ function Detail() {
     getMovieId();
   }, []);
   useEffect(() => {
-    getScheduleMovie();
+    getScheduleLocationMovie();
   }, []);
+  useEffect(() => {
+    getScheduleMovie();
+  }, [location, date]);
 
   const getMovieId = async () => {
     try {
@@ -32,23 +38,36 @@ function Detail() {
       console.log(error.response);
     }
   };
-
+  console.log(scheduleLocation);
   {
     /*handleDate----------------------------------------------------*/
   }
-  const handleDate = () => {
-    const dateChange = dataOrder.dateBooking;
-    if (dateChange) {
-      return Date;
-    }
+  const handleDate = (event) => {
+    setDate(event.target.value);
+    // if (dateChange) {
+    //   return Date;
+    // }
   };
+  console.log(date);
   {
     /*ScheduleId----------------------------------------------------*/
   }
   const getScheduleMovie = async () => {
     try {
-      const scheduleMovie = await axios.get(`schedule/${movieId}`);
+      const scheduleMovie = await axios.get(
+        `schedule?page=1&limit=10&searchLocation=${location}&searchMovieId=${movieId}&searchDate=${date}`
+      );
       setSchedule(scheduleMovie.data.data);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+  const getScheduleLocationMovie = async () => {
+    try {
+      const scheduleMovie = await axios.get(
+        `schedule?page=1&limit=10&searchLocation=&searchMovieId=${movieId}&searchDate=`
+      );
+      setScheduleLocation(scheduleMovie.data.data);
     } catch (error) {
       console.log(error.response);
     }
@@ -62,13 +81,23 @@ function Detail() {
     // [2] = lempar data dengan state
     navigate("/orderpage", { state: [dataOrder, data] });
   };
+  const handleLocation = (value) => {
+    setLocation(value.target.value);
+  };
+  const allDate = () => {
+    setLocation("");
+    setDate("");
+  };
   console.log(dataOrder);
   return (
-    <div className="container">
-      <Navbar />
-      {/*movie detail------------------------------------------------------------------------*/}
-      <section className="container">
-        <div className="movieDetailss">
+    <div>
+      <div>
+        <Navbar />
+      </div>
+      <div className="container">
+        {/*movie detail------------------------------------------------------------------------*/}
+
+        <div className="movieDetails__cardFlexs">
           <img
             src={
               data.image
@@ -77,7 +106,7 @@ function Detail() {
             }
             alt="spiderman/image"
             height="80%"
-            className="moviDetails__image"
+            className="movieDetails__imageBox"
           />
 
           <div className="container moviDetails__desc">
@@ -104,81 +133,113 @@ function Detail() {
               </section>
               <hr />
               <p className="desc4">
-                <strong>Synopsis</strong>
+                <p className="desc3__1--synopsis"> Synopsis</p>
                 <br />
                 {data.synopsis}
               </p>
             </section>
           </div>
         </div>
-      </section>
-      {/*show Times------------------------------------------------------------------------*/}
-      <section className="showTimes">
-        <h3 className="container showTimes__header">Show Times and Tickets</h3>
-        <div className="container showTimes__dates">
-          <input
-            type="date"
-            name="dates"
-            value={dataOrder.dateBooking}
-            onChange={handleDate}
-            className="times__dropdown--dates"
-            placeholder="Set A dates"
-          />
-          <select name="City" className="times__dropdown--location">
-            {dataSchedule.map((item) => (
-              <option key={item.id}>{item.location}</option>
-            ))}
-          </select>
-        </div>
-        {/*show Ticket------------------------------------------------------------------------*/}
-        <div className="container showTickets">
-          {dataSchedule.map((item) => (
-            <div className="showTickets__box" key={item.id}>
-              <div className="showTickets__header">
-                <img
-                  src={require("../../assets/assets/VectorCinema1.png")}
-                  alt="ubv.id"
-                  className="showTickets__box--image"
-                />
-                <section className="showTickets__box--title">
-                  <h3 className="showTickets__box--header"> {item.premiere}</h3>
-                  <p className="showTickets__box--location">{item.location}</p>
-                </section>
-              </div>
-              <hr />
-              <section className=" container showTickets__times">
-                {item.time.split(",").map((itemTime) => (
+      </div>
+      <div className="showtimes__background">
+        {/*show Times------------------------------------------------------------------------*/}
+        <section className=" container showTimes">
+          <h3 className="container showTimes__header">Show Times and Tickets</h3>
+          <div className="container showTimes__dates">
+            <input
+              type="date"
+              name="dates"
+              onChange={handleDate}
+              className="times__dropdown--dates"
+              placeholder="Set A dates"
+            />
+            <select name="City" className="times__dropdown--location" onChange={handleLocation}>
+              {scheduleLocation.map((item) => (
+                <option key={item.id} value={item.location}>
+                  {item.location}
+                </option>
+              ))}
+            </select>
+            <button className="button__showAllDate" onClick={allDate}>
+              show all date and location
+            </button>
+          </div>
+          {/*show Ticket------------------------------------------------------------------------*/}
+
+          {dataSchedule.length == 0 ? (
+            <p className="noDataFound">
+              -------------------No Data Found Try Another Date And Location-----------------
+            </p>
+          ) : (
+            <div className="container showTickets">
+              {dataSchedule.map((item) => (
+                <div className="showTickets__box" key={item.id}>
+                  <div className="showTickets__header">
+                    {item.premiere === "hiflix" ? (
+                      <img
+                        src={require("../../assets/assets/VectorCinema3.png")}
+                        alt="ubv.id"
+                        className="showTickets__box--images"
+                      />
+                    ) : item.premiere === "ebu.id" ? (
+                      <img
+                        src={require("../../assets/assets/VectorCinema1.png")}
+                        alt="ubv.id"
+                        className="showTickets__box--images"
+                      />
+                    ) : item.premiere === "CineOne21" ? (
+                      <img
+                        src={require("../../assets/assets/VectorCinema2.png")}
+                        alt="ubv.id"
+                        className="showTickets__box--images"
+                      />
+                    ) : null}
+
+                    <section className="showTickets__box--title">
+                      <h3 className="showTickets__box--header"> {item.premiere}</h3>
+                      <p className="showTickets__box--location">{item.location}</p>
+                    </section>
+                  </div>
+                  <hr />
+                  <section className=" container showTickets__times">
+                    {item.time.split(",").map((itemTime) => (
+                      <button
+                        key={itemTime}
+                        className="showTickets__times--timesLight"
+                        onClick={() =>
+                          changeDataBooking({
+                            timeBooking: itemTime,
+                            scheduleId: item.id,
+                            premiere: item.premiere,
+                            price: item.price
+                          })
+                        }
+                      >
+                        {itemTime}
+                      </button>
+                    ))}
+                  </section>
+                  <div className="card__priceTicket">
+                    <p className="card__priceTicket__price">Price</p>
+                    <p className="card__priceTicket__total">Rp.{item.price}</p>
+                  </div>
                   <button
-                    key={itemTime}
-                    className="showTickets__times--timesLight"
-                    onClick={() =>
-                      changeDataBooking({
-                        timeBooking: itemTime,
-                        scheduleId: item.id,
-                        premiere: item.premiere
-                      })
-                    }
+                    className="showTickets__button"
+                    disabled={item.id === dataOrder.scheduleId ? false : true}
+                    onClick={handleBooking}
                   >
-                    {itemTime}
+                    {" "}
+                    Book Now
                   </button>
-                ))}
-              </section>
-
-              <button
-                className="showTickets__button"
-                disabled={item.id === dataOrder.scheduleId ? false : true}
-                onClick={handleBooking}
-              >
-                {" "}
-                Book Now
-              </button>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          )}
 
-        <p className="container or">View More</p>
-      </section>
-      <Footer />
+          {/* <p className="container or">View More</p> */}
+        </section>
+        <Footer />
+      </div>
     </div>
   );
 }

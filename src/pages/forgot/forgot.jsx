@@ -3,14 +3,13 @@ import axios from "../../utils/axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getUserById } from "../../stores/actions/user";
-import "./signup.css";
+import "./forgot.css";
 
-function SignUp() {
+function Forgot() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [form, setForm] = useState({
-    email: "",
-    password: ""
+    email: ""
   });
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
@@ -29,22 +28,13 @@ function SignUp() {
       // Input = email password di siapkan
       // console.log(form);
       // Proses = memanggil axios
-      const resultLogin = await axios.post("auth/login", form);
-      console.log(resultLogin.data.msg);
+      const resultLogin = await axios.post("auth/forgotPassword", form);
+      console.log(resultLogin);
       // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai
       setIsError(false);
       setMessage(resultLogin.data.msg);
-      localStorage.setItem("token", resultLogin.data.data.token);
-      localStorage.setItem("refreshToken", resultLogin.data.data.refreshToken);
-      localStorage.setItem("id", resultLogin.data.data.id);
-
-      await dispatch(getUserById(resultLogin.data.data.id));
-
-      if (form.email === "admin@gmail.com") {
-        navigate("/manageMovie");
-      } else {
-        navigate("/home");
-      }
+      alert(resultLogin.data.msg);
+      navigate("/login");
       //   UNTUK GET DATA USER
       //   const dataUser = JSON.parse(localStorage.getItem(dataUser));
     } catch (error) {
@@ -64,15 +54,20 @@ function SignUp() {
       <main>
         <div className="signUp__image__login">
           <image src={require("./assets/Group 10.png")} />
-          <img src={require("./assets/tickitz 1.png")} alt="smallLogoImg" className="tickitz" />
-          <p className="tickitz__desc">Wait, Watch, Wow</p>
+          <img src={require("./assets/tickitz 1.png")} alt="smallLogoImg" className="tickitzs" />
+          <p className="tickitzs__desc">Lets reset your password</p>
+          <p className="tickitzs__descs">
+            To be able to use your account again, please complete the following steps.
+          </p>
+          <p className="tickitzs__descss">1. Fill your complete email</p>
+          <p className="tickitzs__descss">2. Check your email</p>
+          <p className="tickitzs__descss">3. Enter your new password</p>
+          <p className="tickitzs__descss">4. Done</p>
         </div>
         <section className="signUp">
           <img src={require("./assets/Tickitz 2.png")} alt="smallLogoImg" className="tickitzLogo" />
-          <h1 className="signUp__header">Sign In</h1>
-          <h3 className="signUp__subHeader">
-            Sign in with your data that you entered during your registration
-          </h3>
+          <h1 className="signUp__headers">Fill your complete email</h1>
+          <h3 className="signUp__subHeader">well send a link to your email shortly</h3>
           {!message ? null : isError ? (
             <div className="alert alert-danger" role="alert">
               {message}
@@ -92,34 +87,14 @@ function SignUp() {
               className="signUp__input"
               onChange={handleChangeForm}
             />
-            <h4 className="input__header">Password</h4>
-            <input
-              type="password"
-              name="password"
-              placeholder="Write Your Password"
-              className="signUp__input"
-              onChange={handleChangeForm}
-            />
-            <button className="button__signUp" type="submit">
-              Sign In
+            <button className="button__signUps" type="submit">
+              Send
             </button>
           </form>
-          <p className="text_align_link">
-            Forgot your password?{" "}
-            <a href="/forgotPassword" className="reset_align_link">
-              Reset now?
-            </a>
-          </p>
-          <p className="text_align_link">
-            dont have an account?
-            <a href="/signin" className="reset_align_link">
-              SignUp
-            </a>
-          </p>
         </section>
       </main>
     </>
   );
 }
 
-export default SignUp;
+export default Forgot;

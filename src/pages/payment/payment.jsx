@@ -4,66 +4,70 @@ import "./payment.css";
 import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+import axios from "../../utils/axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Modal, ModalFooter, ModalHeader, ModalBody, Alert } from "reactstrap";
 
 function Payment() {
   const { state } = useLocation();
   const [payButton, setPayButton] = useState("");
+  const [data, setData] = useState([]);
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
+  const [pagination, setPagination] = useState("");
+  const [show, setShow] = useState(true);
   const [form, setForm] = useState({
-    userId: "",
-    scheduleId: "",
-    dateBooking: "",
-    timeBooking: "",
-    paymentMethod: "",
-    totalPayment: "",
-    statusPayment: "",
-    seat: []
+    userId: localStorage.getItem("id"),
+    scheduleId: state[1].scheduleId,
+    dateBooking: state[1].dateBooking,
+    timeBooking: state[1].timeBooking,
+    paymentMethod: "bca_kilckpay",
+    totalPayment: state[0].length * state[1].price,
+    statusPayment: "succes",
+    seat: state[0]
   });
+  console.log(form);
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
-  // const [keyword, setKeyword] = useState("");
-
-  // const handleChangeEmail = (event) => {
-  //   console.log(event.target.value);
-  //   setEmail(event.target.value);
-  // };
-  // const handlePassword = (event) => {
-  //   if (event.key === "Enter") {
-  //     console.log("user input a password");
-  //     console.log("password is", event.target.value);
-  //   }
-  // };
+  // Modal open state
+  const [modal, setModal] = React.useState(false);
+  useEffect(() => {
+    getUserById();
+  }, []);
+  const getUserById = async () => {
+    try {
+      const result = await axios.get(`user/${localStorage.getItem("id")}`);
+      setData(result.data.data[0]);
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  };
+  console.log(pagination);
+  const handleResponse = async (event) => {
+    setModal(!modal);
+  };
+  const handleResponseModal = async (event) => {
+    setModal(false);
+  };
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-      // console.log("Submit Login");
-      // Input = email password di siapkan
-      // console.log(form);
-      // Proses = memanggil axios
-      const formData = new FormData();
-      for (const data in form) {
-        formData.append(data, form[data]);
-      }
-      const resultLogin = await axios.post("booking");
-      console.log(resultLogin);
-      console.log(resultLogin.data.message);
-      // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai
-      setIsError(false);
-      setMessage(resultLogin.data.message);
-      navigate("/login");
+      const resultBooking = await axios.post("booking", form);
+      console.log(resultBooking);
+      alert("Succes Create Booking Next Go To Transaction");
+      setModal(false);
+      window.location.replace(resultBooking.data.pagination);
     } catch (error) {
       console.log(error.response);
       setIsError(true);
-      setMessage(error.response.data.msg);
+      alert("Transaction Failed Please Re-Log In");
     }
   };
-
-  const handlePayment = (event) => {
-    setPayButton(event.target.name);
+  const handlePreviousStep = () => {
+    navigate("/home");
   };
-  console.log(payButton);
+
+  console.log(data);
   return (
     <>
       <Navbar />
@@ -116,83 +120,15 @@ function Payment() {
                   <p className="flex__movie--infos1">Total Payment</p>
                 </div>
                 <div className="flex__results">
-                  <p className="flex__movie--results1">${50 * state[0].length}</p>
+                  <p className="flex__movie--results1">Rp.{state[1].price * state[0].length}</p>
                 </div>
               </section>
             </div>
-            {/* {<!----------------------------------Choose Payment Method ---------------------------------------------->} */}
-            <h1 className="container movieInfo__headers">Choose a Payment Method</h1>
-            <section className="seat__borders">
-              <section className="seat__border--boxs">
-                <button className="border__box--grids" onClick={handlePayment} name="BCA Klickpay">
-                  <img
-                    src={require("../../assets/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png")}
-                    alt="payment/image"
-                    width="80%"
-                    name="BCA"
-                  />
-                </button>
-                <button className="border__box--grids" onClick={handlePayment} name="Dana">
-                  <img
-                    src={require("../../assets/assets/Logo DANA (PNG-240p) - FileVector69 1.png")}
-                    alt="payment/image"
-                    width="100%"
-                    name="Dana"
-                  />
-                </button>
-                <button className="border__box--grids" onClick={handlePayment} name="Gopay">
-                  <img
-                    src={require("../../assets/assets/Logo GoPay (SVG-240p) - FileVector69 1.png")}
-                    alt="payment/image"
-                    width="100%"
-                  />
-                </button>
-                <button className="border__box--grids" onClick={handlePayment} name="Paypal">
-                  <img
-                    src={require("../../assets/assets/logos_paypal.png")}
-                    alt="payment/image"
-                    width="40%"
-                  />
-                </button>
-                <button className="border__box--grids" onClick={handlePayment} name="Dana">
-                  <img
-                    src={require("../../assets/assets/Logo DANA (PNG-240p) - FileVector69 1.png")}
-                    alt="payment/image"
-                    width="100%"
-                  />
-                </button>
-                <button className="border__box--grids" onClick={handlePayment} name="BCA Klickpay">
-                  <img
-                    src={require("../../assets/assets/Bank BCA Logo (SVG-240p) - FileVector69 1.png")}
-                    alt="payment/image"
-                    width="90%"
-                  />
-                </button>
-                <button className="border__box--grids" onClick={handlePayment} name="Bank BRI">
-                  <img
-                    src={require("../../assets/assets/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.png")}
-                    alt="payment/image"
-                    width="60%"
-                  />
-                </button>
-
-                <button className="border__box--grids" onClick={handlePayment} name="OVO">
-                  <img src={require("../../assets/assets/ovo.png")} width="100%" />
-                </button>
-              </section>
-              <p className="ors">or</p>
-              <p className="links">
-                Pay via cash.{" "}
-                <a href="" className="link__workss">
-                  See how it works
-                </a>
-              </p>
-            </section>
             <div className="buttons">
               <section className="button__changes">
-                <a href="orderPage.html">
-                  <button className="button__change--movies">Previous Step</button>
-                </a>
+                <button className="button__change--movies" onClick={handlePreviousStep}>
+                  Previous Step
+                </button>
               </section>
               <section className="button__checkouts">
                 <button
@@ -202,30 +138,86 @@ function Payment() {
                   //     timeBooking: "09.00"
                   //   })
                   // }
-                  onClick={handleSubmit}
+                  onClick={handleResponse}
                 >
                   Pay Your Order
                 </button>
               </section>
+              <Modal isOpen={modal} toggle={handleResponse} modalTransition={{ timeout: 1000 }}>
+                <ModalHeader>
+                  <div className="modal__headerBox">
+                    <p className="modal__header">Payment Confirmation</p>
+                  </div>
+                </ModalHeader>
+                <ModalBody>
+                  <div className="modal__image">
+                    {state[1].premiere === "hiflix" ? (
+                      <img
+                        src={require("../../assets/assets/VectorCinema3.png")}
+                        alt="cineOne21/image"
+                        className="personal__box--image"
+                      />
+                    ) : state[1].premiere === "ebu.id" ? (
+                      <img
+                        src={require("../../assets/assets/VectorCinema1.png")}
+                        alt="cineOne21/image"
+                        className="personal__box--image"
+                      />
+                    ) : state[1].premiere === "CineOne21" ? (
+                      <img
+                        src={require("../../assets/assets/VectorCinema2.png")}
+                        alt="cineOne21/image"
+                        className="personal__box--image"
+                      />
+                    ) : null}
+                  </div>
+                  <div className="modal__flex">
+                    <p className="modal__flex1">Movie Selected</p>
+                    <p className="modal__flex2">{state[2].name}</p>
+                  </div>
+                  <div className="modal__flex">
+                    <p className="modal__flex1">{state[1].dateBooking}</p>
+                    <p className="modal__flex2">{state[1].timeBooking}</p>
+                  </div>
+                  <div className="modal__flex">
+                    <p className="modal__flex1">{state[0] + ","}</p>
+                    <p className="modal__flex2">Rp. {state[0].length * state[1].price}</p>
+                  </div>
+                  <hr />
+                  <div className="modal__footer">
+                    <p className="modal__footerText">are you sure want to book?</p>
+                  </div>
+                  <div className="modal__footerFlex">
+                    <button onClick={handleResponseModal} className="modal__footerFlex1">
+                      cancel
+                    </button>
+                    <button onClick={handleSubmit} className="modal__footerFlex2">
+                      yes
+                    </button>
+                  </div>
+                </ModalBody>
+              </Modal>
             </div>
           </div>
 
           {/* {<!----------------------------------Personal Info---------------------------------------------->} */}
 
           <div className="movieSelected__flexs2">
-            <h1 className="container movieInfo__headers">Personal Info</h1>
+            <h1 className="container movieInfo__headerss">Personal Info</h1>
             <section className="personal__boxs">
               <h5 className="personal__box--headers">Full Name</h5>
               <input
                 type="search"
                 placeholder="Write Your Full Name"
                 className="personal__box--names"
+                value={data.firstName + " " + data.lastName}
               />
               <h5 className="personal__box--headers">Email</h5>
               <input
                 type="email"
                 placeholder="Write Your Email"
                 className="personal__box--emails"
+                value={data.email}
               />
               <h5 className="personal__box--headers">Phone Number</h5>
               <input
@@ -233,14 +225,14 @@ function Payment() {
                 placeholder="Write Your phone number"
                 className="personal__box--phones"
                 data-format="+62"
+                value={data.noTelp}
               />
-              <div className="alerts">
-                <h5 className="alert__texts">Fill Your Data Corectly</h5>
-              </div>
             </section>
-            <a href="paymentPage.html">
-              <button className="orderPage__buttons">CheckOut Now</button>
-            </a>
+            <Link to="/home">
+              <button className="orderPage__buttons" onClick={handleSubmit}>
+                CheckOut Now
+              </button>
+            </Link>
           </div>
         </section>
       </section>

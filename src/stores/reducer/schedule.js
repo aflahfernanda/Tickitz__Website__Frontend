@@ -52,7 +52,7 @@ const schedule = (state = initialState, action) => {
         ...state,
         isLoading: false,
         isError: true,
-        msg: action.payload.data.msg
+        msg: action.payload.data
       };
     }
     case "UPDATE_SCHEDULE_PENDING": {
@@ -75,7 +75,7 @@ const schedule = (state = initialState, action) => {
         ...state,
         isLoading: false,
         isError: true,
-        msg: action.payload.data.msg
+        msg: action.payload.data
       };
     }
     case "DELETE_SCHEDULE_PENDING": {

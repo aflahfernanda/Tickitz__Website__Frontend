@@ -8,13 +8,12 @@
 }
 
 /*---------------------------Movie Details-----------------------------------------------*/
-.movieDetailss {
+.movieDetails__cardFlexs {
   display: flex;
-  margin-top: 70px;
-  width: 100%;
 }
-.moviDetails__image {
+.movieDetails__imageBox {
   flex: 1;
+  margin-top: 120px;
   border-radius: 15px;
   border: solid gainsboro 3px;
   padding: 4vh;
@@ -26,6 +25,7 @@
 .moviDetails__desc {
   flex: 3;
   padding-left: 50px;
+  margin-top: 120px;
 }
 
 .movieDetail__desc {
@@ -34,14 +34,17 @@
   gap: 5px;
 }
 .desc1 {
-  font-size: 3.8vh;
+  font-size: 50px;
   font-weight: bold;
-  font-family: "Mulish", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .desc2 {
   color: gray;
-  font-size: 2.7vh;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 .desc3 {
   display: grid;
@@ -53,29 +56,46 @@
 .desc3__1--releaseDate {
   color: gray;
   font-weight: 600;
-  font-size: 2.5vh;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
 }
+.desc3__1--synopsis {
+  color: gray;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .desc3__1--date {
-  font-size: 2.5vh;
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: bold;
-  position: relative;
-  bottom: 10px;
 }
 .desc4 {
   text-align: justify;
   word-spacing: 2px;
-  font-size: 2.5vh;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  margin-bottom: 100px;
 }
 /*---------------------------Show Times------------------*/
-.showTimes {
-  margin-top: 150px;
+.showtimes__background {
   background-color: #f5f6f8;
-  padding-top: 100px;
+  height: 850px;
+  position: relative;
+}
+.showTimes {
+  padding-top: 80px;
 }
 .showTimes__header {
   text-align: center;
   font-weight: bold;
-  font-size: 3.5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 .showTimes__dates {
   text-align: center;
@@ -83,7 +103,7 @@
 }
 .times__dropdown--location {
   padding: 2vh 9vh;
-  border: none;
+  border: solid gainsboro;
   border-radius: 9px;
   background-color: #eff0f6;
   font-weight: bold;
@@ -96,7 +116,7 @@
   margin-top: 20px;
   padding: 2vh 9vh;
   margin: 0 2vh 0 0;
-  border: none;
+  border: solid gainsboro;
   border-radius: 9px;
   background-color: #eff0f6;
   font-weight: bold;
@@ -113,31 +133,53 @@
   column-gap: 3vh;
   row-gap: 2vh;
   overflow-x: auto;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 .showTickets__box {
   background-color: white;
+  padding: 0 30px;
   border-radius: 12px;
   box-shadow: 5px 5px 10px gainsboro;
+  width: 400px;
 }
 .showTickets__header {
   display: flex;
 }
-.showTickets__box--image {
-  flex: 1;
-  padding: 7vh 5vh;
+.showTickets__box--images {
+  flex: 2;
+  margin-right: 30px;
+  width: 20px;
+  height: 35px;
+  margin-top: 70px;
 }
 .showTickets__box--title {
   flex: 2;
+  margin-top: 20px;
 }
 .showTickets__box--header {
   font-weight: bold;
-  font-size: 4vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 30px;
   margin-top: 4vh;
 }
 .showTickets__box--location {
   font-size: 2vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: gray;
+  margin-bottom: 50px;
+}
+.button__showAllDate {
+  padding: 12px 20px;
+  margin-left: 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: #5f2eea;
+  color: white;
+  font-weight: bold;
 }
 .showTickets__times {
   display: grid;
@@ -152,24 +194,28 @@
   margin-bottom: 30px;
 }
 .showTickets__times--timesLight {
-  font-size: 1.6vh;
+  font-size: 13px;
+  padding: 0px 3px;
   font-weight: bold;
-  margin: 0 3vh;
-  color: #a0a3bd;
+  margin: 15px 10px;
+  color: #5f2eea;
+  background-color: white;
+  border: solid #5f2eea 1px;
+  border-radius: 5px;
 }
 .showTickets__times--times:hover {
   cursor: pointer;
-  color: #5f2eea;
 }
 .showTickets__times--timesLight:hover {
   cursor: pointer;
-  color: #5f2eea;
+  color: wheat;
+  background-color: #5f2eea;
 }
 .showTickets__button {
   font-weight: bold;
   padding: 1vh 4vh;
-  margin: 1vh 5vh;
-  width: 45vh;
+  margin: 30px 0;
+  width: 100%;
   margin-bottom: 30px;
   border-radius: 8px;
   background-color: #5f2eea;
@@ -211,185 +257,251 @@
   left: 0.5em;
   margin-right: -50%;
 }
-@media (max-width: 575.98px) {
-  .navbar-brand {
-    position: relative;
-    right: 30px;
+.noDataFound {
+  text-align: center;
+  font-size: 20px;
+  margin-left: 0px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: #5f2eea;
+}
+.card__priceTicket {
+  padding: 0 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.card__priceTicket__price {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 18px;
+}
+.card__priceTicket__total {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 22px;
+  color: #5f2eea;
+  font-weight: bold;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
   }
+
   /*---------------------------Movie Details-----------------------------------------------*/
-  .movieDetailss {
-    display: block;
-    margin-top: 70px;
-    width: 100%;
+  .movieDetails__cardFlexs {
+    display: flex;
   }
-  .moviDetails__image {
-    margin: 50px;
+  .movieDetails__imageBox {
     flex: 1;
+    margin-top: 120px;
     border-radius: 15px;
     border: solid gainsboro 3px;
-    padding: 2vh;
-    width: 80%;
+    padding: 4vh;
+    margin-right: 30px;
+    width: 10%;
   }
 
   /*---------------------------Movie Desc------------------*/
   .moviDetails__desc {
-    display: block;
     flex: 3;
-    padding-left: 40px;
+    padding-left: 50px;
+    margin-top: 120px;
   }
 
   .movieDetail__desc {
+    flex: 3;
     display: grid;
     gap: 5px;
   }
   .desc1 {
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
-    font-family: "Mulish", sans-serif;
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .desc2 {
     color: gray;
-    font-size: 16px;
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-weight: bold;
-    text-align: center;
+    margin-bottom: 30px;
   }
   .desc3 {
     display: grid;
     row-gap: 10px;
-    column-gap: 50px;
+    column-gap: 10px;
     grid-template-columns: auto auto;
   }
 
   .desc3__1--releaseDate {
     color: gray;
     font-weight: 600;
-    font-size: 14px;
-  }
-  .desc3__1--date {
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+  }
+  .desc3__1--synopsis {
+    color: gray;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .desc3__1--date {
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-weight: bold;
-    position: relative;
   }
   .desc4 {
     text-align: justify;
     word-spacing: 2px;
-    font-size: 15px;
+    font-size: 14px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 100px;
   }
   /*---------------------------Show Times------------------*/
-  .showTimes {
-    margin-top: 120px;
+  .showtimes__background {
     background-color: #f5f6f8;
-    padding-top: 60px;
+    height: 1400px;
+    position: relative;
+  }
+  .showTimes {
+    padding-top: 80px;
   }
   .showTimes__header {
     text-align: center;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    margin-bottom: 40px;
   }
   .showTimes__dates {
-    margin: 30px 30px;
     text-align: center;
-    display: block;
+    margin-bottom: 20px;
   }
   .times__dropdown--location {
-    text-align: center;
-    padding: 2vh 11.7vh;
-    border: none;
+    padding: 2vh 9vh;
+    border: solid gainsboro;
     border-radius: 9px;
     background-color: #eff0f6;
     font-weight: bold;
     color: #4e4b66;
-    display: block;
-    margin: 0 30px;
+    background-image: url("../../assets/assets/Vectors.png");
+    background-repeat: no-repeat;
+    background-position: 30px;
   }
   .times__dropdown--dates {
-    text-align: center;
-    margin-top: 40px;
-    padding: 2vh 10vh;
-    margin: 0 30px 0 0;
-    border: none;
+    margin-top: 20px;
+    padding: 2vh 9vh;
+    margin: 0 2vh 0 0;
+    border: solid gainsboro;
     border-radius: 9px;
     background-color: #eff0f6;
     font-weight: bold;
     color: #4e4b66;
-    display: block;
-    margin: 15px 30px;
+    background-image: url("../../assets/assets/calendar\ \(1\)\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 30px;
   }
   /*---------------------------Show Tickets------------------*/
 
   .showTickets {
-    display: block;
-    grid-template-columns: auto auto auto;
+    display: grid;
+    grid-template-columns: auto auto;
     column-gap: 3vh;
     row-gap: 2vh;
-    overflow-x: hidden;
+    overflow-x: auto;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    margin-top: 100px;
   }
 
   .showTickets__box {
-    margin-top: 30px;
     background-color: white;
+    padding: 0 30px;
     border-radius: 12px;
+    box-shadow: 5px 5px 10px gainsboro;
+    width: 400px;
   }
   .showTickets__header {
-    display: block;
+    display: flex;
   }
-  .showTickets__box--image {
-    flex: 1;
-    padding: 2vh 30%;
-    width: 95%;
+  .showTickets__box--images {
+    flex: 2;
+    margin-right: 30px;
+    width: 20px;
+    height: 35px;
+    margin-top: 70px;
   }
   .showTickets__box--title {
     flex: 2;
+    margin-top: 20px;
   }
   .showTickets__box--header {
-    color: white;
     font-weight: bold;
-    font-size: 0vh;
-    margin-top: 1vh;
-    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 30px;
+    margin-top: 4vh;
   }
   .showTickets__box--location {
     font-size: 2vh;
-    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    margin-bottom: 50px;
+  }
+  .button__showAllDate {
+    padding: 12px 20px;
+    margin-left: 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-weight: bold;
   }
   .showTickets__times {
     display: grid;
     grid-template-columns: auto auto auto auto;
     margin-top: 20px;
-    text-align: center;
   }
   .showTickets__times--times {
     font-size: 1.6vh;
     font-weight: bold;
-    margin: 0 1vh;
+    margin: 0 3vh;
     color: #6e7191;
     margin-bottom: 30px;
-    text-align: center;
-    border: none;
-    background-color: none;
   }
   .showTickets__times--timesLight {
-    font-size: 1.6vh;
+    font-size: 13px;
+    padding: 0px 3px;
     font-weight: bold;
-    margin: 0 1vh;
-    color: #a0a3bd;
-    border: none;
+    margin: 15px 10px;
+    color: #5f2eea;
+    background-color: white;
+    border: solid #5f2eea 1px;
+    border-radius: 5px;
   }
   .showTickets__times--times:hover {
     cursor: pointer;
-    color: #5f2eea;
-    background-color: white;
   }
   .showTickets__times--timesLight:hover {
     cursor: pointer;
-    color: #5f2eea;
+    color: wheat;
+    background-color: #5f2eea;
   }
   .showTickets__button {
     font-weight: bold;
     padding: 1vh 4vh;
-    margin: 1vh 10%;
-    width: 78%;
+    margin: 30px 0;
+    width: 100%;
     margin-bottom: 30px;
     border-radius: 8px;
     background-color: #5f2eea;
@@ -418,7 +530,7 @@
     height: 2px;
     position: relative;
     vertical-align: middle;
-    width: 25%;
+    width: 50%;
     margin: 30px 30px;
   }
 
@@ -431,110 +543,904 @@
     left: 0.5em;
     margin-right: -50%;
   }
-
-  /*---------------------------footer-----------------------------------------------*/
-
-  .footer {
-    display: block;
-    margin-top: 200px;
-    margin: 200px 0 60px 0;
-  }
-  /*--------footer1------*/
-  .footer__flexFirst {
-    flex: 1.5;
-    margin-left: 20px;
-  }
-  .footer__flexFirst--image {
-    width: 30vh;
-    height: 12vh;
-    padding-right: 50px;
-  }
-  .footer__flexFirst--caption {
-    color: #6e7191;
-    height: 12vh;
-    padding-right: 50px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  /*--------footer2 ------*/
-  .footer__flexSecond {
-    flex: 1;
-    padding: 15px 20px 0 0;
-    margin-left: 20px;
-  }
-  .footer__flexSecond--title {
-    font-weight: bold;
-    font-size: 3vh;
-    margin-bottom: 20px;
-    color: black;
-  }
-  .footer__flexSecond--listOne {
-    font-size: 2.2vh;
-    color: #4e4b66;
-    text-decoration: none;
-    display: inline;
-    margin-bottom: 20px;
-    margin-right: 60px;
-    font-weight: 600;
-  }
-  .footer__flexSecond--listTwo {
-    font-size: 2.2vh;
-    color: #4e4b66;
-    text-decoration: none;
+  .noDataFound {
     text-align: center;
+    font-size: 20px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+  }
+  .card__priceTicket {
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__priceTicket__price {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+  }
+  .card__priceTicket__total {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 22px;
+    color: #5f2eea;
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /*---------------------------Movie Details-----------------------------------------------*/
+  .movieDetails__cardFlexs {
+    display: block;
+  }
+  .movieDetails__imageBox {
+    flex: 1;
+    margin-top: 120px;
+    border-radius: 15px;
+    border: solid gainsboro 3px;
+    padding: 4vh;
+    margin-right: 30px;
+    width: 45%;
+    text-align: center;
+    margin-left: 200px;
+  }
+
+  /*---------------------------Movie Desc------------------*/
+  .moviDetails__desc {
+    flex: 3;
+    padding-left: 50px;
+    margin-top: 50px;
+  }
+
+  .movieDetail__desc {
+    flex: 3;
+    display: grid;
+    gap: 5px;
+  }
+  .desc1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .desc2 {
+    color: gray;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .desc3 {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 40px;
+    grid-template-columns: auto auto;
+  }
+
+  .desc3__1--releaseDate {
+    color: gray;
     font-weight: 600;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
   }
-  /*--------footer3 ------*/
-  .footer__flexThird {
-    flex: 1;
-    padding: 15px 20px 0 0;
-    margin-top: 40px;
-    margin-left: 20px;
+  .desc3__1--synopsis {
+    color: gray;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
   }
-  .footer__flexThird--title {
+
+  .desc3__1--date {
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-weight: bold;
-    font-size: 3vh;
-    margin-bottom: 30px;
-    color: black;
   }
-  .footer__flexThird--image {
-    display: inline;
-    margin: 0px 21px 0 0;
-    width: 10vh;
+  .desc4 {
+    text-align: justify;
+    word-spacing: 2px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 100px;
   }
-  /*--------footer4 ------*/
-  .footer__flexFourth {
-    flex: 1;
-    padding: 15px 20px 0 0;
-    margin-top: 40px;
-    margin-left: 20px;
-  }
-  .footer__flexFourth--title {
-    font-weight: bold;
-    font-size: 3vh;
-    margin-bottom: 30px;
-    color: black;
-  }
-  .footer__flexFourth--link {
-    display: none;
-    font-size: 2vh;
-  }
-  .footer__flexFourth--mobile {
-    display: inline;
-  }
-  .footer__flexFourth--images {
-    margin-left: 30px;
-    width: 7%;
-    margin-bottom: 40px;
+  /*---------------------------Show Times------------------*/
+  .showtimes__background {
+    background-color: #f5f6f8;
+    height: 1900px;
     position: relative;
-    bottom: 30px;
   }
-  .footer__license {
-    text-align: left;
-    margin-left: 22px;
-    margin-top: 0;
-    font-weight: lighter;
+  .showTimes {
+    padding-top: 60px;
+  }
+  .showTimes__header {
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .showTimes__dates {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .times__dropdown--location {
+    padding: 10px 50px;
+    border: solid gainsboro;
+    border-radius: 9px;
+    background-color: #eff0f6;
+    font-weight: bold;
     color: #4e4b66;
+    background-image: url("../../assets/assets/Vectors.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+  }
+  .times__dropdown--dates {
+    padding: 10px 50px;
+    border: solid gainsboro;
+    border-radius: 9px;
+    background-color: #eff0f6;
+    font-weight: bold;
+    color: #4e4b66;
+    background-image: url("../../assets/assets/calendar\ \(1\)\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 30px;
+  }
+  /*---------------------------Show Tickets------------------*/
+
+  .showTickets {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 150px;
+    column-gap: 3vh;
+    row-gap: 2vh;
+    overflow-x: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .showTickets__box {
+    background-color: white;
+    padding: 0 30px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px gainsboro;
+    width: 400px;
+  }
+  .showTickets__header {
+    display: flex;
+  }
+  .showTickets__box--images {
+    flex: 2;
+    margin-right: 30px;
+    width: 20px;
+    height: 35px;
+    margin-top: 70px;
+  }
+  .showTickets__box--title {
+    flex: 2;
+    margin-top: 20px;
+  }
+  .showTickets__box--header {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 30px;
+    margin-top: 4vh;
+  }
+  .showTickets__box--location {
+    font-size: 2vh;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
     margin-bottom: 50px;
+  }
+  .button__showAllDate {
+    padding: 12px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-weight: bold;
+  }
+  .showTickets__times {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
+  }
+  .showTickets__times--times {
+    font-size: 1.6vh;
+    font-weight: bold;
+    margin: 0 3vh;
+    color: #6e7191;
+    margin-bottom: 30px;
+  }
+  .showTickets__times--timesLight {
+    font-size: 13px;
+    padding: 0px 3px;
+    font-weight: bold;
+    margin: 15px 10px;
+    color: #5f2eea;
+    background-color: white;
+    border: solid #5f2eea 1px;
+    border-radius: 5px;
+  }
+  .showTickets__times--times:hover {
+    cursor: pointer;
+  }
+  .showTickets__times--timesLight:hover {
+    cursor: pointer;
+    color: wheat;
+    background-color: #5f2eea;
+  }
+  .showTickets__button {
+    font-weight: bold;
+    padding: 1vh 4vh;
+    margin: 30px 0;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #5f2eea;
+    border: none;
+    color: white;
+  }
+  .showTickets__button:hover {
+    background-color: #7b51ed;
+    cursor: pointer;
+  }
+  .or {
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    margin-bottom: 50px;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .or:before,
+  .or:after {
+    background-color: #dedede;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    margin: 30px 30px;
+  }
+
+  .or:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  .or:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+  .noDataFound {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+  }
+  .card__priceTicket {
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__priceTicket__price {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+  }
+  .card__priceTicket__total {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 22px;
+    color: #5f2eea;
+    font-weight: bold;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /*---------------------------Movie Details-----------------------------------------------*/
+  .movieDetails__cardFlexs {
+    display: block;
+  }
+  .movieDetails__imageBox {
+    flex: 1;
+    margin-top: 120px;
+    border-radius: 15px;
+    border: solid gainsboro 3px;
+    padding: 10px;
+    margin-right: 30px;
+    width: 50%;
+    text-align: center;
+    margin-left: 140px;
+  }
+
+  /*---------------------------Movie Desc------------------*/
+  .moviDetails__desc {
+    flex: 3;
+    padding-left: 50px;
+    margin-top: 50px;
+  }
+
+  .movieDetail__desc {
+    flex: 3;
+    display: grid;
+    gap: 5px;
+  }
+  .desc1 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .desc2 {
+    color: gray;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .desc3 {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 40px;
+    grid-template-columns: auto auto;
+  }
+
+  .desc3__1--releaseDate {
+    color: gray;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+  }
+  .desc3__1--synopsis {
+    color: gray;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .desc3__1--date {
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+  }
+  .desc4 {
+    text-align: justify;
+    word-spacing: 2px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 100px;
+  }
+  /*---------------------------Show Times------------------*/
+  .showtimes__background {
+    background-color: #f5f6f8;
+    height: 1900px;
+    position: relative;
+  }
+  .showTimes {
+    padding-top: 60px;
+  }
+  .showTimes__header {
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .showTimes__dates {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .times__dropdown--location {
+    padding: 10px 50px;
+    border: solid gainsboro;
+    border-radius: 9px;
+    background-color: #eff0f6;
+    font-weight: bold;
+    color: #4e4b66;
+    background-image: url("../../assets/assets/Vectors.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+  }
+  .times__dropdown--dates {
+    padding: 10px 50px;
+    border: solid gainsboro;
+    border-radius: 9px;
+    background-color: #eff0f6;
+    font-weight: bold;
+    color: #4e4b66;
+    background-image: url("../../assets/assets/calendar\ \(1\)\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 30px;
+  }
+  /*---------------------------Show Tickets------------------*/
+
+  .showTickets {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 60px;
+    column-gap: 3vh;
+    row-gap: 2vh;
+    overflow-x: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .showTickets__box {
+    background-color: white;
+    padding: 0 30px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px gainsboro;
+    width: 400px;
+  }
+  .showTickets__header {
+    display: flex;
+  }
+  .showTickets__box--images {
+    flex: 2;
+    margin-right: 30px;
+    width: 20px;
+    height: 35px;
+    margin-top: 70px;
+  }
+  .showTickets__box--title {
+    flex: 2;
+    margin-top: 20px;
+  }
+  .showTickets__box--header {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 30px;
+    margin-top: 4vh;
+  }
+  .showTickets__box--location {
+    font-size: 2vh;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    margin-bottom: 50px;
+  }
+  .button__showAllDate {
+    padding: 12px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-weight: bold;
+  }
+  .showTickets__times {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
+  }
+  .showTickets__times--times {
+    font-size: 1.6vh;
+    font-weight: bold;
+    margin: 0 3vh;
+    color: #6e7191;
+    margin-bottom: 30px;
+  }
+  .showTickets__times--timesLight {
+    font-size: 13px;
+    padding: 0px 3px;
+    font-weight: bold;
+    margin: 15px 10px;
+    color: #5f2eea;
+    background-color: white;
+    border: solid #5f2eea 1px;
+    border-radius: 5px;
+  }
+  .showTickets__times--times:hover {
+    cursor: pointer;
+  }
+  .showTickets__times--timesLight:hover {
+    cursor: pointer;
+    color: wheat;
+    background-color: #5f2eea;
+  }
+  .showTickets__button {
+    font-weight: bold;
+    padding: 1vh 4vh;
+    margin: 30px 0;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #5f2eea;
+    border: none;
+    color: white;
+  }
+  .showTickets__button:hover {
+    background-color: #7b51ed;
+    cursor: pointer;
+  }
+  .or {
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    margin-bottom: 50px;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .or:before,
+  .or:after {
+    background-color: #dedede;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    margin: 30px 30px;
+  }
+
+  .or:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  .or:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+  .noDataFound {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+  }
+  .card__priceTicket {
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__priceTicket__price {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+  }
+  .card__priceTicket__total {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 22px;
+    color: #5f2eea;
+    font-weight: bold;
+  }
+}
+@media (max-width: 575.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /*---------------------------Movie Details-----------------------------------------------*/
+  .movieDetails__cardFlexs {
+    display: block;
+  }
+  .movieDetails__imageBox {
+    flex: 1;
+    margin-top: 120px;
+    border-radius: 15px;
+    border: solid gainsboro 3px;
+    padding: 10px;
+    margin-right: 30px;
+    width: 50%;
+    text-align: center;
+    margin-left: 130px;
+  }
+
+  /*---------------------------Movie Desc------------------*/
+  .moviDetails__desc {
+    flex: 3;
+    padding-left: 50px;
+    margin-top: 50px;
+  }
+
+  .movieDetail__desc {
+    flex: 3;
+    display: grid;
+    gap: 5px;
+  }
+  .desc1 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  .desc2 {
+    color: gray;
+    font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .desc3 {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 40px;
+    grid-template-columns: auto auto;
+  }
+
+  .desc3__1--releaseDate {
+    color: gray;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+  }
+  .desc3__1--synopsis {
+    color: gray;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .desc3__1--date {
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+  }
+  .desc4 {
+    text-align: justify;
+    word-spacing: 2px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-bottom: 100px;
+  }
+  /*---------------------------Show Times------------------*/
+  .showtimes__background {
+    background-color: #f5f6f8;
+    height: 1900px;
+    position: relative;
+  }
+  .showTimes {
+    padding-top: 60px;
+  }
+  .showTimes__header {
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .showTimes__dates {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .times__dropdown--location {
+    padding: 10px 60px;
+    border: solid gainsboro;
+    margin-top: 20px;
+    border-radius: 9px;
+    background-color: #eff0f6;
+    font-weight: bold;
+    color: #4e4b66;
+    background-image: url("../../assets/assets/Vectors.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+    margin-left: 10px;
+  }
+  .times__dropdown--dates {
+    padding: 10px 50px;
+    border: solid gainsboro;
+    border-radius: 9px;
+    margin-left: 20px;
+    background-color: #eff0f6;
+    font-weight: bold;
+    color: #4e4b66;
+    background-image: url("../../assets/assets/calendar\ \(1\)\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 20px;
+  }
+  /*---------------------------Show Tickets------------------*/
+
+  .showTickets {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 25px;
+    column-gap: 3vh;
+    row-gap: 2vh;
+    overflow-x: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  .showTickets__box {
+    background-color: white;
+    padding: 0 30px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px gainsboro;
+    width: 400px;
+  }
+  .showTickets__header {
+    display: flex;
+  }
+  .showTickets__box--images {
+    flex: 2;
+    margin-right: 30px;
+    width: 20px;
+    height: 35px;
+    margin-top: 70px;
+  }
+  .showTickets__box--title {
+    flex: 2;
+    margin-top: 20px;
+  }
+  .showTickets__box--header {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 30px;
+    margin-top: 4vh;
+  }
+  .showTickets__box--location {
+    font-size: 2vh;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    margin-bottom: 50px;
+  }
+  .button__showAllDate {
+    padding: 12px 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #5f2eea;
+    color: white;
+    font-weight: bold;
+  }
+  .showTickets__times {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 20px;
+  }
+  .showTickets__times--times {
+    font-size: 1.6vh;
+    font-weight: bold;
+    margin: 0 3vh;
+    color: #6e7191;
+    margin-bottom: 30px;
+  }
+  .showTickets__times--timesLight {
+    font-size: 13px;
+    padding: 0px 3px;
+    font-weight: bold;
+    margin: 15px 10px;
+    color: #5f2eea;
+    background-color: white;
+    border: solid #5f2eea 1px;
+    border-radius: 5px;
+  }
+  .showTickets__times--times:hover {
+    cursor: pointer;
+  }
+  .showTickets__times--timesLight:hover {
+    cursor: pointer;
+    color: wheat;
+    background-color: #5f2eea;
+  }
+  .showTickets__button {
+    font-weight: bold;
+    padding: 1vh 4vh;
+    margin: 30px 0;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #5f2eea;
+    border: none;
+    color: white;
+  }
+  .showTickets__button:hover {
+    background-color: #7b51ed;
+    cursor: pointer;
+  }
+  .or {
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    margin-bottom: 50px;
+    position: relative;
+    bottom: 150px;
+  }
+
+  .or:before,
+  .or:after {
+    background-color: #dedede;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    margin: 30px 30px;
+  }
+
+  .or:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  .or:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+  .noDataFound {
+    text-align: center;
+    font-size: 12px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+  }
+  .card__priceTicket {
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__priceTicket__price {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 18px;
+  }
+  .card__priceTicket__total {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 22px;
+    color: #5f2eea;
+    font-weight: bold;
   }
 }

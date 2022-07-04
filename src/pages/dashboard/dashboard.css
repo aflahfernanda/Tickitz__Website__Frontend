@@ -1,0 +1,287 @@
+.dashboard__flexBackground {
+  margin-top: 100px;
+  display: flex;
+}
+.dashboard__backgroundColor {
+  background-color: whitesmoke;
+}
+.dashboard__flex1 {
+  flex: 3;
+  margin-right: 40px;
+}
+.dashboard__flex2 {
+  flex: 1;
+}
+.dashboard__header {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.dashboard__backgroundGrafic {
+  margin-bottom: 20px;
+  background-color: white;
+  width: 100%;
+  margin-right: 40px;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: gainsboro 12px 12px 12px;
+  margin-bottom: 80px;
+}
+.dashboard__sortMovie {
+  width: 100%;
+  padding: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  border-radius: 8px;
+  box-shadow: gainsboro 5px 5px;
+  margin-top: 20px;
+}
+.dashboard__filter {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #5f2eea;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: white;
+}
+.dashboard__option {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .dashboard__flexBackground {
+    margin-top: 100px;
+    display: flex;
+  }
+  .dashboard__backgroundColor {
+    background-color: whitesmoke;
+  }
+  .dashboard__flex1 {
+    flex: 3;
+    margin-right: 20px;
+  }
+  .dashboard__flex2 {
+    flex: 1;
+  }
+  .dashboard__header {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .dashboard__backgroundGrafic {
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    margin-right: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 12px 12px 12px;
+    margin-bottom: 80px;
+  }
+  .dashboard__sortMovie {
+    width: 100%;
+    padding: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    box-shadow: gainsboro 5px 5px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .dashboard__filter {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+  }
+  .dashboard__option {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .dashboard__flexBackground {
+    margin-top: 100px;
+    display: block;
+  }
+  .dashboard__backgroundColor {
+    background-color: whitesmoke;
+  }
+  .dashboard__flex1 {
+    flex: 3;
+    margin-right: 20px;
+  }
+  .dashboard__flex2 {
+    flex: 1;
+  }
+  .dashboard__header {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .dashboard__backgroundGrafic {
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    margin-right: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 12px 12px 12px;
+    margin-bottom: 80px;
+  }
+  .dashboard__sortMovie {
+    width: 100%;
+    padding: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    box-shadow: gainsboro 5px 5px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .dashboard__filter {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+  }
+  .dashboard__option {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .dashboard__flexBackground {
+    margin-top: 100px;
+    display: block;
+  }
+  .dashboard__backgroundColor {
+    background-color: whitesmoke;
+  }
+  .dashboard__flex1 {
+    flex: 3;
+    margin-right: 20px;
+  }
+  .dashboard__flex2 {
+    flex: 1;
+  }
+  .dashboard__header {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .dashboard__backgroundGrafic {
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    margin-right: 40px;
+    padding: 0px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 12px 12px 12px;
+    margin-bottom: 80px;
+  }
+  .dashboard__sortMovie {
+    width: 100%;
+    padding: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    box-shadow: gainsboro 5px 5px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .dashboard__filter {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+  }
+  .dashboard__option {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+}
+@media (max-width: 575.98px) {
+  .dashboard__flexBackground {
+    margin-top: 100px;
+    display: block;
+  }
+  .dashboard__backgroundColor {
+    background-color: whitesmoke;
+  }
+  .dashboard__flex1 {
+    flex: 3;
+    margin-right: 0px;
+  }
+  .dashboard__flex2 {
+    flex: 1;
+  }
+  .dashboard__header {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .dashboard__backgroundGrafic {
+    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    margin-right: 0px;
+    padding: 0px;
+    padding-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: gainsboro 12px 12px 12px;
+    margin-bottom: 20px;
+  }
+  .dashboard__sortMovie {
+    width: 100%;
+    padding: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    box-shadow: gainsboro 5px 5px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .dashboard__filter {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: white;
+  }
+  .dashboard__option {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+}

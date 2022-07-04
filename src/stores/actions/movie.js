@@ -1,10 +1,12 @@
 import { type } from "@testing-library/user-event/dist/type";
 import axios from "../../utils/axios";
 
-export const getDataMovie = (page, limit, search, sort) => {
+export const getDataMovie = (page, limit, sort, search) => {
   return {
     type: "GET_DATA_MOVIE",
-    payload: axios.get(`movie?page=${page}&limit=${limit}&sort=&searchRelease=&searchName=`)
+    payload: axios.get(
+      `movie?page=${page}&limit=${limit}&sort=${sort}&searchRelease=&searchName=${search}`
+    )
   };
 };
 

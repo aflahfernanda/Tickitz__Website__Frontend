@@ -2,62 +2,61 @@
 
 /*---------------------------movie Details-----------------------------------------------*/
 .card {
-  margin: 0 20px;
+  margin: 0 5px;
   text-align: center;
   font-weight: bold;
-  width: 200px;
+  width: 220px;
+  height: 450px;
+  padding: 15px;
+  border-radius: 12px;
 }
 /*---------------------------input Email-----------------------------------------------*/
-.inputs {
-  position: relative;
-  margin: 0 0 0 0;
-  background-color: white;
-  border: solid gainsboro 1px;
-  vertical-align: middle;
-  width: 100%;
-  height: 350px;
-  box-shadow: 10px 10px 10px gainsboro;
-  text-align: center;
-}
-.input__aligns {
-  position: relative;
-  top: 60px;
-}
-.input__descs {
-  color: gray;
-  font-weight: bold;
-}
-.input__titles {
-  color: #5f2eea;
-  font-family: "Mulish", sans-serif;
-  font-weight: 900;
-  font-size: 55px;
-}
-.input__emails {
-  border: solid gainsboro 2px;
-  margin: 20px 10px;
-  padding: 10px 70px;
-  border-radius: 10px;
-  text-align: left;
-}
-.input__buttons {
-  color: white;
-  font-weight: bold;
-  background-color: #5f2eea;
-  padding: 10px 30px;
-  border-radius: 10px;
-}
-
-.input__captions {
-  display: block;
+.card__titleMovie {
   font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card__genreMovie {
+  font-size: 13px;
+}
+.card__buttonMovie {
+  font-size: 15px;
+  padding: 5px 20px;
+  border: solid #5f2eea 1px;
+  background-color: white;
+  color: #5f2eea;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 12px;
 }
 
 @media (max-width: 575.98px) {
   .card {
-    margin: 0 20px;
+    margin: 0 5px;
     text-align: center;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
+    height: 420px;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  /*---------------------------input Email-----------------------------------------------*/
+  .card__titleMovie {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .card__genreMovie {
+    font-size: 13px;
+  }
+  .card__buttonMovie {
+    font-size: 15px;
+    padding: 5px 10px;
+    border: solid #5f2eea 1px;
+    background-color: white;
+    color: #5f2eea;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 12px;
   }
 }

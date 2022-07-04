@@ -11,7 +11,7 @@
 .upcomingView {
   position: relative;
   width: 100%;
-  margin: 20px 0 0 0;
+  /* margin: 20px 0 0 0; */
 }
 
 .upcomingView__header {
@@ -19,7 +19,9 @@
   display: flex;
 }
 .upcoming__header--upcomingView {
-  font-size: 25px;
+  margin-top: 80px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   flex: 1;
   color: black;
@@ -29,18 +31,30 @@
   cursor: pointer;
 }
 .upcomingView__header--viewAll {
+  margin-top: 80px;
   flex: 1;
   text-align: right;
-  color: #5f2eea;
+  color: black;
   font-weight: bold;
   width: 40px;
-  border-radius: 16px;
+  border-radius: 7px;
   background-color: #fcfdfe;
+  border: solid gray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: 15px;
 }
 .sort__asc {
-  border-radius: 12px;
+  margin-top: 80px;
+  border-radius: 7px;
   margin-right: 20px;
   font-weight: bold;
+  padding: 20px;
+  box-shadow: gainsboro 8px 8px 8px;
+  border: solid gray 2px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 /*---------------------------month-----------------------------------------------*/
 .upcomingView__month {
@@ -51,7 +65,7 @@
   white-space: nowrap;
 }
 
-.upcomingView__month--button {
+.upcomingView__month--buttons {
   color: blueviolet;
   background-color: white;
   font-weight: bold;
@@ -62,14 +76,14 @@
   height: 50px;
   border-radius: 10px;
 }
-.upcomingView__month--button:hover {
+.upcomingView__month--buttons:hover {
   color: white;
   cursor: pointer;
   background-color: #5f2eea;
   bottom: 1px;
 }
 /*---------------------------movie Details-----------------------------------------------*/
-.movieDetailsView {
+.movieDetailsViews {
   position: relative;
   margin-bottom: 100px;
   display: grid;
@@ -236,21 +250,79 @@
   display: block;
   font-size: 15px;
 }
-@media (max-width: 575.98px) {
+.paginations {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  margin-top: 40px;
+  text-decoration: none;
+  color: #5f2eea;
+  border: solid #5f2eea;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.paginations:hover {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  margin-top: 40px;
+  text-decoration: none;
+  color: white;
+  background-color: #5f2eea;
+  border: solid #5f2eea;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.pagination_previous {
+  font-size: 20px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  background-color: #5f2eea;
+  padding: 0px 20px;
+  border-radius: 7px;
+}
+.viewAll__noDataFound {
+  color: #5f2eea;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
   /*---------------------------upcoming-----------------------------------------------*/
   .upcomingView {
     position: relative;
     width: 100%;
-    margin: 20px 0 0 0;
+    /* margin: 20px 0 0 0; */
   }
 
   .upcomingView__header {
     padding: 50px 0;
-    display: block;
+    display: flex;
   }
   .upcoming__header--upcomingView {
+    margin-top: 80px;
     font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    flex: 1;
     color: black;
   }
   .upcoming__header--upcomingView:hover {
@@ -258,21 +330,30 @@
     cursor: pointer;
   }
   .upcomingView__header--viewAll {
+    margin-top: 80px;
+    flex: 1;
     text-align: right;
-    color: #5f2eea;
+    color: black;
     font-weight: bold;
     width: 40px;
-    border-radius: 16px;
+    border-radius: 7px;
     background-color: #fcfdfe;
-    width: 60%;
-    height: 50px;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
   }
   .sort__asc {
-    border-radius: 12px;
-    margin-right: 10px;
+    margin-top: 80px;
+    border-radius: 7px;
+    margin-right: 20px;
     font-weight: bold;
-    width: 30%;
-    height: 50px;
+    padding: 7px;
+    box-shadow: gainsboro 8px 8px 8px;
+    border: solid gray 2px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
   }
   /*---------------------------month-----------------------------------------------*/
   .upcomingView__month {
@@ -283,33 +364,33 @@
     white-space: nowrap;
   }
 
-  .upcomingView__month--button {
+  .upcomingView__month--buttons {
     color: blueviolet;
     background-color: white;
     font-weight: bold;
     border: solid blueviolet 2px;
     position: relative;
-    margin: 0 0 0 5px;
-    width: 170px;
-    height: 50px;
+    margin: 0 10px;
+    width: 140px;
+    height: 40px;
     border-radius: 10px;
   }
-  .upcomingView__month--button:hover {
+  .upcomingView__month--buttons:hover {
     color: white;
     cursor: pointer;
     background-color: #5f2eea;
     bottom: 1px;
   }
   /*---------------------------movie Details-----------------------------------------------*/
-  .movieDetailsView {
+  .movieDetailsViews {
     position: relative;
     margin-bottom: 100px;
     display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
     row-gap: 50px;
-    margin: 100px 0 0 0;
-    padding: 40px 200px;
+    margin: 100px 0 0 8vh;
+    padding: 40px 40px;
     text-align: center;
     justify-content: center;
   }
@@ -422,5 +503,995 @@
   }
   .movieDetails__movie6:hover {
     background-color: gainsboro;
+  }
+  /*---------------------------input Email-----------------------------------------------*/
+  .inputs {
+    position: relative;
+    margin: 200px 0 0 0;
+    background-color: white;
+    border: solid gainsboro 1px;
+    vertical-align: middle;
+    width: 100%;
+    height: 350px;
+    box-shadow: 10px 10px 10px gainsboro;
+    text-align: center;
+  }
+  .input__aligns {
+    position: relative;
+    top: 60px;
+  }
+  .input__descs {
+    color: gray;
+    font-weight: bold;
+  }
+  .input__titles {
+    color: #5f2eea;
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+  }
+  .input__emails {
+    border: solid gainsboro 2px;
+    margin: 20px 10px;
+    padding: 10px 70px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  .input__buttons {
+    color: white;
+    font-weight: bold;
+    background-color: #5f2eea;
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+
+  .input__captions {
+    display: block;
+    font-size: 15px;
+  }
+  .paginations {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .paginations:hover {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .pagination_previous {
+    font-size: 20px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    background-color: #5f2eea;
+    padding: 0px 20px;
+    border-radius: 7px;
+  }
+  .viewAll__noDataFound {
+    color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /*---------------------------upcoming-----------------------------------------------*/
+  .upcomingView {
+    position: relative;
+    width: 100%;
+    /* margin: 20px 0 0 0; */
+  }
+
+  .upcomingView__header {
+    padding: 50px 0;
+    display: flex;
+  }
+  .upcoming__header--upcomingView {
+    margin-top: 80px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    flex: 1;
+    color: black;
+  }
+  .upcoming__header--upcomingView:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .upcomingView__header--viewAll {
+    margin-top: 80px;
+    flex: 1;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    width: 40px;
+    border-radius: 7px;
+    background-color: #fcfdfe;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+  .sort__asc {
+    margin-top: 80px;
+    border-radius: 7px;
+    margin-right: 20px;
+    font-weight: bold;
+    padding: 7px;
+    box-shadow: gainsboro 8px 8px 8px;
+    border: solid gray 2px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  /*---------------------------month-----------------------------------------------*/
+  .upcomingView__month {
+    position: relative;
+    margin: 0 0 0 5vh;
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .upcomingView__month--buttons {
+    color: blueviolet;
+    background-color: white;
+    font-weight: bold;
+    border: solid blueviolet 2px;
+    position: relative;
+    margin: 0 10px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .upcomingView__month--buttons:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #5f2eea;
+    bottom: 1px;
+  }
+  /*---------------------------movie Details-----------------------------------------------*/
+  .movieDetailsViews {
+    position: relative;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 50px;
+    margin: 50px 0 0 8vh;
+    padding: 10px 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .movieDetails__movie1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie1:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__title {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .movieDetails__genre {
+    text-align: center;
+    color: #a0a3bd;
+    font-weight: bold;
+  }
+  .movieDetails__button {
+    color: blueviolet;
+    font-weight: bold;
+    padding: 5px 30px;
+    margin: 0 50px;
+    border-radius: 10px;
+    border: solid blueviolet 2px;
+    background-color: white;
+  }
+  .movieDetails__button:hover {
+    color: white;
+    background-color: blueviolet;
+  }
+  .movieDetails__movie2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie2:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie3:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie4:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie5:hover {
+    background-color: gainsboro;
+  }
+
+  .movieDetails__movie6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie6:hover {
+    background-color: gainsboro;
+  }
+  /*---------------------------input Email-----------------------------------------------*/
+  .inputs {
+    position: relative;
+    margin: 200px 0 0 0;
+    background-color: white;
+    border: solid gainsboro 1px;
+    vertical-align: middle;
+    width: 100%;
+    height: 350px;
+    box-shadow: 10px 10px 10px gainsboro;
+    text-align: center;
+  }
+  .input__aligns {
+    position: relative;
+    top: 60px;
+  }
+  .input__descs {
+    color: gray;
+    font-weight: bold;
+  }
+  .input__titles {
+    color: #5f2eea;
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+  }
+  .input__emails {
+    border: solid gainsboro 2px;
+    margin: 20px 10px;
+    padding: 10px 70px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  .input__buttons {
+    color: white;
+    font-weight: bold;
+    background-color: #5f2eea;
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+
+  .input__captions {
+    display: block;
+    font-size: 15px;
+  }
+  .paginations {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .paginations:hover {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .pagination_previous {
+    font-size: 20px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    background-color: #5f2eea;
+    padding: 0px 20px;
+    border-radius: 7px;
+  }
+  .viewAll__noDataFound {
+    color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /*---------------------------upcoming-----------------------------------------------*/
+  .upcomingView {
+    position: relative;
+    width: 100%;
+    /* margin: 20px 0 0 0; */
+  }
+
+  .upcomingView__header {
+    padding: 50px 0;
+    display: flex;
+  }
+  .upcoming__header--upcomingView {
+    margin-top: 80px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    flex: 1;
+    color: black;
+  }
+  .upcoming__header--upcomingView:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .upcomingView__header--viewAll {
+    margin-top: 80px;
+    flex: 1;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    width: 40px;
+    border-radius: 7px;
+    background-color: #fcfdfe;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+  .sort__asc {
+    margin-top: 80px;
+    border-radius: 7px;
+    margin-right: 20px;
+    font-weight: bold;
+    padding: 7px;
+    box-shadow: gainsboro 8px 8px 8px;
+    border: solid gray 2px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  /*---------------------------month-----------------------------------------------*/
+  .upcomingView__month {
+    position: relative;
+    margin: 0 0 0 5vh;
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .upcomingView__month--buttons {
+    color: blueviolet;
+    background-color: white;
+    font-weight: bold;
+    border: solid blueviolet 2px;
+    position: relative;
+    margin: 0 10px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .upcomingView__month--buttons:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #5f2eea;
+    bottom: 1px;
+  }
+  /*---------------------------movie Details-----------------------------------------------*/
+  .movieDetailsViews {
+    position: relative;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0px;
+    row-gap: 50px;
+    margin: 50px 0 0 0;
+    padding: 10px 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .movieDetails__movie1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie1:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__title {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .movieDetails__genre {
+    text-align: center;
+    color: #a0a3bd;
+    font-weight: bold;
+  }
+  .movieDetails__button {
+    color: blueviolet;
+    font-weight: bold;
+    padding: 5px 30px;
+    margin: 0 50px;
+    border-radius: 10px;
+    border: solid blueviolet 2px;
+    background-color: white;
+  }
+  .movieDetails__button:hover {
+    color: white;
+    background-color: blueviolet;
+  }
+  .movieDetails__movie2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie2:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie3:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie4:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie5:hover {
+    background-color: gainsboro;
+  }
+
+  .movieDetails__movie6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie6:hover {
+    background-color: gainsboro;
+  }
+  /*---------------------------input Email-----------------------------------------------*/
+  .inputs {
+    position: relative;
+    margin: 200px 0 0 0;
+    background-color: white;
+    border: solid gainsboro 1px;
+    vertical-align: middle;
+    width: 100%;
+    height: 350px;
+    box-shadow: 10px 10px 10px gainsboro;
+    text-align: center;
+  }
+  .input__aligns {
+    position: relative;
+    top: 60px;
+  }
+  .input__descs {
+    color: gray;
+    font-weight: bold;
+  }
+  .input__titles {
+    color: #5f2eea;
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+  }
+  .input__emails {
+    border: solid gainsboro 2px;
+    margin: 20px 10px;
+    padding: 10px 70px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  .input__buttons {
+    color: white;
+    font-weight: bold;
+    background-color: #5f2eea;
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+
+  .input__captions {
+    display: block;
+    font-size: 15px;
+  }
+  .paginations {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .paginations:hover {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .pagination_previous {
+    font-size: 20px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    background-color: #5f2eea;
+    padding: 0px 20px;
+    border-radius: 7px;
+  }
+  .viewAll__noDataFound {
+    color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  /*---------------------------upcoming-----------------------------------------------*/
+  .upcomingView {
+    position: relative;
+    width: 100%;
+    /* margin: 20px 0 0 0; */
+  }
+
+  .upcomingView__header {
+    padding: 50px 0;
+    display: flex;
+  }
+  .upcoming__header--upcomingView {
+    margin-top: 80px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    flex: 1;
+    color: black;
+  }
+  .upcoming__header--upcomingView:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .upcomingView__header--viewAll {
+    margin-top: 80px;
+    flex: 1;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    width: 40px;
+    border-radius: 7px;
+    background-color: #fcfdfe;
+    border: solid gray;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+  .sort__asc {
+    margin-top: 80px;
+    border-radius: 7px;
+    margin-right: 20px;
+    font-weight: bold;
+    padding: 7px;
+    box-shadow: gainsboro 8px 8px 8px;
+    border: solid gray 2px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+  }
+  /*---------------------------month-----------------------------------------------*/
+  .upcomingView__month {
+    position: relative;
+    margin: 0 0 0 5vh;
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .upcomingView__month--buttons {
+    color: blueviolet;
+    background-color: white;
+    font-weight: bold;
+    border: solid blueviolet 2px;
+    position: relative;
+    margin: 0 10px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .upcomingView__month--buttons:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #5f2eea;
+    bottom: 1px;
+  }
+  /*---------------------------movie Details-----------------------------------------------*/
+  .movieDetailsViews {
+    position: relative;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0px;
+    row-gap: 50px;
+    margin: 50px 0 0 0;
+    padding: 10px 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .movieDetails__movie1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie1:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__title {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  .movieDetails__genre {
+    text-align: center;
+    color: #a0a3bd;
+    font-weight: bold;
+  }
+  .movieDetails__button {
+    color: blueviolet;
+    font-weight: bold;
+    padding: 5px 30px;
+    margin: 0 50px;
+    border-radius: 10px;
+    border: solid blueviolet 2px;
+    background-color: white;
+  }
+  .movieDetails__button:hover {
+    color: white;
+    background-color: blueviolet;
+  }
+  .movieDetails__movie2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie2:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie3:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie4:hover {
+    background-color: gainsboro;
+  }
+  .movieDetails__movie5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie5:hover {
+    background-color: gainsboro;
+  }
+
+  .movieDetails__movie6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: solid gainsboro 2px;
+    border-radius: 16px;
+    padding: 15px;
+    margin-right: 30px;
+    flex: 1;
+  }
+  .movieDetails__movie6:hover {
+    background-color: gainsboro;
+  }
+  /*---------------------------input Email-----------------------------------------------*/
+  .inputs {
+    position: relative;
+    margin: 200px 0 0 0;
+    background-color: white;
+    border: solid gainsboro 1px;
+    vertical-align: middle;
+    width: 100%;
+    height: 350px;
+    box-shadow: 10px 10px 10px gainsboro;
+    text-align: center;
+  }
+  .input__aligns {
+    position: relative;
+    top: 60px;
+  }
+  .input__descs {
+    color: gray;
+    font-weight: bold;
+  }
+  .input__titles {
+    color: #5f2eea;
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    font-size: 55px;
+  }
+  .input__emails {
+    border: solid gainsboro 2px;
+    margin: 20px 10px;
+    padding: 10px 70px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  .input__buttons {
+    color: white;
+    font-weight: bold;
+    background-color: #5f2eea;
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+
+  .input__captions {
+    display: block;
+    font-size: 15px;
+  }
+  .paginations {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .paginations:hover {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    margin-top: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #5f2eea;
+    border: solid #5f2eea;
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .pagination_previous {
+    font-size: 20px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    background-color: #5f2eea;
+    padding: 0px 20px;
+    border-radius: 7px;
+  }
+  .viewAll__noDataFound {
+    color: #5f2eea;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: center;
+    font-size: 20px;
   }
 }

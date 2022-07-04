@@ -6,10 +6,10 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/*---------------------------Movie Selected-----------------------------------------------*/
-.movieSelected {
+.order__background {
   background-color: #f5f6f8;
 }
+/*---------------------------Movie Selected-----------------------------------------------*/
 .movieSelected__flex {
   padding-top: 90px;
   display: flex;
@@ -18,22 +18,30 @@
 
 /*-------------------Movie Selected Title---------------------------------------*/
 .movieSelected__flex1 {
+  margin-top: 50px;
   flex: 2;
   font-size: 3vh;
 }
 .movieSelected__header {
   font-weight: bold;
-  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-bottom: 40px;
 }
 .movieSelected__movieSelected {
   border: none;
   border-radius: 16px;
   background-color: white;
-  padding: 4vh 4vh;
+  box-shadow: gainsboro 12px 12px 12px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
 }
 .movieSelected__movieSelected--title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  color: gray;
   font-weight: bold;
-  display: inline;
   font-size: 100%;
   margin-right: 42%;
 }
@@ -42,10 +50,28 @@
   display: inline-block;
   background-color: #eff0f6;
   border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   border-radius: 8px;
   padding: 1vh 2%;
   font-size: 2.5vh;
   color: #5f2eea;
+  border: solid #5f2eea 2px;
+  font-weight: bold;
+  width: auto;
+}
+.movieSelected__movieSelected--button:hover {
+  text-align: right;
+  display: inline-block;
+  background-color: #5f2eea;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  border-radius: 8px;
+  padding: 1vh 2%;
+  font-size: 2.5vh;
+  color: white;
+  border: solid #5f2eea 2px;
   font-weight: bold;
   width: auto;
 }
@@ -54,37 +80,43 @@
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
 }
 .seatSelected__movieSelected {
   border: none;
   border-radius: 16px;
   background-color: white;
-  padding: 5vh 15%;
+  padding: 10px 50px;
 }
 .seatSelected__movieSelected--title {
   font-weight: bold;
   margin-top: 60px;
-  font-size: 2.3vh;
+  font-size: 20px;
   text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   color: #4e4b66;
 }
 .seat__border--line {
-  background-color: #d6d8e7;
+  background-color: #5f2eea;
   height: 1vh;
   width: 95%;
   border-radius: 10px;
 }
 .seat__border--main {
   margin-top: 30px;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 .seat__border--box {
   margin-top: 50px;
 }
 .seat__border--headerTwo {
   font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-size: 2.5vh;
-  margin: 0 0 40px 0;
+  margin: 0 0 30px 0;
 }
 
 .headerTwo__box1 {
@@ -118,7 +150,7 @@
   display: inline block;
   position: relative;
   margin-left: 6vh;
-  font-size: 2vh;
+  font-size: 15px;
   top: 5px;
   font-weight: bold;
   color: #4e4b66;
@@ -131,9 +163,10 @@
   flex: 1;
 }
 .button__change--movie {
-  padding: 1vh 10%;
-  height: 6vh;
-  font-size: 2vh;
+  padding: 15px 80px;
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: bold;
   border-radius: 8px;
   border: solid blueviolet 2px;
@@ -144,13 +177,15 @@
   background-color: #5f2eea;
 }
 .button__checkout--movie {
-  padding: 1vh 10%;
-  height: 6vh;
-  font-size: 2vh;
+  padding: 15px 80px;
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: bold;
-  border-radius: 12px;
+  border-radius: 8px;
   border: solid blueviolet 2px;
   color: #5f2eea;
+  margin-bottom: 50px;
 }
 .button__checkout--movie:hover {
   color: white;
@@ -162,13 +197,15 @@
 }
 /*---------------------------Movie Selected Flex Right-----------------------------------------------*/
 .movieSelected__flex2 {
+  margin-top: 50px;
   flex: 1;
   margin-left: 20px;
 }
 .movieInfo__header {
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: 4vh;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .personal__box {
   background-color: white;
@@ -178,12 +215,18 @@
   padding: 4vh;
   border-radius: 12px;
 }
+.personal__boxImage {
+  display: flex;
+  justify-content: center;
+}
 .personal__box--image {
   margin: 0 80px;
 }
 .personal__box--title {
   text-align: center;
-  font-size: 3.5vh;
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: bold;
   margin: 15px 0 30px 0;
 }
@@ -195,13 +238,16 @@
 }
 .flex__movie--info {
   margin-top: 5px;
-  font-size: 2vh;
+  font-size: 16px;
   color: #6b6b6b;
   font-weight: 600;
 }
 .flex__movie--info1 {
-  font-size: 2vh;
+  font-size: 18px;
   color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-weight: bold;
   margin-top: 30px;
   font-weight: 600;
 }
@@ -209,13 +255,17 @@
   flex: 1;
 }
 .flex__movie--result {
-  font-size: 2vh;
+  font-size: 18px;
   color: black;
   font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   text-align: right;
 }
 .flex__movie--result1 {
-  font-size: 2.5vh;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   color: #5f2eea;
   font-weight: bold;
   text-align: right;
@@ -235,74 +285,132 @@
   color: white;
   display: none;
 }
-@media (max-width: 575.98px) {
-  .navbar-brand {
-    position: relative;
-    right: 30px;
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
   }
-  /*---------------------------Movie Selected-----------------------------------------------*/
-  .movieSelected {
+  .order__background {
     background-color: #f5f6f8;
   }
+  /*---------------------------Movie Selected-----------------------------------------------*/
   .movieSelected__flex {
     padding-top: 90px;
-    display: block;
+    display: flex;
   }
   /*---------------------------Movie Selected Flex Left-----------------------------------------------*/
 
   /*-------------------Movie Selected Title---------------------------------------*/
   .movieSelected__flex1 {
+    margin-top: 50px;
     flex: 2;
     font-size: 3vh;
   }
   .movieSelected__header {
-    display: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
   }
   .movieSelected__movieSelected {
-    display: none;
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: gainsboro 12px 12px 12px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .movieSelected__movieSelected--title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 42%;
+  }
+  .movieSelected__movieSelected--button {
+    text-align: right;
+    display: inline-block;
+    background-color: #eff0f6;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 3px 23px;
+    font-size: 12px;
+    color: #5f2eea;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  .movieSelected__movieSelected--button:hover {
+    text-align: right;
+    display: inline-block;
+    background-color: #5f2eea;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 1vh 2%;
+    font-size: 2.5vh;
+    color: white;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
   }
   /*-------------------Movie Selected Seat---------------------------------------*/
   .seatSelected__header {
     font-weight: bold;
     margin-bottom: 20px;
-    margin-top: 0;
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
   }
   .seatSelected__movieSelected {
     border: none;
     border-radius: 16px;
     background-color: white;
-    padding: 0.5vh 5%;
+    padding: 10px 50px;
   }
   .seatSelected__movieSelected--title {
-    display: none;
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 17px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #4e4b66;
   }
   .seat__border--line {
-    margin-top: 50px;
-    background-color: #9570fe;
+    background-color: #5f2eea;
     height: 1vh;
     width: 95%;
     border-radius: 10px;
   }
   .seat__border--main {
     margin-top: 30px;
-    padding-right: 30px;
+    padding-right: 10px;
   }
   .seat__border--box {
     margin-top: 50px;
-    margin-bottom: 50px;
   }
   .seat__border--headerTwo {
     font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-size: 2.5vh;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
   }
 
   .headerTwo__box1 {
     margin: 30px 0;
     background-color: #d6d8e7;
     border-radius: 7px;
-    height: 3.5vh;
-    width: 3.5vh;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     margin: 0 100px 30px 0;
   }
@@ -310,8 +418,8 @@
     margin: 30px 0;
     background-color: #5f2eea;
     border-radius: 7px;
-    height: 3.5vh;
-    width: 3.5vh;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     margin: 0 100px 0 0;
   }
@@ -319,50 +427,51 @@
     margin: 30px 0;
     background-color: #6e7191;
     border-radius: 7px;
-    height: 3.5vh;
-    width: 3.5vh;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     margin: 0 5vh 0 0;
   }
   .headerTwo__desc {
     display: inline block;
     position: relative;
-    margin-left: 4vh;
-    font-size: 2vh;
-    top: 0px;
+    margin-left: 6vh;
+    font-size: 15px;
+    top: 5px;
     font-weight: bold;
     color: #4e4b66;
   }
   .button {
-    margin: 70px 0;
+    margin: 60px 0;
     display: flex;
   }
   .button__change {
     flex: 1;
   }
   .button__change--movie {
-    padding: 1vh 10%;
-    height: 6vh;
-    font-size: 2vh;
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-weight: bold;
     border-radius: 8px;
     border: solid blueviolet 2px;
     color: #5f2eea;
-    display: none;
   }
   .button__change--movie:hover {
     color: white;
     background-color: #5f2eea;
   }
   .button__checkout--movie {
-    padding: 1vh 10%;
-    height: 6vh;
-    font-size: 2vh;
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-weight: bold;
-    border-radius: 12px;
+    border-radius: 8px;
     border: solid blueviolet 2px;
     color: #5f2eea;
-    display: none;
+    margin-bottom: 50px;
   }
   .button__checkout--movie:hover {
     color: white;
@@ -374,28 +483,32 @@
   }
   /*---------------------------Movie Selected Flex Right-----------------------------------------------*/
   .movieSelected__flex2 {
+    margin-top: 50px;
     flex: 1;
-    margin-left: 0;
+    margin-left: 20px;
   }
   .movieInfo__header {
     font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 2.7vh;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .personal__box {
     background-color: white;
     border: solid gainsboro 2px;
     box-shadow: 10px 10px 10px gainsboro;
-    margin: 20px 1vh;
+    margin: 30px 1vh;
     padding: 4vh;
     border-radius: 12px;
   }
   .personal__box--image {
-    margin: 0 60px;
+    margin: 0 30px;
   }
   .personal__box--title {
     text-align: center;
-    font-size: 3.5vh;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     font-weight: bold;
     margin: 15px 0 30px 0;
   }
@@ -407,31 +520,38 @@
   }
   .flex__movie--info {
     margin-top: 5px;
-    font-size: 1.5vh;
+    font-size: 15px;
     color: #6b6b6b;
     font-weight: 600;
   }
   .flex__movie--info1 {
-    font-size: 2vh;
+    font-size: 16px;
     color: black;
-    margin-top: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
     font-weight: 600;
   }
   .flex__result {
     flex: 1;
   }
   .flex__movie--result {
-    font-size: 1.5vh;
+    font-size: 15px;
     color: black;
     font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     text-align: right;
   }
   .flex__movie--result1 {
-    font-size: 2.5vh;
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
     color: #5f2eea;
     font-weight: bold;
     text-align: right;
-    margin-top: 10px;
+    margin-top: 30px;
   }
   /*---------------------------Button-----------------------------------------------*/
   .orderPage__button {
@@ -439,13 +559,842 @@
     margin-left: 5%;
     font-size: 2vh;
     font-weight: bold;
-    height: 6vh;
+    height: 8vh;
     width: 90%;
     border-radius: 12px;
     border: none;
     background-color: #5f2eea;
     color: white;
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .order__background {
+    background-color: #f5f6f8;
+  }
+  /*---------------------------Movie Selected-----------------------------------------------*/
+  .movieSelected__flex {
+    padding-top: 90px;
     display: block;
-    margin-bottom: 100px;
+  }
+  /*---------------------------Movie Selected Flex Left-----------------------------------------------*/
+
+  /*-------------------Movie Selected Title---------------------------------------*/
+  .movieSelected__flex1 {
+    margin-top: 50px;
+    flex: 2;
+    font-size: 3vh;
+  }
+  .movieSelected__header {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .movieSelected__movieSelected {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: gainsboro 12px 12px 12px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .movieSelected__movieSelected--title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 42%;
+  }
+  .movieSelected__movieSelected--button {
+    text-align: right;
+    display: inline-block;
+    background-color: #eff0f6;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 3px 23px;
+    font-size: 12px;
+    color: #5f2eea;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  .movieSelected__movieSelected--button:hover {
+    text-align: right;
+    display: inline-block;
+    background-color: #5f2eea;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 1vh 2%;
+    font-size: 2.5vh;
+    color: white;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  /*-------------------Movie Selected Seat---------------------------------------*/
+  .seatSelected__header {
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .seatSelected__movieSelected {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    padding: 10px 50px;
+  }
+  .seatSelected__movieSelected--title {
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 17px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #4e4b66;
+  }
+  .seat__border--line {
+    background-color: #5f2eea;
+    height: 1vh;
+    width: 95%;
+    border-radius: 10px;
+  }
+  .seat__border--main {
+    margin-top: 30px;
+    padding-right: 10px;
+  }
+  .seat__border--box {
+    margin-top: 50px;
+  }
+  .seat__border--headerTwo {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 2.5vh;
+    margin: 0 0 30px 0;
+  }
+
+  .headerTwo__box1 {
+    margin: 30px 0;
+    background-color: #d6d8e7;
+    border-radius: 7px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin: 0 100px 30px 0;
+  }
+  .headerTwo__box2 {
+    margin: 30px 0;
+    background-color: #5f2eea;
+    border-radius: 7px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin: 0 100px 0 0;
+  }
+  .headerTwo__box3 {
+    margin: 30px 0;
+    background-color: #6e7191;
+    border-radius: 7px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin: 0 5vh 0 0;
+  }
+  .headerTwo__desc {
+    display: inline block;
+    position: relative;
+    margin-left: 6vh;
+    font-size: 15px;
+    top: 5px;
+    font-weight: bold;
+    color: #4e4b66;
+  }
+  .button {
+    margin: 60px 0;
+    display: none;
+  }
+  .button__change {
+    flex: 1;
+  }
+  .button__change--movie {
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid blueviolet 2px;
+    color: #5f2eea;
+  }
+  .button__change--movie:hover {
+    color: white;
+    background-color: #5f2eea;
+  }
+  .button__checkout--movie {
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid blueviolet 2px;
+    color: #5f2eea;
+    margin-bottom: 50px;
+  }
+  .button__checkout--movie:hover {
+    color: white;
+    background-color: #5f2eea;
+  }
+  .button__checkout {
+    text-align: right;
+    flex: 1;
+  }
+  /*---------------------------Movie Selected Flex Right-----------------------------------------------*/
+  .movieSelected__flex2 {
+    margin-top: 50px;
+    flex: 1;
+    margin-left: 20px;
+  }
+  .movieInfo__header {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .personal__box {
+    background-color: white;
+    border: solid gainsboro 2px;
+    box-shadow: 10px 10px 10px gainsboro;
+    margin: 30px 1vh;
+    padding: 4vh;
+    border-radius: 12px;
+  }
+  .personal__box--image {
+    margin: 0 210px;
+  }
+  .personal__box--title {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin: 15px 0 30px 0;
+  }
+  .personal__box--flex {
+    display: flex;
+  }
+  .flex__movie {
+    flex: 1;
+  }
+  .flex__movie--info {
+    margin-top: 5px;
+    font-size: 17px;
+    color: #6b6b6b;
+    font-weight: 600;
+  }
+  .flex__movie--info1 {
+    font-size: 20px;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+  .flex__result {
+    flex: 1;
+  }
+  .flex__movie--result {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: right;
+  }
+  .flex__movie--result1 {
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 30px;
+  }
+  /*---------------------------Button-----------------------------------------------*/
+  .orderPage__button {
+    display: block;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .order__background {
+    background-color: #f5f6f8;
+  }
+  /*---------------------------Movie Selected-----------------------------------------------*/
+  .movieSelected__flex {
+    padding-top: 90px;
+    display: block;
+  }
+  /*---------------------------Movie Selected Flex Left-----------------------------------------------*/
+
+  /*-------------------Movie Selected Title---------------------------------------*/
+  .movieSelected__flex1 {
+    margin-top: 50px;
+    flex: 2;
+    font-size: 3vh;
+  }
+  .movieSelected__header {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    display: none;
+  }
+  .movieSelected__movieSelected {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: gainsboro 12px 12px 12px;
+    padding: 20px 30px;
+    display: none;
+    justify-content: space-between;
+  }
+  .movieSelected__movieSelected--title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 42%;
+  }
+  .movieSelected__movieSelected--button {
+    text-align: right;
+    display: inline-block;
+    background-color: #eff0f6;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 3px 23px;
+    font-size: 12px;
+    color: #5f2eea;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  .movieSelected__movieSelected--button:hover {
+    text-align: right;
+    display: inline-block;
+    background-color: #5f2eea;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 1vh 2%;
+    font-size: 2.5vh;
+    color: white;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  /*-------------------Movie Selected Seat---------------------------------------*/
+  .seatSelected__header {
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .seatSelected__movieSelected {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    padding: 10px 50px;
+  }
+  .seatSelected__movieSelected--title {
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 17px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #4e4b66;
+  }
+  .seat__border--line {
+    background-color: #5f2eea;
+    height: 1vh;
+    width: 99%;
+    border-radius: 10px;
+  }
+  .seat__border--main {
+    margin-top: 30px;
+    padding-right: 10px;
+  }
+  .seat__border--box {
+    margin-top: 50px;
+  }
+  .seat__border--headerTwo {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 2.5vh;
+    margin: 0 0 30px 0;
+  }
+
+  .headerTwo__box1 {
+    margin: 30px 0;
+    background-color: #d6d8e7;
+    border-radius: 7px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin: 0 100px 30px 0;
+  }
+  .headerTwo__box2 {
+    margin: 30px 0;
+    background-color: #5f2eea;
+    border-radius: 7px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin: 0 100px 0 0;
+  }
+  .headerTwo__box3 {
+    margin: 30px 0;
+    background-color: #6e7191;
+    border-radius: 7px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin: 0 5vh 0 0;
+  }
+  .headerTwo__desc {
+    display: inline block;
+    position: relative;
+    margin-left: 6vh;
+    font-size: 13px;
+    top: 5px;
+    font-weight: bold;
+    color: #4e4b66;
+  }
+  .button {
+    margin: 60px 0;
+    display: none;
+  }
+  .button__change {
+    flex: 1;
+  }
+  .button__change--movie {
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid blueviolet 2px;
+    color: #5f2eea;
+  }
+  .button__change--movie:hover {
+    color: white;
+    background-color: #5f2eea;
+  }
+  .button__checkout--movie {
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid blueviolet 2px;
+    color: #5f2eea;
+    margin-bottom: 50px;
+  }
+  .button__checkout--movie:hover {
+    color: white;
+    background-color: #5f2eea;
+  }
+  .button__checkout {
+    text-align: right;
+    flex: 1;
+  }
+  /*---------------------------Movie Selected Flex Right-----------------------------------------------*/
+  .movieSelected__flex2 {
+    margin-top: 50px;
+    flex: 1;
+    margin-left: 20px;
+  }
+  .movieInfo__header {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .personal__box {
+    background-color: white;
+    border: solid gainsboro 2px;
+    box-shadow: 10px 10px 10px gainsboro;
+    margin: 30px 1vh;
+    padding: 4vh;
+    border-radius: 12px;
+  }
+  .personal__box--image {
+    margin: 0 120px;
+  }
+  .personal__box--title {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin: 15px 0 30px 0;
+  }
+  .personal__box--flex {
+    display: flex;
+  }
+  .flex__movie {
+    flex: 1;
+  }
+  .flex__movie--info {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #6b6b6b;
+    font-weight: 600;
+  }
+  .flex__movie--info1 {
+    font-size: 17px;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+  .flex__result {
+    flex: 1;
+  }
+  .flex__movie--result {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: right;
+  }
+  .flex__movie--result1 {
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 30px;
+  }
+  /*---------------------------Button-----------------------------------------------*/
+  .orderPage__button {
+    display: block;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .order__background {
+    background-color: #f5f6f8;
+  }
+  /*---------------------------Movie Selected-----------------------------------------------*/
+  .movieSelected__flex {
+    padding-top: 90px;
+    display: block;
+  }
+  /*---------------------------Movie Selected Flex Left-----------------------------------------------*/
+
+  /*-------------------Movie Selected Title---------------------------------------*/
+  .movieSelected__flex1 {
+    margin-top: 50px;
+    flex: 2;
+    font-size: 3vh;
+  }
+  .movieSelected__header {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    display: none;
+  }
+  .movieSelected__movieSelected {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: gainsboro 12px 12px 12px;
+    padding: 20px 30px;
+    display: none;
+    justify-content: space-between;
+  }
+  .movieSelected__movieSelected--title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 42%;
+  }
+  .movieSelected__movieSelected--button {
+    text-align: right;
+    display: inline-block;
+    background-color: #eff0f6;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 3px 23px;
+    font-size: 12px;
+    color: #5f2eea;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  .movieSelected__movieSelected--button:hover {
+    text-align: right;
+    display: inline-block;
+    background-color: #5f2eea;
+    border: none;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    border-radius: 8px;
+    padding: 1vh 2%;
+    font-size: 2.5vh;
+    color: white;
+    border: solid #5f2eea 2px;
+    font-weight: bold;
+    width: auto;
+  }
+  /*-------------------Movie Selected Seat---------------------------------------*/
+  .seatSelected__header {
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .seatSelected__movieSelected {
+    border: none;
+    border-radius: 16px;
+    background-color: white;
+    padding: 10px 50px;
+  }
+  .seatSelected__movieSelected--title {
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 17px;
+    text-align: center;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #4e4b66;
+  }
+  .seat__border--line {
+    background-color: #5f2eea;
+    height: 1vh;
+    width: 99%;
+    border-radius: 10px;
+  }
+  .seat__border--main {
+    margin-top: 30px;
+    padding-right: 10px;
+  }
+  .seat__border--box {
+    margin-top: 50px;
+  }
+  .seat__border--headerTwo {
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 2.5vh;
+    margin: 0 0 30px 0;
+  }
+
+  .headerTwo__box1 {
+    margin: 30px 0;
+    background-color: #d6d8e7;
+    border-radius: 7px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin: 0 100px 30px 0;
+  }
+  .headerTwo__box2 {
+    margin: 30px 0;
+    background-color: #5f2eea;
+    border-radius: 7px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin: 0 100px 0 0;
+  }
+  .headerTwo__box3 {
+    margin: 30px 0;
+    background-color: #6e7191;
+    border-radius: 7px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin: 0 5vh 0 0;
+  }
+  .headerTwo__desc {
+    display: inline block;
+    position: relative;
+    margin-left: 6vh;
+    font-size: 13px;
+    top: 5px;
+    font-weight: bold;
+    color: #4e4b66;
+  }
+  .button {
+    margin: 60px 0;
+    display: none;
+  }
+  .button__change {
+    flex: 1;
+  }
+  .button__change--movie {
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid blueviolet 2px;
+    color: #5f2eea;
+  }
+  .button__change--movie:hover {
+    color: white;
+    background-color: #5f2eea;
+  }
+  .button__checkout--movie {
+    padding: 10px 50px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    border: solid blueviolet 2px;
+    color: #5f2eea;
+    margin-bottom: 50px;
+  }
+  .button__checkout--movie:hover {
+    color: white;
+    background-color: #5f2eea;
+  }
+  .button__checkout {
+    text-align: right;
+    flex: 1;
+  }
+  /*---------------------------Movie Selected Flex Right-----------------------------------------------*/
+  .movieSelected__flex2 {
+    margin-top: 50px;
+    flex: 1;
+    margin-left: 20px;
+  }
+  .movieInfo__header {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .personal__box {
+    background-color: white;
+    border: solid gainsboro 2px;
+    box-shadow: 10px 10px 10px gainsboro;
+    margin: 30px 1vh;
+    padding: 4vh;
+    border-radius: 12px;
+  }
+  .personal__box--image {
+    margin: 0 90px;
+  }
+  .personal__box--title {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin: 15px 0 30px 0;
+  }
+  .personal__box--flex {
+    display: flex;
+  }
+  .flex__movie {
+    flex: 1;
+  }
+  .flex__movie--info {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #6b6b6b;
+    font-weight: 600;
+  }
+  .flex__movie--info1 {
+    font-size: 17px;
+    color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-weight: bold;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+  .flex__result {
+    flex: 1;
+  }
+  .flex__movie--result {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    text-align: right;
+  }
+  .flex__movie--result1 {
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    color: #5f2eea;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 30px;
+  }
+  /*---------------------------Button-----------------------------------------------*/
+  .orderPage__button {
+    display: block;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+      sans-serif;
+    font-size: 15px;
   }
 }

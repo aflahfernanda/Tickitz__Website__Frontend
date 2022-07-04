@@ -28,3 +28,270 @@
   column-gap: 50px;
   row-gap: 20px;
 }
+.manageSchedule__premiereFlex {
+  display: flex;
+  justify-content: space-between;
+}
+.manageSchedule__premiereName {
+  border: solid gainsboro;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: gainsboro 5px 5px 5px;
+}
+.manageSchedule__premiereName:hover {
+  border: solid gainsboro;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: gainsboro 5px 5px 5px;
+  background-color: rgb(215, 182, 246);
+  cursor: pointer;
+}
+.manageSchedule__submitReset {
+  text-align: right;
+  margin-top: 200px;
+}
+.scheduleCard {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  column-gap: 50px;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .manageSchedule {
+    background-color: white;
+    display: flex;
+  }
+  .manageSchedule__image {
+    flex: 1;
+    background-color: aqua;
+  }
+  .manageSchedule__movie {
+    flex: 2;
+    background-color: bisque;
+  }
+  .manageSchedule__location {
+    flex: 2;
+    background-color: cornsilk;
+  }
+  .cardTickets {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+  .manageSchedule__premiereFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .manageSchedule__premiereName {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+  }
+  .manageSchedule__premiereName:hover {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+    background-color: rgb(215, 182, 246);
+    cursor: pointer;
+  }
+  .manageSchedule__submitReset {
+    text-align: right;
+    margin-top: 100px;
+  }
+  .scheduleCard {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .manageSchedule {
+    background-color: white;
+    display: flex;
+  }
+  .manageSchedule__image {
+    flex: 1;
+    background-color: aqua;
+  }
+  .manageSchedule__movie {
+    flex: 2;
+    background-color: bisque;
+  }
+  .manageSchedule__location {
+    flex: 2;
+    background-color: cornsilk;
+  }
+  .cardTickets {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+  .manageSchedule__premiereFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .manageSchedule__premiereName {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+  }
+  .manageSchedule__premiereName:hover {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+    background-color: rgb(215, 182, 246);
+    cursor: pointer;
+  }
+  .manageSchedule__submitReset {
+    text-align: right;
+    margin-top: 700px;
+  }
+  .scheduleCard {
+    display: grid;
+    margin-left: 120px;
+    row-gap: 40px;
+    grid-template-columns: none;
+    justify-content: center;
+    column-gap: 50px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .manageSchedule {
+    background-color: white;
+    display: flex;
+  }
+  .manageSchedule__image {
+    flex: 1;
+    background-color: aqua;
+  }
+  .manageSchedule__movie {
+    flex: 2;
+    background-color: bisque;
+  }
+  .manageSchedule__location {
+    flex: 2;
+    background-color: cornsilk;
+  }
+  .cardTickets {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+  .manageSchedule__premiereFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .manageSchedule__premiereName {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+  }
+  .manageSchedule__premiereName:hover {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+    background-color: rgb(215, 182, 246);
+    cursor: pointer;
+  }
+  .manageSchedule__submitReset {
+    text-align: right;
+    margin-top: 700px;
+  }
+  .scheduleCard {
+    display: grid;
+    margin-left: 50px;
+    row-gap: 40px;
+    grid-template-columns: none;
+    justify-content: center;
+    column-gap: 50px;
+  }
+}
+@media (max-width: 575.98px) {
+  * {
+    font-family: "Mulish", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .manageSchedule {
+    background-color: white;
+    display: flex;
+  }
+  .manageSchedule__image {
+    flex: 1;
+    background-color: aqua;
+  }
+  .manageSchedule__movie {
+    flex: 2;
+    background-color: bisque;
+  }
+  .manageSchedule__location {
+    flex: 2;
+    background-color: cornsilk;
+  }
+  .cardTickets {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+  .manageSchedule__premiereFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .manageSchedule__premiereName {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+  }
+  .manageSchedule__premiereName:hover {
+    border: solid gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: gainsboro 5px 5px 5px;
+    background-color: rgb(215, 182, 246);
+    cursor: pointer;
+  }
+  .manageSchedule__submitReset {
+    text-align: right;
+    margin-top: 700px;
+  }
+  .scheduleCard {
+    display: grid;
+    margin-left: 20px;
+    row-gap: 40px;
+    grid-template-columns: none;
+    justify-content: center;
+    column-gap: 50px;
+  }
+}

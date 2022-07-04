@@ -32,51 +32,74 @@ function ScheduleCard(props) {
     //   </a>
     // </section>
     <>
-      <div className="card" style={{ width: "80%" }}>
-        <img
-          className="card-img-top"
-          src={require("../../assets/assets/VectorCinema1.png")}
-          alt="Card image cap"
-          style={{ width: "250px" }}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{premiere}</h5>
-          <p className="card-text">{location}</p>
-          {time.split(",").map((item) => (
+      <div className="showTickets__box">
+        <div className="showTickets__header">
+          {premiere === "hiflix" ? (
+            <img
+              src={require("../../assets/assets/VectorCinema3.png")}
+              alt="ubv.id"
+              className="showTickets__box--images"
+            />
+          ) : premiere === "ebu.id" ? (
+            <img
+              src={require("../../assets/assets/VectorCinema1.png")}
+              alt="ubv.id"
+              className="showTickets__box--images"
+            />
+          ) : premiere === "CineOne21" ? (
+            <img
+              src={require("../../assets/assets/VectorCinema2.png")}
+              alt="ubv.id"
+              className="showTickets__box--images"
+            />
+          ) : null}
+
+          <section className="showTickets__box--title">
+            <h3 className="showTickets__box--header"> {premiere}</h3>
+            <p className="showTickets__box--location">{location}</p>
+          </section>
+        </div>
+        <hr />
+        <section className=" container showTickets__times">
+          {time.split(",").map((itemTime) => (
             <button
-              key={item}
+              key={itemTime}
               className="showTickets__times--timesLight"
               // onClick={() =>
               //   changeDataBooking({
               //     timeBooking: itemTime,
               //     scheduleId: item.id,
-              //     premiere: item.premiere
+              //     premiere: item.premiere,
+              //     price: item.price
               //   })
               // }
             >
-              {item}
+              {itemTime}
             </button>
           ))}
-          <button
-            className="btn btn-outline-primary"
-            style={{
-              border: "solid blueviolet 1px",
-              color: "blueviolet",
-              margin: "0px 10px",
-              fontWeight: "bold"
-            }}
-            onClick={() => props.setUpdate(props.data)}
-          >
-            Update
-          </button>
-          <button
-            className="btn btn-outline-danger"
-            style={{ margin: "0px 10px", fontWeight: "bold" }}
-            onClick={() => props.handleDelete(id)}
-          >
-            Delete
-          </button>
+        </section>
+        <div className="card__priceTicket">
+          <p className="card__priceTicket__price">Price</p>
+          <p className="card__priceTicket__total">Rp.{price}</p>
         </div>
+        <button
+          className="showTickets__button"
+          // disabled={item.id === dataOrder.scheduleId ? false : true}
+          onClick={() => props.setUpdate(props.data)}
+          style={{ marginBottom: "0" }}
+        >
+          {" "}
+          Update
+        </button>
+        <button
+          className="showTickets__button"
+          // disabled={item.id === dataOrder.scheduleId ? false : true}
+          onClick={() => props.handleDelete(id)}
+          style={{ backgroundColor: "red" }}
+        >
+          {" "}
+          Delete
+        </button>
       </div>
     </>
   );

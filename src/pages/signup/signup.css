@@ -12,23 +12,36 @@ main {
   max-width: 100%;
 }
 .signUp__image__login {
-  flex: 2;
+  flex: 1.8;
   background-image: url(./assets/Group\ 10.png);
   background-repeat: no-repeat;
-  height: 100vh;
+  width: 100%;
+  height: 750px;
 }
 .tickitz {
-  position: relative;
-  left: 18%;
-  top: 35%;
+  margin-top: 220px;
+  margin-left: 120px;
+  width: 65%;
 }
 .tickitz__desc {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   color: white;
   text-align: center;
-  position: relative;
-  top: 35%;
+}
+.tickitz__descs {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-align: start;
+  margin-right: 150px;
+}
+.image_set {
+  margin-top: 28%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .signUp__image--cover {
   object-fit: cover;
@@ -37,7 +50,7 @@ main {
 }
 .signUp {
   flex: 1;
-  margin: 33px 80px;
+  margin: 33px 60px;
   padding: 0 40px;
 }
 
@@ -45,6 +58,7 @@ main {
   display: none;
 }
 .signUp__header {
+  margin-top: 40px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -53,117 +67,580 @@ main {
   color: gray;
   font-family: "Inter", sans-serif;
   padding: 10px 0px;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-weight: bold;
+  text-align: justify;
 }
 .input__header {
   padding: 10px 0px;
-  font-size: small;
+  font-size: 16px;
   font-weight: bold;
+  margin-top: 10px;
 }
 .signUp__input {
-  color: black;
+  color: #5f2eea;
   font-weight: bold;
-  width: 90%;
+  width: 100%;
   height: 60px;
   border-radius: 16px;
   border: 1px solid gray;
   padding: 0 20px;
 }
 .signUp__input:focus {
-  border: 2px solid gray;
+  border: 2px solid gainsboro;
   color: black;
   font-weight: bold;
-}
-
-/* .signUp__input:valid {
-  border: 1px solid green;
-} */
-
-.button {
 }
 .button__signUp {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin: 10px 0;
-  background-color: blueviolet;
-  width: 90%;
+  background-color: #5f2eea;
+  border: none;
+  width: 100%;
   height: 60px;
   border-radius: 16px;
+  font-weight: light;
   padding: 0 20px;
-  font-weight: bold;
-  font-size: 15px;
+  margin-top: 30px;
+  font-size: 20px;
   cursor: pointer;
 }
 .button__signUp:hover {
-  font-size: 20px;
+  font-size: 22px;
   background-color: rgb(166, 72, 253);
 }
 .button__link {
   text-align: center;
 }
-@media (max-width: 991.98px) {
+.text_align_link {
+  text-align: center;
+  font-weight: bold;
+  color: #8692a6;
+  font-weight: light;
+  margin-top: 5px;
+}
+.reset_align_link {
+  text-align: center;
+  font-weight: bold;
+  color: #5f2eea;
+  text-decoration: none;
+  font-weight: light;
+  margin-top: 5px;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
   main {
     display: flex;
     max-width: 100%;
   }
   .signUp__image__login {
-    flex: 0;
-    background-image: none;
-    display: none;
-  }
-  .signUp {
-    flex: 1;
-    margin: 33px 10%;
-    padding: 0 0;
+    flex: 1.8;
+    background-image: url(./assets/Group\ 10.png);
+    background-color: #5f2eea;
+    height: 750px;
   }
   .tickitz {
-    position: none;
-    left: 180px;
-    top: 35%;
+    margin-top: 220px;
+    margin-left: 100px;
+    width: 65%;
   }
   .tickitz__desc {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
     text-align: center;
-    position: relative;
-    top: 35%;
   }
+  .image_set {
+    margin-top: 28%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signUp__image--cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .signUp {
+    flex: 1;
+    margin: 33px 60px;
+    padding: 0 40px;
+  }
+
   .tickitzLogo {
-    display: block;
-    margin-bottom: 30px;
-    padding: 20px;
-    position: relative;
-    right: 27px;
+    display: none;
   }
   .signUp__header {
+    margin-top: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
+    font-weight: bold;
   }
   .signUp__subHeader {
-    color: purple;
+    color: gray;
     font-family: "Inter", sans-serif;
     padding: 10px 0px;
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: justify;
   }
   .input__header {
     padding: 10px 0px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: #4e4b66;
+    margin-top: 10px;
   }
   .signUp__input {
-    color: black;
-    width: 90%;
-    height: 60px;
+    color: #5f2eea;
+    font-weight: bold;
+    width: 100%;
+    height: 56px;
     border-radius: 16px;
     border: 1px solid gray;
     padding: 0 20px;
-    margin-bottom: 30px;
   }
   .signUp__input:focus {
-    border: 2px solid gray;
+    border: 2px solid gainsboro;
     color: black;
     font-weight: bold;
+  }
+  .button__signUp {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px 0;
+    background-color: #5f2eea;
+    border: none;
+    width: 100%;
+    height: 56px;
+    border-radius: 16px;
+    font-weight: light;
+    padding: 0 20px;
+    margin-top: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .button__signUp:hover {
+    font-size: 20px;
+    background-color: rgb(166, 72, 253);
+  }
+  .button__link {
+    text-align: center;
+  }
+  .text_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #8692a6;
+    font-weight: light;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .reset_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    text-decoration: none;
+    font-weight: light;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  main {
+    display: flex;
+    max-width: 100%;
+  }
+  .signUp__image__login {
+    flex: 1.8;
+    background-image: url(./assets/Group\ 10.png);
+    background-color: #5f2eea;
+    height: 750px;
+    justify-content: center;
+  }
+  .tickitz {
+    position: relative;
+    left: 80px;
+    width: 70%;
+    margin-left: auto;
+  }
+  .tickitz__desc {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: none;
+  }
+  .image_set {
+    margin-top: 28%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signUp__image--cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .signUp {
+    flex: 1;
+    margin: 33px 30px;
+    padding: 0 40px;
+  }
+
+  .tickitzLogo {
+    display: none;
+  }
+  .signUp__header {
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .signUp__subHeader {
+    color: gray;
+    font-family: "Inter", sans-serif;
+    padding: 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  .input__header {
+    padding: 0px 0px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .signUp__input {
+    color: #5f2eea;
+    font-weight: bold;
+    width: 100%;
+    height: 46px;
+    border-radius: 16px;
+    border: 1px solid gray;
+    padding: 0 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .signUp__input:focus {
+    border: 2px solid gainsboro;
+    color: black;
+    font-weight: bold;
+  }
+  .button__signUp {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px 0;
+    background-color: #5f2eea;
+    border: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 16px;
+    font-weight: light;
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .button__signUp:hover {
+    font-size: 17px;
+    background-color: rgb(166, 72, 253);
+  }
+  .button__link {
+    text-align: center;
+  }
+  .text_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #8692a6;
+    font-weight: light;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .reset_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    text-decoration: none;
+    font-weight: light;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  main {
+    display: flex;
+    max-width: 100%;
+  }
+  .signUp__image__login {
+    flex: 1.8;
+    background-image: url(./assets/Group\ 10.png);
+    background-color: #5f2eea;
+    height: 100vh;
+    justify-content: center;
+    display: none;
+  }
+  .tickitz {
+    position: relative;
+    left: 80px;
+    width: 70%;
+    margin-left: auto;
+    display: none;
+  }
+  .tickitz__desc {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: none;
+  }
+  .image_set {
+    margin-top: 28%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signUp__image--cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .signUp {
+    flex: 1;
+    margin: 33px 30px;
+    padding: 0 40px;
+  }
+
+  .tickitzLogo {
+    display: block;
+    width: 130px;
+  }
+  .signUp__header {
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .signUp__subHeader {
+    color: gray;
+    font-family: "Inter", sans-serif;
+    padding: 0px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  .input__header {
+    padding: 0px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .signUp__input {
+    color: #5f2eea;
+    font-weight: bold;
+    width: 100%;
+    height: 55px;
+    border-radius: 16px;
+    border: 1px solid gray;
+    padding: 0 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .signUp__input:focus {
+    border: 2px solid gainsboro;
+    color: black;
+    font-weight: bold;
+  }
+  .button__signUp {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px 0;
+    background-color: #5f2eea;
+    border: none;
+    width: 100%;
+    height: 60px;
+    border-radius: 16px;
+    font-weight: light;
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .button__signUp:hover {
+    font-size: 17px;
+    background-color: rgb(166, 72, 253);
+  }
+  .button__link {
+    text-align: center;
+  }
+  .text_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #8692a6;
+    font-weight: light;
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  .reset_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    text-decoration: none;
+    font-weight: light;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 575.98px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  main {
+    display: flex;
+    max-width: 100%;
+  }
+  .signUp__image__login {
+    flex: 1.8;
+    background-image: url(./assets/Group\ 10.png);
+    background-color: #5f2eea;
+    height: 100vh;
+    justify-content: center;
+    display: none;
+  }
+  .tickitz {
+    position: relative;
+    left: 80px;
+    width: 70%;
+    margin-left: auto;
+    display: none;
+  }
+  .tickitz__desc {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: none;
+  }
+  .image_set {
+    margin-top: 28%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signUp__image--cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  .signUp {
+    flex: 1;
+    margin: 33px 30px;
+    padding: 0 40px;
+  }
+
+  .tickitzLogo {
+    display: block;
+    width: 100px;
+  }
+  .signUp__header {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .signUp__subHeader {
+    color: gray;
+    font-family: "Inter", sans-serif;
+    padding: 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  .input__header {
+    padding: 0px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .signUp__input {
+    color: #5f2eea;
+    font-weight: bold;
+    width: 100%;
+    height: 45px;
+    border-radius: 16px;
+    border: 1px solid gray;
+    padding: 0 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .signUp__input:focus {
+    border: 2px solid gainsboro;
+    color: black;
+    font-weight: bold;
+  }
+  .button__signUp {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px 0;
+    background-color: #5f2eea;
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 16px;
+    font-weight: light;
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .button__signUp:hover {
+    font-size: 17px;
+    background-color: rgb(166, 72, 253);
+  }
+  .button__link {
+    text-align: center;
+  }
+  .text_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #8692a6;
+    font-weight: light;
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .reset_align_link {
+    text-align: center;
+    font-weight: bold;
+    color: #5f2eea;
+    text-decoration: none;
+    font-weight: light;
+    margin-top: 5px;
   }
 }

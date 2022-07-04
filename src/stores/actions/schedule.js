@@ -1,10 +1,12 @@
 import { type } from "@testing-library/user-event/dist/type";
 import axios from "../../utils/axios";
 
-export const getDataSchedule = (page, limit) => {
+export const getDataSchedule = (page, limit, searchLocation, searchMovieId, searchDate) => {
   return {
     type: "GET_DATA_SCHEDULE",
-    payload: axios.get(`schedule?page=${page}&limit=${limit}&searchLocation=&sort=&searchMovieId=2`)
+    payload: axios.get(
+      `schedule?page=${page}&limit=${limit}&searchLocation=${searchLocation}&searchMovieId=${searchMovieId}&searchDate=${searchDate}`
+    )
   };
 };
 
@@ -23,6 +25,6 @@ export const updateSchedule = (id, form) => {
 export const deleteSchedule = (id) => {
   return {
     type: "DELETE_SCHEDULE",
-    payload: axios.patch(`schedule/${id}`)
+    payload: axios.delete(`schedule/${id}`)
   };
 };

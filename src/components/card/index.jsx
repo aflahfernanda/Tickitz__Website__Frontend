@@ -12,46 +12,46 @@ function Card(props) {
     navigate("/moviedetail");
   };
   return (
-    // <section className="movieDetails__movie1">
-    // <img
-    //   src={
-    //     image
-    //       ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
-    //       : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
-    //   }
-    //   alt="imageJohnWick"
-    //   style={{ width: "300px" }}
-    // />
-    //   <h2 className="movieDetails__title">{name}</h2>
-    //   <p className="movieDetails__genre">{category}</p>
-    //   <a>
-    //     <button className="movieDetails__button" onClick={() => props.handleDetail(id)}>
-    //       Details
-    //     </button>
-    //   </a>
-    // </section>
-    <>
-      <div className="card">
-        <img
-          className="card-img-top"
-          src={
-            image
-              ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
-              : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
-          }
-          alt="Card image cap"
-          style={{ width: "100%" }}
-        />
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <p className="card-text">{category}</p>
+    <section className="card">
+      <img
+        src={
+          image
+            ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
+            : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
+        }
+        alt="imageJohnWick"
+        style={{ width: "300px" }}
+      />
+      <h2 className="card__titleMovie">{name}</h2>
+      <p className="card__genreMovie">{category}</p>
+      <a>
+        <button className="card__buttonMovie" onClick={() => props.handleDetail(id)}>
+          Details
+        </button>
+      </a>
+    </section>
+    // <>
+    //   <div className="card">
+    //     <img
+    //       className="card-img-top"
+    //       src={
+    //         image
+    //           ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
+    //           : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
+    //       }
+    //       alt="Card image cap"
+    //       style={{ width: "100%" }}
+    //     />
+    //     <div className="card-body">
+    //       <h5 className="card-title">{name}</h5>
+    //       <p className="card-text">{category}</p>
 
-          <button className="btn btn-outline-primary" onClick={() => props.handleDetail(id)}>
-            Details
-          </button>
-        </div>
-      </div>
-    </>
+    //       <button className="btn btn-outline-primary" onClick={() => props.handleDetail(id)}>
+    //         Details
+    //       </button>
+    //     </div>
+    //   </div>
+    // </>
   );
 }
 Card.defaultProps = {

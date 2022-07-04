@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "../../utils/axios";
 import { Link, useNavigate } from "react-router-dom";
-import style from "./signIn.css";
+import "./signIn.css";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -63,10 +63,11 @@ function SignIn() {
   return (
     <>
       <main>
-        <section className="signUp__image">
-          <img src={require("./assets/tickitz 1.png")} alt="logoImg" className="tickitz" />
-          <p className="tickitz__desc"> wait, watch, wow</p>
-        </section>
+        <div className="signUp__image__logins">
+          <image src={require("./assets/Group 10.png")} />
+          <img src={require("./assets/tickitz 1.png")} alt="smallLogoImg" className="tickitz" />
+          <p className="tickitz__desc">Wait, Watch, Wow</p>
+        </div>
         <section className="signUp">
           <img src={require("./assets/Tickitz 2.png")} alt="smallLogoImg" className="tickitzLogo" />
           <h1 className="signUp__header">Sign Up</h1>
@@ -80,23 +81,23 @@ function SignIn() {
               {message}
             </div>
           )}
-          <h4 className="input">First Name</h4>
+          <h4 className="input__header">First Name</h4>
           <input
             type="search"
             placeholder="write your first name"
-            className="signUp__inputName"
+            className="signUp__input"
             onChange={handleChangeForm}
             name="firstName"
           />
-          <h4 className="input">Last Name</h4>
+          <h4 className="input__header">Last Name</h4>
           <input
             type="search"
             placeholder="write your first name"
-            className="signUp__inputName"
+            className="signUp__input"
             onChange={handleChangeForm}
             name="lastName"
           />
-          <h4 className="input">Phone Number</h4>
+          <h4 className="input__header">Phone Number</h4>
           <input
             type="number"
             placeholder="Write Your Phone Number"
@@ -104,7 +105,7 @@ function SignIn() {
             onChange={handleChangeForm}
             name="noTelp"
           />
-          <h4 className="input">Email</h4>
+          <h4 className="input__header">Email</h4>
           <input
             type="email"
             placeholder="Write Your Email"
@@ -112,7 +113,7 @@ function SignIn() {
             onChange={handleChangeForm}
             name="email"
           />
-          <h4 className="input">Password</h4>
+          <h4 className="input__header">Password</h4>
           <input
             type="password"
             placeholder="Write Your Password"
@@ -123,6 +124,12 @@ function SignIn() {
           <button onClick={handleSubmit} className="button__signUp">
             Sign Up
           </button>
+          <p className="text_align_link">
+            already have an account?
+            <a href="/login" className="reset_align_link">
+              Sign In
+            </a>
+          </p>
         </section>
       </main>
     </>
