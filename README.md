@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+<h1 align='center'>Tickitz Website</h1>
+  <p align="center">
+    <a href="link_deploy">View Demo</a>
+    ·
+    <a href="https://github.com/usergithub/namarepo/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/usergithub/namarepo/pulls">Request Feature</a>
+  </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <a href="https://ibb.co/cc1ThB8"><img src="./src/assets/assets/Tickitz 2.png" alt="08-06-2022-14-51-13-REC" border="0" width="400px"></a>
+</p>
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+Website Application Booking Ticket| Web Frontend Repository
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![NodeJs](https://img.shields.io/badge/NodeJs-16.15.x-green)](https://github.com/react-bootstrap/react-bootstrap)
+[![React JS](https://img.shields.io/badge/Next-v12.1.6-black)](https://reactjs.org/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requirements
 
-### `npm test`
+1. <a href="https://nodejs.org/en/download/">Node Js</a>
+2. Node_modules `npm install` or `yarn install`
+3. Backend API Tickitz [`here`](https://github.com/aflahfernanda/paytickz-project)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+1. Download this Project or you can type `git clone https://github.com/aflahfernanda/tickitz__website__frontend.git`
+2. Open app's directory in CMD or Terminal
+3. Type `npm install` or `yarn install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+URL_BACKEND: "https://project-paytickz.herokuapp.com/",
+URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/",
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Type `npm run dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgements
 
-### `npm run eject`
+- [axios](https://www.npmjs.com/package/axios)
+- [bootstrap](https://www.npmjs.com/package/bootstrap)
+- [node-sass](https://www.npmjs.com/package/node-sass)
+- [qs](https://www.npmjs.com/package/qs)
+- [react-redux](https://www.npmjs.com/package/react-redux)
+- [redux](https://www.npmjs.com/package/redux)
+- [redux-logger](https://www.npmjs.com/package/redux-logger)
+- [redux-promise-middleware](https://www.npmjs.com/package/redux-promise-middleware)
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
+- [eslint](https://www.npmjs.com/package/eslint)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## App License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+© [Tickitz](https://github.com/aflahfernanda/tickitz__website__frontend.git)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔎 Preview Pages
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p float="left">
+  <img src="./src/assets/readmePicture1.png" width="250" />
+  <img src="./src/assets/readmePicture2.png" width="250" />
+  <img src="./src/assets/readmePicture3.png" width="250" />
+</p>
+<br>
+<p float="left">
+  <img src="./src/assets/readmePicture4.png" width="250" />
+  <img src="./src/assets/readmePicture5.png" width="250" />
+  <img src="./src/assets/readmePicture6.png" width="250" />
+</p>
+<br>
+<p float="left">
+  <img src="./src/assets/readmePicture7.png" width="250" />
+</p>
 
-## Learn More
+## ✍️ Tickitz - Backend Link
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://github.com/aflahfernanda/paytickz-project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+## ⛏️ Built Using
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [axios](https://www.npmjs.com/package/axios)
+- [qs](https://www.npmjs.com/package/qs)
+- [react-redux](https://www.npmjs.com/package/react-redux)
+- [redux](https://www.npmjs.com/package/redux)
+- [redux-logger](https://www.npmjs.com/package/redux-logger)
+- [redux-promise-middleware](https://www.npmjs.com/package/redux-promise-middleware)
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
+- [eslint](https://www.npmjs.com/package/eslint)
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributors
 
-### Making a Progressive Web App
+If you have a suggestion that would make this better, please fork the repo and create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the Project
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
+5. Open a Pull Request
 
-### Advanced Configuration
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Instagram - [@aflahfernanda](https://www.instagram.com/aflahfernanda/)
+linkedIn - [@aflahfernanda](https://www.linkedin.com/in/aflah-fernanda-6841401ab/)
+email-[fernandaaflah@gmail.com](fernandaaflah@gmail.com)
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© [Mohd.Aflah Fernanda](https://github.com/aflahfernanda)
