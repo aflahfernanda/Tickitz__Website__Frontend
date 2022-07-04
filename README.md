@@ -60,11 +60,11 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
 
 <p float="left">
 <h3 align='center'>Auth Preview Pages</h1>
-  <img src="./src/assets/assets/readme1.png" width="300" />
-  <img src="./src/assets/assets/readme2.png" width="300" />
+  <img src="./src/assets/assets/readme1.png" width="200" />
+  <img src="./src/assets/assets/readme2.png" width="200" />
 </p>
 <p float="left">
- <img src="./src/assets/assets/readme3.png" width="300" />
+ <img src="./src/assets/assets/readme3.png" width="200" />
 </p>
  
 <br>
