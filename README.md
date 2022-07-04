@@ -58,6 +58,7 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
 
 ## 🔎 Web Preview Pages
 
+<h3 align='center'>Auth Preview Pages</h3>
 <p float="left">
   <img src="./src/assets/assets/readme1.png" width="400" />
    <img src="./src/assets/assets/readme3.png" width="400" />
@@ -67,14 +68,34 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
 </p>
  
 <br>
+<h3 align='center'>User Preview Pages</h3>
 <p float="left">
-  <img src="./src/assets/readmePicture4.png" width="250" />
-  <img src="./src/assets/readmePicture5.png" width="250" />
-  <img src="./src/assets/readmePicture6.png" width="250" />
+  <img src="./src/assets/assets/readmeHome1.png" width="400" />
+    <img src="./src/assets/assets/readmeHome2.png" width="400" />
+</p>
+<p float="left">
+  <img src="./src/assets/assets/readmeHome3.png" width="400" />
+    <img src="./src/assets/assets/readmeHome4.png" width="400" />
+</p>
+<p float="left">
+  <img src="./src/assets/assets/readmeHome5.png" width="400" />
+    <img src="./src/assets/assets/readmeHome6.png" width="400" />
+</p>
+<p float="left">
+  <img src="./src/assets/assets/readmeHome7.png" width="400" />
 </p>
 <br>
+<h3 align='center'>Admin Preview Pages</h3>
 <p float="left">
-  <img src="./src/assets/readmePicture7.png" width="250" />
+  <img src="./src/assets/assets/readmeAdmin1.png" width="400" />
+    <img src="./src/assets/assets/readmeAdmin2.png" width="400" />
+</p>
+<p float="left">
+  <img src="./src/assets/assets/readmeAdmin3.png" width="400" />
+    <img src="./src/assets/assets/readmeAdmin4.png" width="400" />
+</p>
+<p float="left">
+  <img src="./src/assets/assets/readmeAdmin5.png" width="400" />
 </p>
 
 ## ✍️ Tickitz - Backend Link
