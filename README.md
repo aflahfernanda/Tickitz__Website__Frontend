@@ -59,12 +59,11 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
 ## 🔎 Web Preview Pages
 
 <p float="left">
-<h3 align='center'>Auth Preview Pages</h1>
-  <img src="./src/assets/assets/readme1.png" width="200" />
-  <img src="./src/assets/assets/readme2.png" width="200" />
+  <img src="./src/assets/assets/readme1.png" width="400" />
+  <img src="./src/assets/assets/readme2.png" width="400" />
 </p>
 <p float="left">
- <img src="./src/assets/assets/readme3.png" width="200" />
+ <img src="./src/assets/assets/readme3.png" width="400" />
 </p>
  
 <br>
