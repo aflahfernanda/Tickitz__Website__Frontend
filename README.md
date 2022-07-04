@@ -18,7 +18,7 @@ Website Application Booking Ticket| Web Frontend Repository
 ## Built With
 
 [![NodeJs](https://img.shields.io/badge/NodeJs-16.15.x-green)](https://github.com/react-bootstrap/react-bootstrap)
-[![React JS](https://img.shields.io/badge/Next-v12.1.6-black)](https://reactjs.org/)
+[![React JS](https://img.shields.io/badge/React-v12.1.6-black)](https://reactjs.org/)
 
 ## Requirements
 
