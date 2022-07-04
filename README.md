@@ -56,12 +56,13 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
 
 © [Tickitz](https://github.com/aflahfernanda/tickitz__website__frontend.git)
 
-## 🔎 Preview Pages
+## 🔎 Web Preview Pages
 
 <p float="left">
-  <img src="./src/assets/readmePicture1.png" width="250" />
-  <img src="./src/assets/readmePicture2.png" width="250" />
-  <img src="./src/assets/readmePicture3.png" width="250" />
+<h1 align='center'>Auth Preview Pages</h1>
+  <img src="./src/assets/assets/readme1.png" width="250" />
+  <img src="./src/assets/assets/readme2.png" width="250" />
+  <img src="./src/assets/assets/readme3.png" width="250" />
 </p>
 <br>
 <p float="left">
