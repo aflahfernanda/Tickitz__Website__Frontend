@@ -13,24 +13,6 @@ function ScheduleCard(props) {
     navigate("/moviedetail");
   };
   return (
-    // <section className="movieDetails__movie1">
-    // <img
-    //   src={
-    //     image
-    //       ? `https://res.cloudinary.com/da776aoko/image/upload/v1651001489/${image}`
-    //       : "https://res.cloudinary.com/da776aoko/image/upload/v1651001489/Tickitz/movie/ekmnkymc7uyk2uk0cxru.jpg"
-    //   }
-    //   alt="imageJohnWick"
-    //   style={{ width: "300px" }}
-    // />
-    //   <h2 className="movieDetails__title">{name}</h2>
-    //   <p className="movieDetails__genre">{category}</p>
-    //   <a>
-    //     <button className="movieDetails__button" onClick={() => props.handleDetail(id)}>
-    //       Details
-    //     </button>
-    //   </a>
-    // </section>
     <>
       <div className="showTickets__box">
         <div className="showTickets__header">
