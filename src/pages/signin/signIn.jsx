@@ -41,13 +41,7 @@ function SignIn() {
       // console.log(form);
       // Proses = memanggil axios
       const resultLogin = await axios.post("auth/register", form);
-      const resultUser = [
-        {
-          id: 1,
-          name: "aflah",
-          role: "admin"
-        }
-      ];
+      alert("succes register user kindly check your email");
       console.log(resultLogin);
       console.log(resultLogin.data.msg);
       // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai

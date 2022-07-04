@@ -35,7 +35,7 @@
   border-radius: 50%;
   border: solid gainsboro;
   height: 180px;
-  width: 100%;
+  width: 200px;
 }
 .profile__name {
   margin-top: 30px;
@@ -330,7 +330,7 @@
     border-radius: 50%;
     border: solid gainsboro;
     height: 170px;
-    width: 100%;
+    width: 300px;
   }
   .profile__name {
     margin-top: 30px;
@@ -599,7 +599,7 @@
     border-radius: 50%;
     border: solid gainsboro;
     height: 170px;
-    width: 100%;
+    width: 300px;
   }
   .profile__name {
     margin-top: 30px;

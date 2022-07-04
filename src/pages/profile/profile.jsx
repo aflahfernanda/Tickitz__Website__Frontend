@@ -149,6 +149,11 @@ function Profile() {
   const handleResponseModalPassword = async (event) => {
     setModalPassword(false);
   };
+  const handleLogout = () => {
+    localStorage.clear();
+    alert("Succes Log Out");
+    navigate("/login");
+  };
   return (
     <>
       <Navbar />
@@ -262,7 +267,10 @@ function Profile() {
               <p className="profile__email">{user.email}</p>
               <hr />
               <div className="profile__buttonBox">
-                <button className="profile__buttonLogout"> Logout </button>
+                <button className="profile__buttonLogout" onClick={handleLogout}>
+                  {" "}
+                  Logout{" "}
+                </button>
               </div>
             </div>
           </div>

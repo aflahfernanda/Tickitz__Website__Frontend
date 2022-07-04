@@ -26,6 +26,16 @@ Website Application Booking Ticket| Web Frontend Repository
 2. Node_modules `npm install` or `yarn install`
 3. Backend API Tickitz [`here`](https://github.com/aflahfernanda/paytickz-project)
 
+## User Testing Account
+
+email : mgmcqxwrvvn@knowledgemd.com
+password: user123
+
+## Admin Testing Account
+
+email : admin@gmail.com
+password: admin123
+
 ## Getting Started
 
 1. Download this Project or you can type `git clone https://github.com/aflahfernanda/tickitz__website__frontend.git`
