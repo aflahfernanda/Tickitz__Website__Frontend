@@ -1,6 +1,6 @@
 <h1 align='center'>Tickitz Website</h1>
   <p align="center">
-    <a href="link_deploy">View Demo</a>
+    <a href="https://master--tickitz-eticket.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/usergithub/namarepo/issues">Report Bug</a>
     ·
