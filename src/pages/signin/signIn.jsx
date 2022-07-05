@@ -47,7 +47,7 @@ function SignIn() {
       // Output = suatu keadaan yang dapat diinfokan ke user bahwa proses sudah selesai
       setIsError(false);
       setMessage(resultLogin.data.msg);
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.log(error.response);
       setIsError(true);
@@ -120,7 +120,7 @@ function SignIn() {
           </button>
           <p className="text_align_link">
             already have an account?
-            <a href="/login" className="reset_align_link">
+            <a href="/" className="reset_align_link">
               Sign In
             </a>
           </p>

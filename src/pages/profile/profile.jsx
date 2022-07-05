@@ -152,7 +152,7 @@ function Profile() {
   const handleLogout = () => {
     localStorage.clear();
     alert("Succes Log Out");
-    navigate("/login");
+    navigate("/");
   };
   return (
     <>

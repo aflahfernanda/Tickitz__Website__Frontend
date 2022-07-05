@@ -12,7 +12,7 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.clear();
     alert("Succes Log Out");
-    navigate("/login");
+    navigate("/");
   };
   useEffect(() => {
     getDataUser();

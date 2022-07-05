@@ -33,7 +33,7 @@ function Reset() {
       setIsError(false);
       setMessage(resultLogin.data.msg);
       alert(resultLogin.data.msg);
-      navigate("/login");
+      navigate("/");
       //   UNTUK GET DATA USER
       //   const dataUser = JSON.parse(localStorage.getItem(dataUser));
     } catch (error) {
