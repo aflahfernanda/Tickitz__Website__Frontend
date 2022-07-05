@@ -24,26 +24,26 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<PublicRoute restricted={true} />}>
-          <Route path="signin" element={<SignIn />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<SignUp />} />
-          <Route path="forgotPassword" element={<Forgot />} />
-          <Route path="resetPassword/:id" element={<Reset />} />
+          <Route path="/forgotPassword" element={<Forgot />} />
+          <Route path="/resetPassword/:id" element={<Reset />} />
         </Route>
 
         <Route element={<PrivateRoute isAdmin={true} />}>
-          <Route path="manageMovie" element={<ManageMovie />} />
-          <Route path="manageSchedule" element={<ManageSchedule />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/manageMovie" element={<ManageMovie />} />
+          <Route path="/manageSchedule" element={<ManageSchedule />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Route>
 
         <Route element={<PrivateRoute isAdmin={false} />}>
-          <Route path="home" element={<Home />} />
-          <Route path="home/viewall" element={<ViewAll />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="moviedetail/:id" element={<Detail />} />
-          <Route path="orderpage" element={<OrderPage />} />
-          <Route path="paymentpage" element={<Payment />} />
-          <Route path="ticket" element={<Ticket />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/viewall" element={<ViewAll />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/moviedetail/:id" element={<Detail />} />
+          <Route path="/orderpage" element={<OrderPage />} />
+          <Route path="/paymentpage" element={<Payment />} />
+          <Route path="/ticket" element={<Ticket />} />
         </Route>
       </Routes>
     </BrowserRouter>
