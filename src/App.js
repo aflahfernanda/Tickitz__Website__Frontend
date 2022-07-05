@@ -25,7 +25,7 @@ function App() {
       <Routes>
         <Route element={<PublicRoute restricted={true} />}>
           <Route path="signin" element={<SignIn />} />
-          <Route path="login" element={<SignUp />} />
+          <Route path="/" element={<SignUp />} />
           <Route path="forgotPassword" element={<Forgot />} />
           <Route path="resetPassword/:id" element={<Reset />} />
         </Route>
