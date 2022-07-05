@@ -18,7 +18,7 @@
   },
   "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": [0, "error", "windows"],
     "quotes": ["error", "double", { "avoidEscape": true }],
     "semi": ["error", "always"],
     "max-len": [
@@ -31,18 +31,18 @@
         "ignoreUrls": true
       }
     ],
-    "no-console": "warn",
+    "no-console": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off"
-    // "prettier/prettier": [
-    //   "error",
-    //   {
-    //     "endOfLine": "auto"
-    //   }
-    // ]
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }

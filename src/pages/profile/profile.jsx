@@ -202,8 +202,7 @@ function Profile() {
                     <Modal
                       isOpen={modal}
                       toggle={handleResponse}
-                      modalTransition={{ timeout: 1000 }}
-                    >
+                      modalTransition={{ timeout: 1000 }}>
                       <ModalHeader>
                         <div className="modal__headerBox">
                           <p className="modal__header">Update Image Confirmation</p>
@@ -229,8 +228,7 @@ function Profile() {
                     <Modal
                       isOpen={modalDelete}
                       toggle={handleResponseDelete}
-                      modalTransition={{ timeout: 1000 }}
-                    >
+                      modalTransition={{ timeout: 1000 }}>
                       <ModalHeader>
                         <div className="modal__headerBox">
                           <p className="modal__header">Delete Image Confirmation</p>
@@ -241,8 +239,7 @@ function Profile() {
                         <div className="update__confirmFlex">
                           <button
                             onClick={handleResponseModalDelete}
-                            className="update__confirm__cancel"
-                          >
+                            className="update__confirm__cancel">
                             Cancel
                           </button>
                           <button onClick={handleDeleteImage} className="update__confirm__update">
@@ -255,8 +252,7 @@ function Profile() {
                   <div className="profile__buttonBox">
                     <button
                       className="profile__cancelImageButton"
-                      onClick={() => setImageUpdate(true)}
-                    >
+                      onClick={() => setImageUpdate(true)}>
                       Cancel Update
                     </button>
                   </div>
@@ -281,8 +277,7 @@ function Profile() {
                 <p
                   className="profile__accountSettings"
                   onClick={() => setOrder(true)}
-                  style={{ color: "#5f2eea", fontWeight: "bold" }}
-                >
+                  style={{ color: "#5f2eea", fontWeight: "bold" }}>
                   Account Settings
                 </p>
                 <p className="profile__orderHistory" onClick={handleOrder}>
@@ -297,8 +292,7 @@ function Profile() {
                 <p
                   className="profile__orderHistory"
                   onClick={handleOrder}
-                  style={{ color: "#5f2eea", fontWeight: "bold" }}
-                >
+                  style={{ color: "#5f2eea", fontWeight: "bold" }}>
                   Order History
                 </p>
               </div>
@@ -403,8 +397,7 @@ function Profile() {
                       <Modal
                         isOpen={modalProfile}
                         toggle={handleResponseProfile}
-                        modalTransition={{ timeout: 1000 }}
-                      >
+                        modalTransition={{ timeout: 1000 }}>
                         <ModalHeader>
                           <div className="modal__headerBox">
                             <p className="modal__header">Update Profile Confirmation</p>
@@ -415,14 +408,12 @@ function Profile() {
                           <div className="update__confirmFlex">
                             <button
                               onClick={handleResponseModalProfile}
-                              className="update__confirm__cancel"
-                            >
+                              className="update__confirm__cancel">
                               Cancel
                             </button>
                             <button
                               onClick={handleUpdateProfile}
-                              className="update__confirm__update"
-                            >
+                              className="update__confirm__update">
                               Update
                             </button>
                           </div>
@@ -489,8 +480,7 @@ function Profile() {
                       <Modal
                         isOpen={modalPassword}
                         toggle={handleResponsePassword}
-                        modalTransition={{ timeout: 1000 }}
-                      >
+                        modalTransition={{ timeout: 1000 }}>
                         <ModalHeader>
                           <div className="modal__headerBox">
                             <p className="modal__header">Update Password Confirmation</p>
@@ -501,14 +491,12 @@ function Profile() {
                           <div className="update__confirmFlex">
                             <button
                               onClick={handleResponseModalPassword}
-                              className="update__confirm__cancel"
-                            >
+                              className="update__confirm__cancel">
                               Cancel
                             </button>
                             <button
                               onClick={handleUpdatePassword}
-                              className="update__confirm__update"
-                            >
+                              className="update__confirm__update">
                               Update
                             </button>
                           </div>
@@ -552,8 +540,7 @@ function Profile() {
                       <hr />
                       <button
                         className="profile__orderTicketButton"
-                        onClick={() => handleResult(item.id)}
-                      >
+                        onClick={() => handleResult(item.id)}>
                         Ticket In Active
                       </button>
                     </div>

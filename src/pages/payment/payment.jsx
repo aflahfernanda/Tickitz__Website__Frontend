@@ -138,8 +138,7 @@ function Payment() {
                   //     timeBooking: "09.00"
                   //   })
                   // }
-                  onClick={handleResponse}
-                >
+                  onClick={handleResponse}>
                   Pay Your Order
                 </button>
               </section>

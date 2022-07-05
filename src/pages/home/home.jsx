@@ -80,8 +80,7 @@ function Home() {
           {/*--------------------------Now Showing-----------------------------*/}
           <div
             className=" container nowShowing"
-            style={{ width: "100%", position: "relative", bottom: "10px" }}
-          >
+            style={{ width: "100%", position: "relative", bottom: "10px" }}>
             <div className="nowShowing__header">
               <p className="nowShowing__header--nowShowing"> Now Showing </p>
               <p className="nowShowing__header--viewAll" onClick={handleviewAllMovie}>

@@ -247,8 +247,7 @@ function ManageSchedule() {
               <div className="manageSchedule__premiereFlex">
                 <div
                   onClick={(value) => handleFormPremiere("hiflix")}
-                  className="manageSchedule__premiereName"
-                >
+                  className="manageSchedule__premiereName">
                   <img
                     src={require("../../assets/assets/VectorCinema3.png")}
                     alt=""

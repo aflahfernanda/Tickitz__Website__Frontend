@@ -34,8 +34,7 @@ function Seat(props) {
               key={item}
               onClick={() => {
                 reserved.includes(item) ? null : selectedSeat(item);
-              }}
-            ></div>
+              }}></div>
           </div>
         ))}
 
@@ -54,8 +53,7 @@ function Seat(props) {
               key={item}
               onClick={() => {
                 reserved.includes(item) ? null : selectedSeat(item);
-              }}
-            ></div>
+              }}></div>
           </div>
         ))}
       </div>

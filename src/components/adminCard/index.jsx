@@ -36,8 +36,7 @@ function AdminCard(props) {
               border: "solid red 1px",
               marginLeft: "10px"
             }}
-            onClick={() => props.handleDelete(id)}
-          >
+            onClick={() => props.handleDelete(id)}>
             Delete
           </button>
         </a>

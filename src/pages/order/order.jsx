@@ -69,8 +69,7 @@ function OrderPage() {
 
                   <button
                     className="movieSelected__movieSelected--button"
-                    onClick={handleChangeMovie}
-                  >
+                    onClick={handleChangeMovie}>
                     Change Movie
                   </button>
                 </div>

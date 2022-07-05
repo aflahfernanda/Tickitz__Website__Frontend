@@ -62,8 +62,7 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={handleHamburger}
-                >
+                  onClick={handleHamburger}>
                   <span className="navbar-toggler-icon"></span>
                 </button>
 
@@ -133,8 +132,7 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={handleHamburger}
-                >
+                  onClick={handleHamburger}>
                   <span className="navbar-toggler-icon"></span>
                 </button>
 
@@ -197,21 +195,18 @@ function Navbar() {
           <div className="hamburger__menu">
             <a
               href="/manageMovie"
-              style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}
-            >
+              style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}>
               <p className="hamburger__menu--button">Manage Movie</p>
             </a>
             <a
               href="/manageSchedule"
-              style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}
-            >
+              style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}>
               {" "}
               <p className="hamburger__menu--button">Manage Schedule</p>
             </a>
             <a
               href="/dashboard"
-              style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}
-            >
+              style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}>
               {" "}
               <p className="hamburger__menu--button">Dashboard</p>
             </a>
@@ -226,21 +221,18 @@ function Navbar() {
         <div className="hamburger__menu">
           <a
             href="/home"
-            style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}
-          >
+            style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}>
             <p className="hamburger__menu--button">Home</p>
           </a>
           <a
             href="/home/viewAll"
-            style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}
-          >
+            style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}>
             {" "}
             <p className="hamburger__menu--button">List Movie</p>
           </a>
           <a
             href="/profile"
-            style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}
-          >
+            style={{ textDecoration: "none", backgroundColor: "none", color: "black" }}>
             {" "}
             <p className="hamburger__menu--button">Profile</p>
           </a>

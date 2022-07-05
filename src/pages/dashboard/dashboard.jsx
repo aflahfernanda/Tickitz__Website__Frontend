@@ -189,8 +189,7 @@ function Dashboard() {
                       name=""
                       id=""
                       className="dashboard__sortMovie"
-                      onChange={handleLocation}
-                    >
+                      onChange={handleLocation}>
                       <option value="" disabled selected>
                         Choose Your Option
                       </option>
@@ -204,8 +203,7 @@ function Dashboard() {
                       name=""
                       id=""
                       className="dashboard__sortMovie"
-                      onChange={handlePremiere}
-                    >
+                      onChange={handlePremiere}>
                       <option value="" disabled selected>
                         Choose Your Option
                       </option>

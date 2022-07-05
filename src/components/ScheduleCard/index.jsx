@@ -68,8 +68,7 @@ function ScheduleCard(props) {
           className="showTickets__button"
           // disabled={item.id === dataOrder.scheduleId ? false : true}
           onClick={() => props.setUpdate(props.data)}
-          style={{ marginBottom: "0" }}
-        >
+          style={{ marginBottom: "0" }}>
           {" "}
           Update
         </button>
@@ -77,8 +76,7 @@ function ScheduleCard(props) {
           className="showTickets__button"
           // disabled={item.id === dataOrder.scheduleId ? false : true}
           onClick={() => props.handleDelete(id)}
-          style={{ backgroundColor: "red" }}
-        >
+          style={{ backgroundColor: "red" }}>
           {" "}
           Delete
         </button>

@@ -213,8 +213,7 @@ function Detail() {
                             premiere: item.premiere,
                             price: item.price
                           })
-                        }
-                      >
+                        }>
                         {itemTime}
                       </button>
                     ))}
@@ -226,8 +225,7 @@ function Detail() {
                   <button
                     className="showTickets__button"
                     disabled={item.id === dataOrder.scheduleId ? false : true}
-                    onClick={handleBooking}
-                  >
+                    onClick={handleBooking}>
                     {" "}
                     Book Now
                   </button>
