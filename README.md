@@ -62,9 +62,17 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
 - [redux-thunk](https://www.npmjs.com/package/redux-thunk)
 - [eslint](https://www.npmjs.com/package/eslint)
 
-## App License
+<br>
 
-© [Tickitz](https://github.com/aflahfernanda/tickitz__website__frontend.git)
+## Contributors
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request.
+
+1. Fork the Project
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
+5. Open a Pull Request
 
 ## 🔎 Web Preview Pages
 
@@ -108,35 +116,6 @@ URL_CLOUDINARY: "https://res.cloudinary.com/da776aoko/image/upload/v1656419307/"
   <img src="./src/assets/assets/readmeAdmin5.png" width="400" />
 </p>
 
-## ✍️ Tickitz - Backend Link
-
-https://github.com/aflahfernanda/paytickz-project
-
-<br>
-
-## ⛏️ Built Using
-
-- [axios](https://www.npmjs.com/package/axios)
-- [qs](https://www.npmjs.com/package/qs)
-- [react-redux](https://www.npmjs.com/package/react-redux)
-- [redux](https://www.npmjs.com/package/redux)
-- [redux-logger](https://www.npmjs.com/package/redux-logger)
-- [redux-promise-middleware](https://www.npmjs.com/package/redux-promise-middleware)
-- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
-- [eslint](https://www.npmjs.com/package/eslint)
-
-<br>
-
-## Contributors
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request.
-
-1. Fork the Project
-2. Create your Feature Branch
-3. Commit your Changes
-4. Push to the Branch
-5. Open a Pull Request
-
 ## Contact
 
 Instagram - [@aflahfernanda](https://www.instagram.com/aflahfernanda/)
@@ -146,3 +125,4 @@ email-[fernandaaflah@gmail.com](fernandaaflah@gmail.com)
 ## License
 
 © [Mohd.Aflah Fernanda](https://github.com/aflahfernanda)
+© [Tickitz](https://github.com/aflahfernanda/tickitz__website__frontend.git)
