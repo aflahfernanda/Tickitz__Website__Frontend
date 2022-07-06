@@ -13,7 +13,8 @@
 
 ## About The Project
 
-Website Application Booking Ticket| Web Frontend Repository
+tickitz its an app for booking ticket online, and this app is build for website user with react js. the feature of the web is
+you can check movie,order seat, see schedule and booking a ticket online. this app make user can book a ticket easyly.
 
 ## Built With
 
